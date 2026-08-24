@@ -1,0 +1,25 @@
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# 临时 / 缓存（脚本克隆上游的临时目录、扫描中间产物等）
+.tmp/
+tmp/
+*.log
+
+# 用户本地敏感信息（绝不上传）
+.env
+*.key
+*.pem
