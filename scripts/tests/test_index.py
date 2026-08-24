@@ -2,6 +2,7 @@
 
 运行：python -m scripts.tests.test_index   （在仓库根目录）
 """
+
 from __future__ import annotations
 
 import tempfile
@@ -51,7 +52,9 @@ def main() -> None:
         "description_zh": "按两轴审查代码改动：标准 + 规格",
     }
     sid = skill_id(meta)
-    _assert(sid == "mattpocock/skills/engineering/code-review", f"skill_id 推导正确: {sid}")
+    _assert(
+        sid == "mattpocock/skills/engineering/code-review", f"skill_id 推导正确: {sid}"
+    )
     save_meta(root, sid, meta)
     loaded = load_meta(root, sid)
     _assert(loaded is not None and loaded["name"] == "code-review", "meta 写读往返一致")

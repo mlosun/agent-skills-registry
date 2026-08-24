@@ -9,6 +9,7 @@
 所有脚本（import/sync/translate/security_scan）对这两个文件的读写都必须走本模块，
 保证单点维护 schema 与持久化逻辑。
 """
+
 from __future__ import annotations
 
 import re
@@ -28,6 +29,7 @@ _SEGMENT_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 
 
 # ---------------- 路径定位 ----------------
+
 
 def repo_root() -> Path:
     """定位 registry 仓库根目录。
@@ -64,6 +66,7 @@ def meta_path(root: Path, skill_id: str) -> Path:
 
 # ---------------- YAML 基础读写 ----------------
 
+
 def load_yaml(path: Path) -> dict[str, Any] | None:
     """读取 YAML 文件，返回 dict；文件不存在或为空返回 None。"""
     if not path.exists():
@@ -85,9 +88,11 @@ def dump_yaml(path: Path, data: dict[str, Any], *, comment: str | None = None) -
         for line in comment.strip().splitlines():
             lines.append(f"# {line}")
         lines.append("")  # 注释块与正文之间空一行
-    lines.append(yaml.safe_dump(
-        data, allow_unicode=True, sort_keys=False, default_flow_style=False
-    ).rstrip("\n"))
+    lines.append(
+        yaml.safe_dump(
+            data, allow_unicode=True, sort_keys=False, default_flow_style=False
+        ).rstrip("\n")
+    )
     with path.open("w", encoding="utf-8") as fh:
         fh.write("\n".join(lines) + "\n")
 
@@ -98,6 +103,7 @@ def utc_now_iso() -> str:
 
 
 # ---------------- index.yaml（仓库级装订页） ----------------
+
 
 def empty_index() -> dict[str, Any]:
     """构造一个空的 index 结构（含 schema 版本头）。"""
@@ -157,6 +163,7 @@ def remove_skill(index: dict[str, Any], skill_id: str) -> bool:
 
 
 # ---------------- skill-meta.yaml（skill 级详情） ----------------
+
 
 def skill_id(meta: dict[str, Any]) -> str:
     """由 skill-meta 推导唯一 id = ``owner/repo/[category/]name``。"""

@@ -1,0 +1,14 @@
+# skill 级元数据 · 由 scripts 自动维护，请谨慎手改
+
+name: writing-for-agents
+source:
+  owner: mattpocock
+  repo: skills
+  category: productivity
+  path_in_repo: skills/productivity/writing-for-agents
+upstream_branch: main
+upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
+version: 1.0.0
+last_synced_at: '2026-08-24'
+risk: clean
+description_zh: ''
