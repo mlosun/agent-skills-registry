@@ -1,0 +1,1 @@
+"""registry scripts 包。"""
