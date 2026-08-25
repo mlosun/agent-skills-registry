@@ -77,7 +77,7 @@ rules:
       - type: regex
         pattern: '\bAKIA[0-9A-Z]{16}'
       - type: regex
-        pattern: '-----BEGIN [A-Z ]*PRIVATE KEY-----'
+        pattern: "-----BEGIN [A-Z ]*PRIVATE KEY-----"
       - type: regex
         pattern: >-
           (password|passwd|api_key|apikey|secret|token)\s*=\s*["\x27]?[^"\x27\s]{8,}
@@ -111,7 +111,7 @@ rules:
         pattern: >-
           (show|print|reveal|give)\s+(me\s+)?your\s+system\s+(prompt|instructions)
       - type: regex
-        pattern: 'self[-_ ]?(replicat|improv|evolv|modify)'
+        pattern: "self[-_ ]?(replicat|improv|evolv|modify)"
     suggestion: 文档含操纵性指令/疑似 prompt 注入，需人工判定
 
   # ---- R5 依赖来源 · warn · 配置/脚本 ----

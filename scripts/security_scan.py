@@ -11,6 +11,7 @@
 阶段3 决策：high 不阻止入库（由后续人工流程处理），本脚本只负责
 「打标签 + 出报告」；import.py 调用本模块并把 risk 写进 skill-meta.yaml。
 """
+
 from __future__ import annotations
 
 import argparse
@@ -26,16 +27,60 @@ import yaml
 from .lib.index import repo_root
 
 # ---- 文件类型判定 ----
-_SCRIPT_EXTS = {".sh", ".bash", ".zsh", ".py", ".js", ".ts", ".rb", ".pl", ".php", ".go", ".rs"}
+_SCRIPT_EXTS = {
+    ".sh",
+    ".bash",
+    ".zsh",
+    ".py",
+    ".js",
+    ".ts",
+    ".rb",
+    ".pl",
+    ".php",
+    ".go",
+    ".rs",
+}
 _DOC_EXTS = {".md", ".markdown", ".txt", ".rst"}
 _CONFIG_EXTS = {".yaml", ".yml", ".json", ".toml", ".ini", ".cfg"}
-_SPECIAL_CONFIG = {"dockerfile", "makefile", "requirements.txt", "package.json", "pyproject.toml"}
+_SPECIAL_CONFIG = {
+    "dockerfile",
+    "makefile",
+    "requirements.txt",
+    "package.json",
+    "pyproject.toml",
+}
 
 # 跳过目录：测试夹具/示例/隐藏目录/依赖安装目录（§2.5.2 排除项，白名单可配置）
-_SKIP_DIRS = {".git", ".github", "node_modules", "venv", ".venv", "__pycache__",
-              "test", "tests", "fixtures", "fixture", "examples", "example", "samples"}
-_SKIP_EXTS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".svg", ".pdf",
-              ".woff", ".woff2", ".ttf", ".lock", ".pyc"}
+_SKIP_DIRS = {
+    ".git",
+    ".github",
+    "node_modules",
+    "venv",
+    ".venv",
+    "__pycache__",
+    "test",
+    "tests",
+    "fixtures",
+    "fixture",
+    "examples",
+    "example",
+    "samples",
+}
+_SKIP_EXTS = {
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".webp",
+    ".ico",
+    ".svg",
+    ".pdf",
+    ".woff",
+    ".woff2",
+    ".ttf",
+    ".lock",
+    ".pyc",
+}
 
 # 每规则每文件最多记录/显示前 N 处命中，防报告爆炸
 _MAX_HITS_PER_RULE_PER_FILE = 5
@@ -78,6 +123,7 @@ class ScanResult:
 
 # ---------------- 规则加载 ----------------
 
+
 def load_rules(path: Path | None = None) -> list[dict[str, Any]]:
     """从 rules.yaml 加载规则列表。path 缺省用仓库根 rules.yaml。"""
     p = path or (repo_root() / "rules.yaml")
@@ -102,6 +148,7 @@ def _compile_rule(rule: dict[str, Any]) -> dict[str, Any]:
 
 # ---------------- 文件类型 ----------------
 
+
 def _classify(path: Path) -> set[str]:
     """判定文件适用的类型集合。"""
     name = path.name.lower()
@@ -122,7 +169,10 @@ def _classify(path: Path) -> set[str]:
 
 # ---------------- 扫描 ----------------
 
-def scan_skill(skill_dir: Path, rules: list[dict[str, Any]] | None = None) -> ScanResult:
+
+def scan_skill(
+    skill_dir: Path, rules: list[dict[str, Any]] | None = None
+) -> ScanResult:
     """扫描一个 skill 目录，返回聚合结果。"""
     rules = rules if rules is not None else load_rules()
     compiled = [_compile_rule(r) for r in rules]
@@ -134,7 +184,10 @@ def scan_skill(skill_dir: Path, rules: list[dict[str, Any]] | None = None) -> Sc
             continue
         rel = path.relative_to(skill_dir).as_posix()
         parts = path.relative_to(skill_dir).parts
-        if any(p in _SKIP_DIRS for p in parts[:-1]) or path.suffix.lower() in _SKIP_EXTS:
+        if (
+            any(p in _SKIP_DIRS for p in parts[:-1])
+            or path.suffix.lower() in _SKIP_EXTS
+        ):
             skipped += 1
             continue
         if path.name in ("skill-meta.yaml", "security-report.md"):
@@ -147,13 +200,17 @@ def scan_skill(skill_dir: Path, rules: list[dict[str, Any]] | None = None) -> Sc
             if "all" not in ftypes and not (types & set(ftypes)):
                 continue
             hits = _scan_file(path, rel, rule, types)
-            findings.extend(hits[: _MAX_HITS_PER_RULE_PER_FILE])
+            findings.extend(hits[:_MAX_HITS_PER_RULE_PER_FILE])
 
     risk = _aggregate(findings)
-    return ScanResult(risk=risk, findings=findings, scanned_files=scanned, skipped_files=skipped)
+    return ScanResult(
+        risk=risk, findings=findings, scanned_files=scanned, skipped_files=skipped
+    )
 
 
-def _scan_file(path: Path, rel: str, rule: dict[str, Any], types: set[str]) -> list[Finding]:
+def _scan_file(
+    path: Path, rel: str, rule: dict[str, Any], types: set[str]
+) -> list[Finding]:
     """对单个文件套一条规则，返回命中（最多每 matcher 前 N 处）。"""
     try:
         lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
@@ -170,8 +227,17 @@ def _scan_file(path: Path, rel: str, rule: dict[str, Any], types: set[str]) -> l
                 m = rx.search(line)
                 if m:
                     snippet = m.group(0).strip() or line.strip()
-                    hits.append(Finding(rule["id"], rule["name"], rule["severity"],
-                                        rel, i, snippet, rule.get("suggestion", "")))
+                    hits.append(
+                        Finding(
+                            rule["id"],
+                            rule["name"],
+                            rule["severity"],
+                            rel,
+                            i,
+                            snippet,
+                            rule.get("suggestion", ""),
+                        )
+                    )
                     count += 1
                     if count >= _MAX_HITS_PER_RULE_PER_FILE:
                         break
@@ -181,11 +247,17 @@ def _scan_file(path: Path, rel: str, rule: dict[str, Any], types: set[str]) -> l
             if scope == "same_line":
                 for i, line in enumerate(lines, start=1):
                     if matcher["_rx_a"].search(line) and matcher["_rx_b"].search(line):
-                        hits.append(Finding(
-                            rule["id"], rule["name"], rule["severity"],
-                            rel, i, "组合(同行): a 与 b 同现",
-                            rule.get("suggestion", ""),
-                        ))
+                        hits.append(
+                            Finding(
+                                rule["id"],
+                                rule["name"],
+                                rule["severity"],
+                                rel,
+                                i,
+                                "组合(同行): a 与 b 同现",
+                                rule.get("suggestion", ""),
+                            )
+                        )
                         break
             else:
                 text = "\n".join(lines)
@@ -193,16 +265,33 @@ def _scan_file(path: Path, rel: str, rule: dict[str, Any], types: set[str]) -> l
                 mb = matcher["_rx_b"].search(text)
                 if ma and mb:
                     line_no = text.count("\n", 0, ma.start()) + 1
-                    hits.append(Finding(rule["id"], rule["name"], rule["severity"],
-                                        rel, line_no, f"组合: {ma.group(0)!r} + {mb.group(0)!r}",
-                                        rule.get("suggestion", "")))
+                    hits.append(
+                        Finding(
+                            rule["id"],
+                            rule["name"],
+                            rule["severity"],
+                            rel,
+                            line_no,
+                            f"组合: {ma.group(0)!r} + {mb.group(0)!r}",
+                            rule.get("suggestion", ""),
+                        )
+                    )
         else:  # literal
             needle = matcher.get("value", "")
             count = 0
             for i, line in enumerate(lines, start=1):
                 if needle in line:
-                    hits.append(Finding(rule["id"], rule["name"], rule["severity"],
-                                        rel, i, needle, rule.get("suggestion", "")))
+                    hits.append(
+                        Finding(
+                            rule["id"],
+                            rule["name"],
+                            rule["severity"],
+                            rel,
+                            i,
+                            needle,
+                            rule.get("suggestion", ""),
+                        )
+                    )
                     count += 1
                     if count >= _MAX_HITS_PER_RULE_PER_FILE:
                         break
@@ -219,6 +308,7 @@ def _aggregate(findings: list[Finding]) -> str:
 
 
 # ---------------- 报告 ----------------
+
 
 def render_report(skill_name: str, result: ScanResult) -> str:
     """渲染 markdown 扫描报告文本。"""
@@ -259,10 +349,15 @@ def write_report(skill_dir: Path, result: ScanResult) -> Path:
 
 # ---------------- CLI ----------------
 
+
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="security_scan", description="扫描 skill 目录安全性")
+    parser = argparse.ArgumentParser(
+        prog="security_scan", description="扫描 skill 目录安全性"
+    )
     parser.add_argument("skill_dir", help="要扫描的 skill 目录")
-    parser.add_argument("--no-report", action="store_true", help="不写 security-report.md")
+    parser.add_argument(
+        "--no-report", action="store_true", help="不写 security-report.md"
+    )
     parser.add_argument("--rules", help="自定义 rules.yaml 路径")
     args = parser.parse_args(argv)
 
