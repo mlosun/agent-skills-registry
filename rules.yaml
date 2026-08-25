@@ -1,0 +1,110 @@
+# registry 安全扫描规则库
+#
+# 由 scripts/security_scan.py 消费。增删规则只改本文件，不改代码。
+#
+# 规则字段：
+#   id         规则编号（R1..R5）
+#   name       规则名
+#   severity   block（命中→risk: high）/ warn（命中→risk: medium）
+#   file_types 适用文件类型：all / script / doc / config / executable（见 security_scan.py 的类型判定）
+#   matchers   匹配器列表
+#     - type: literal   子串匹配；value: 待匹配字符串
+#     - type: regex     正则匹配；pattern: 正则表达式（re.search，忽略大小写）
+#     - type: pair      组合检测（同文件内 a 与 b 都命中才触发，用于外传组合）
+#   suggestion 命中时给维护者的建议文本
+#
+# 风险结论：任一 block 命中 → high；仅 warn 命中 → medium；无命中 → clean。
+# （high 不阻止入库，由人工后续处理——见阶段 3 决策记录。）
+
+version: 1
+rules:
+  # ---- R1 危险命令 · block · 脚本/命令串 ----
+  - id: R1
+    name: dangerous-command
+    severity: block
+    file_types: [script, executable]
+    matchers:
+      - type: regex
+        pattern: 'rm\s+(-[a-zA-Z]+\s+)*/?\s*$|rm\s+-rf\s+/'
+      - type: regex
+        pattern: '\bsudo\b'
+      - type: regex
+        pattern: '(curl|wget)\s+[^|;&]*\|\s*(bash|sh|zsh)'
+      - type: regex
+        pattern: 'base64\s+-\s*d'
+      - type: regex
+        pattern: '\beval\s*\('
+      - type: regex
+        pattern: 'mkfs\.'
+      - type: regex
+        pattern: '\bdd\s+if=/dev/'
+      - type: regex
+        pattern: 'chmod\s+-R\s*777'
+      - type: regex
+        pattern: '>\s*/etc/'
+      - type: regex
+        pattern: '\bcrontab\b'
+    suggestion: 脚本含高危命令，需人工确认是否为正常运维逻辑
+
+  # ---- R2 敏感凭据 · block · 全部文件 ----
+  - id: R2
+    name: sensitive-credentials
+    severity: block
+    file_types: [all]
+    matchers:
+      - type: regex
+        pattern: '\bsk-[A-Za-z0-9]{20,}'
+      - type: regex
+        pattern: '\bghp_[A-Za-z0-9]{20,}'
+      - type: regex
+        pattern: '\bxox[bp]-[A-Za-z0-9-]+'
+      - type: regex
+        pattern: '\bAKIA[0-9A-Z]{16}'
+      - type: regex
+        pattern: '-----BEGIN [A-Z ]*PRIVATE KEY-----'
+      - type: regex
+        pattern: >-
+          (password|passwd|api_key|apikey|secret|token)\s*=\s*["\x27]?[^"\x27\s]{8,}
+    suggestion: 疑似硬编码敏感凭据，需确认是否真实密钥
+
+  # ---- R3 数据外传组合 · warn · 脚本 ----
+  - id: R3
+    name: data-exfiltration
+    severity: warn
+    file_types: [script]
+    matchers:
+      - type: pair
+        a: '(cat|type|read)\s+[~/]|curl\s+-d\s*@|cat\s+~?/?\.ssh'
+        b: >-
+          (curl|wget)\s|requests\.(post|put)|urllib|socket\.|pastebin|webhook\.site|requestbin
+    suggestion: 存在"读取本地文件 + 发送远程"的组合，可能是数据外传，需人工复核
+
+  # ---- R4 操纵性指令（prompt 注入）· block · 文档/提示词 ----
+  - id: R4
+    name: manipulative-instruction
+    severity: block
+    file_types: [doc]
+    matchers:
+      - type: regex
+        pattern: 'ignore\s+(all\s+)?previous instructions'
+      - type: regex
+        pattern: '忽略\s*之前\s*指令|无视\s*(以上|之前的)\s*(指令|规则|要求)'
+      - type: regex
+        pattern: 'ignore\s+(the\s+)?(system|your)\s+(prompt|instructions|rules)'
+      - type: regex
+        pattern: '(show|print|reveal|give)\s+(me\s+)?your\s+system\s+(prompt|instructions)'
+      - type: regex
+        pattern: 'self[-_ ]?(replicat|improv|evolv|modify)'
+    suggestion: 文档含操纵性指令/疑似 prompt 注入，需人工判定
+
+  # ---- R5 依赖来源 · warn · 配置/脚本 ----
+  - id: R5
+    name: dependency-source
+    severity: warn
+    file_types: [config, script]
+    matchers:
+      - type: regex
+        pattern: 'https?://gist\.github\.com/'
+      - type: regex
+        pattern: '(curl|wget)\s+[^|]*\|\s*(bash|sh).*https?://'
+    suggestion: 依赖/安装脚本指向非官方来源，供应链风险，需人工确认

@@ -1,7 +1,7 @@
 # registry 装订页 · schema v1 · 由 scripts 自动维护，勿手改
 
 version: 1
-updated_at: '2026-08-24T14:58:34+00:00'
+updated_at: '2026-08-25T01:52:28+00:00'
 skills:
 - id: mattpocock/skills/engineering/ask-matt
   name: ask-matt

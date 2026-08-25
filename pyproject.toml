@@ -1,0 +1,15 @@
+[project]
+name = "agent-skills-registry"
+version = "0.1.0"
+description = "精选 AI Agent Skills 源仓库（纯镜像 + 维护脚本）"
+requires-python = ">=3.10"
+
+[tool.pyright]
+# 以仓库根作为包解析根，避免 Pyright 从单文件解析时找不到 scripts 包
+pythonVersion = "3.10"
+include = ["scripts", "rules.yaml"]
+exclude = ["**/.git/**"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"

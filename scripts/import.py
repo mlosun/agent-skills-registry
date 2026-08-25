@@ -15,6 +15,7 @@
 in-progress/deprecated 等半成品分类；已存在默认温和跳过（--force 覆盖）；
 首次入库 version 恒为 1.0.0。
 """
+
 from __future__ import annotations
 
 import argparse
@@ -29,7 +30,7 @@ from typing import Any
 
 import yaml
 
-from scripts.lib.index import (
+from .lib.index import (
     load_index,
     repo_root,
     row_from_meta,
@@ -37,21 +38,34 @@ from scripts.lib.index import (
     save_meta,
     upsert_skill,
 )
+from .security_scan import scan_skill, write_report
 
 # ---- 常量 ----
 # 半成品/废弃分类：默认跳过，--include-drafts 时入库
-DRAFT_DIRS = {"in-progress", "deprecated", "wip", "experimental", "draft", "_draft", "archive"}
+DRAFT_DIRS = {
+    "in-progress",
+    "deprecated",
+    "wip",
+    "experimental",
+    "draft",
+    "_draft",
+    "archive",
+}
 FIRST_VERSION = "1.0.0"
 
 # 匹配 owner/repo，兼容前导 https://github.com/ 与尾部 .git
-_REPO_RE = re.compile(r"^(?:https?://github\.com/)?([A-Za-z0-9_-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?/?$")
+_REPO_RE = re.compile(
+    r"^(?:https?://github\.com/)?([A-Za-z0-9_-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?/?$"
+)
 
 
 def parse_repo(arg: str) -> tuple[str, str]:
     """把 URL 或 ``owner/repo`` 解析成 (owner, repo)。"""
     m = _REPO_RE.match(arg.strip())
     if not m:
-        raise ValueError(f"无法解析的仓库：{arg!r}（期望 https://github.com/owner/repo 或 owner/repo）")
+        raise ValueError(
+            f"无法解析的仓库：{arg!r}（期望 https://github.com/owner/repo 或 owner/repo）"
+        )
     return m.group(1), m.group(2)
 
 
@@ -60,16 +74,25 @@ def _clone_repo(owner: str, repo: str, dest: Path) -> tuple[str, str]:
     url = f"https://github.com/{owner}/{repo}.git"
     subprocess.run(
         ["git", "clone", "--depth", "1", url, str(dest)],
-        check=True, capture_output=True, text=True,
+        check=True,
+        capture_output=True,
+        text=True,
     )
     sha = subprocess.run(
         ["git", "-C", str(dest), "rev-parse", "HEAD"],
-        check=True, capture_output=True, text=True,
+        check=True,
+        capture_output=True,
+        text=True,
     ).stdout.strip()
-    branch = subprocess.run(
-        ["git", "-C", str(dest), "rev-parse", "--abbrev-ref", "HEAD"],
-        check=True, capture_output=True, text=True,
-    ).stdout.strip() or "main"
+    branch = (
+        subprocess.run(
+            ["git", "-C", str(dest), "rev-parse", "--abbrev-ref", "HEAD"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        or "main"
+    )
     return sha, branch
 
 
@@ -105,18 +128,26 @@ def _discover(clone: Path, include_drafts: bool) -> list[dict[str, Any]]:
         category_parts = rest[:-1]
         if not include_drafts and any(c in DRAFT_DIRS for c in category_parts):
             continue  # 默认跳过半成品/废弃分类
-        found.append({
-            "src_dir": sk.parent,
-            "rel_dir": rel_dir.as_posix(),
-            "name": name,
-            "category_parts": category_parts,
-            "container": container,
-        })
+        found.append(
+            {
+                "src_dir": sk.parent,
+                "rel_dir": rel_dir.as_posix(),
+                "name": name,
+                "category_parts": category_parts,
+                "container": container,
+            }
+        )
     return found
 
 
-def _copy_category_readme(root: Path, owner: str, repo: str, clone: Path,
-                          category_parts: list[str], container: bool) -> None:
+def _copy_category_readme(
+    root: Path,
+    owner: str,
+    repo: str,
+    clone: Path,
+    category_parts: list[str],
+    container: bool,
+) -> None:
     """若来源分类目录下存在 README.md，原样保留到 registry 对应分类。"""
     if not category_parts:
         return
@@ -131,8 +162,15 @@ def _copy_category_readme(root: Path, owner: str, repo: str, clone: Path,
         shutil.copy2(src_reader, dest)
 
 
-def import_repo(root: Path, owner: str, repo: str, *,
-                include_drafts: bool, force: bool, dry_run: bool) -> dict[str, Any]:
+def import_repo(
+    root: Path,
+    owner: str,
+    repo: str,
+    *,
+    include_drafts: bool,
+    force: bool,
+    dry_run: bool,
+) -> dict[str, Any]:
     """导入一个仓库，返回统计 {added, skipped, failed}。"""
     stats = {"added": [], "skipped": [], "failed": []}
 
@@ -158,23 +196,44 @@ def import_repo(root: Path, owner: str, repo: str, *,
             cp = sk["category_parts"]
             sid_path = "/".join([owner, repo] + cp + [sk["name"]])
             try:
-                _import_one(root, clone, owner, repo, sha, branch, sk,
-                            force=force, dry_run=dry_run, stats=stats)
+                _import_one(
+                    root,
+                    clone,
+                    owner,
+                    repo,
+                    sha,
+                    branch,
+                    sk,
+                    force=force,
+                    dry_run=dry_run,
+                    stats=stats,
+                )
             except Exception as exc:  # noqa: BLE001 —— 单 skill 失败不影响其余
                 stats["failed"].append((sid_path, f"{type(exc).__name__}: {exc}"))
 
         # 分类 README 保留（非演练时）
         if not dry_run:
             for sk in skills:
-                _copy_category_readme(root, owner, repo, clone,
-                                      sk["category_parts"], sk["container"])
+                _copy_category_readme(
+                    root, owner, repo, clone, sk["category_parts"], sk["container"]
+                )
 
     return stats
 
 
-def _import_one(root: Path, clone: Path, owner: str, repo: str, sha: str, branch: str,
-                sk: dict[str, Any], *, force: bool, dry_run: bool,
-                stats: dict[str, Any]) -> None:
+def _import_one(
+    root: Path,
+    clone: Path,
+    owner: str,
+    repo: str,
+    sha: str,
+    branch: str,
+    sk: dict[str, Any],
+    *,
+    force: bool,
+    dry_run: bool,
+    stats: dict[str, Any],
+) -> None:
     """导入单个 skill：校验→复制→写 meta→更新 index。"""
     cp = sk["category_parts"]
     sid = "/".join([owner, repo] + cp + [sk["name"]])
@@ -206,6 +265,11 @@ def _import_one(root: Path, clone: Path, owner: str, repo: str, sha: str, branch
             raise RuntimeError(f"无法清空旧目录 {dest_dir}: {exc}") from exc
     shutil.copytree(sk["src_dir"], dest_dir)
 
+    # 安全扫描：high 不阻止入库，只打 risk 标签 + 生成 security-report.md
+    scan_result = scan_skill(dest_dir)
+    risk = scan_result.risk
+    write_report(dest_dir, scan_result)
+
     meta = {
         "name": sk["name"],
         "source": {
@@ -218,20 +282,25 @@ def _import_one(root: Path, clone: Path, owner: str, repo: str, sha: str, branch
         "upstream_sha": sha,
         "version": FIRST_VERSION,
         "last_synced_at": str(date.today()),
-        "risk": "clean",  # 阶段3 安全扫描接入后据此重写
+        "risk": risk,
         "description_zh": "",
     }
     save_meta(root, sid, meta)
     upsert_skill(index, row_from_meta(meta))
     save_index(index, root)
-    stats["added"].append((sid, "已入库 v1.0.0"))
+    stats["added"].append((sid, f"已入库 v1.0.0（risk={risk}）"))
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="import", description="把 GitHub skills 入库 registry")
+    parser = argparse.ArgumentParser(
+        prog="import", description="把 GitHub skills 入库 registry"
+    )
     parser.add_argument("repos", nargs="+", help="GitHub URL 或 owner/repo")
-    parser.add_argument("--include-drafts", action="store_true",
-                        help="连 in-progress/deprecated 等半成品分类一起入库")
+    parser.add_argument(
+        "--include-drafts",
+        action="store_true",
+        help="连 in-progress/deprecated 等半成品分类一起入库",
+    )
     parser.add_argument("--force", action="store_true", help="同 id 已存在则覆盖重入")
     parser.add_argument("--dry-run", "-n", action="store_true", help="演练，不写盘")
     args = parser.parse_args(argv)
@@ -243,11 +312,18 @@ def main(argv: list[str] | None = None) -> int:
         except ValueError as exc:
             print(f"✗ {exc}")
             continue
-        print(f"\n==> 导入 {owner}/{repo}（include_drafts={args.include_drafts}, "
-              f"force={args.force}, dry_run={args.dry_run}）")
-        stats = import_repo(root, owner, repo,
-                            include_drafts=args.include_drafts,
-                            force=args.force, dry_run=args.dry_run)
+        print(
+            f"\n==> 导入 {owner}/{repo}（include_drafts={args.include_drafts}, "
+            f"force={args.force}, dry_run={args.dry_run}）"
+        )
+        stats = import_repo(
+            root,
+            owner,
+            repo,
+            include_drafts=args.include_drafts,
+            force=args.force,
+            dry_run=args.dry_run,
+        )
         for sid, msg in stats["added"]:
             print(f"  + {sid}  {msg}")
         for sid, msg in stats["skipped"]:
