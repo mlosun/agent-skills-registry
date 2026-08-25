@@ -28,8 +28,6 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-import yaml
-
 from .lib.index import (
     load_index,
     repo_root,
@@ -38,6 +36,7 @@ from .lib.index import (
     save_meta,
     upsert_skill,
 )
+from .lib.skillfile import read_frontmatter
 from .security_scan import scan_skill, write_report
 
 # ---- 常量 ----
@@ -94,21 +93,6 @@ def _clone_repo(owner: str, repo: str, dest: Path) -> tuple[str, str]:
         or "main"
     )
     return sha, branch
-
-
-def _read_frontmatter(skill_md: Path) -> dict[str, Any] | None:
-    """解析 SKILL.md 的 YAML frontmatter；缺失或无法解析返回 None。"""
-    text = skill_md.read_text(encoding="utf-8", errors="replace")
-    if not text.startswith("---"):
-        return None
-    end = text.find("\n---", 3)
-    if end == -1:
-        return None
-    try:
-        data = yaml.safe_load(text[3:end]) or {}
-        return data if isinstance(data, dict) else None
-    except yaml.YAMLError:
-        return None
 
 
 def _discover(clone: Path, include_drafts: bool) -> list[dict[str, Any]]:
@@ -247,7 +231,7 @@ def _import_one(
 
     # 校验 SKILL.md frontmatter（必须可解析）
     skill_md = sk["src_dir"] / "SKILL.md"
-    frontmatter = _read_frontmatter(skill_md)
+    frontmatter = read_frontmatter(skill_md)
     if frontmatter is None:
         stats["failed"].append((sid, "SKILL.md 缺少可解析的 frontmatter"))
         return
