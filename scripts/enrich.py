@@ -16,6 +16,7 @@
 时段护栏与 translate.py 相同（DeepSeek 峰谷定价：工作日 09-12/14-18 全价拒绝，
 其余含周末 5 折）。
 """
+
 from __future__ import annotations
 
 import argparse
@@ -57,6 +58,7 @@ JSON 示例：
 
 
 # ---------------- LLM 调用 ----------------
+
 
 def enrich_one_call(
     name: str,
@@ -146,6 +148,7 @@ def _parse_result(text: str, name: str) -> dict[str, Any]:
 
 # ---------------- 主流程 ----------------
 
+
 def find_pending_skills(root: Path) -> list[tuple[str, Path]]:
     """扫描所有 skill-meta.yaml，返回需要内容化的 (skill_id, meta_path)。
 
@@ -190,18 +193,25 @@ def enrich_skill(
         return sid, f"✓ 待处理（{' + '.join(what)}）"
 
     result = enrich_one_call(
-        name, description, api_key=api_key, model=model,
-        base_url=base_url, need_desc=need_desc,
+        name,
+        description,
+        api_key=api_key,
+        model=model,
+        base_url=base_url,
+        need_desc=need_desc,
     )
     meta["recommendation"] = result["recommendation"]
     meta["tags"] = result["tags"]
     if need_desc and result["description_zh"]:
         meta["description_zh"] = result["description_zh"]
     save_meta(root, sid, meta)
-    return sid, f"✓ 已生成推荐 + {len(result['tags'])} 标签" + (" + 中文" if need_desc else "")
+    return sid, f"✓ 已生成推荐 + {len(result['tags'])} 标签" + (
+        " + 中文" if need_desc else ""
+    )
 
 
 # ---------------- CLI ----------------
+
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
@@ -212,7 +222,9 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--dry-run", "-n", action="store_true", help="预览，不调用 API")
     parser.add_argument("--force", action="store_true", help="高峰时段强制运行")
-    parser.add_argument("--model", default=DEFAULT_MODEL, help=f"模型（默认 {DEFAULT_MODEL}）")
+    parser.add_argument(
+        "--model", default=DEFAULT_MODEL, help=f"模型（默认 {DEFAULT_MODEL}）"
+    )
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="API 地址")
     parser.add_argument(
         "--interval",
@@ -259,8 +271,12 @@ def main(argv: list[str] | None = None) -> int:
     for i, (sid, _mp) in enumerate(pending, start=1):
         try:
             _, msg = enrich_skill(
-                root, sid, api_key=api_key, model=args.model,
-                base_url=args.base_url, dry_run=args.dry_run,
+                root,
+                sid,
+                api_key=api_key,
+                model=args.model,
+                base_url=args.base_url,
+                dry_run=args.dry_run,
             )
             print(f"  [{i}/{len(pending)}] {sid}  {msg}")
             ok += 1
@@ -270,7 +286,10 @@ def main(argv: list[str] | None = None) -> int:
         if i < len(pending):
             time.sleep(args.interval)
 
-    print(f"\n完成：成功 {ok}，失败 {fail}" + ("（演练模式，未写盘）" if args.dry_run else ""))
+    print(
+        f"\n完成：成功 {ok}，失败 {fail}"
+        + ("（演练模式，未写盘）" if args.dry_run else "")
+    )
     return 0 if fail == 0 else 1
 
 

@@ -5,6 +5,7 @@
 
 覆盖：JSON 解析容错、幂等扫描、LLM 调用构造（mock 网络，不真连）。
 """
+
 from __future__ import annotations
 
 import tempfile
@@ -30,7 +31,8 @@ def _mk_meta(path: Path, *, has_rec: bool = False, has_tags: bool = False) -> No
 
 def test_parse_result_normal() -> None:
     r = _parse_result(
-        '{"description_zh":"测试","recommendation":"值得装","tags":["编码","审查"]}', "x"
+        '{"description_zh":"测试","recommendation":"值得装","tags":["编码","审查"]}',
+        "x",
     )
     assert r["recommendation"] == "值得装"
     assert r["tags"] == ["编码", "审查"]
@@ -38,7 +40,8 @@ def test_parse_result_normal() -> None:
 
 def test_parse_result_codeblock() -> None:
     r = _parse_result(
-        '```json\n{"description_zh":"a","recommendation":"b","tags":["x","y"]}\n```', "x"
+        '```json\n{"description_zh":"a","recommendation":"b","tags":["x","y"]}\n```',
+        "x",
     )
     assert r["recommendation"] == "b"
     assert r["tags"] == ["x", "y"]
@@ -46,7 +49,8 @@ def test_parse_result_codeblock() -> None:
 
 def test_parse_result_extra_text() -> None:
     r = _parse_result(
-        '好的，这是结果：{"recommendation":"推荐","tags":["z"],"description_zh":""}', "x"
+        '好的，这是结果：{"recommendation":"推荐","tags":["z"],"description_zh":""}',
+        "x",
     )
     assert r["recommendation"] == "推荐"
 
@@ -80,9 +84,11 @@ def test_enrich_one_call_payload() -> None:
         def read(self):
             # 用 json.dumps 构造含中文的响应体，避免 bytes 字面量非 ASCII
             inner = '{"description_zh":"","recommendation":"\u63a8\u8350","tags":["a"]}'
-            return json.dumps({
-                "choices": [{"message": {"content": inner}}],
-            }).encode("utf-8")
+            return json.dumps(
+                {
+                    "choices": [{"message": {"content": inner}}],
+                }
+            ).encode("utf-8")
 
     def fake_urlopen(req, timeout):
         captured["url"] = req.full_url
@@ -98,7 +104,10 @@ def test_enrich_one_call_payload() -> None:
 
     with mock.patch("scripts.enrich.urllib.request.urlopen", side_effect=fake_urlopen):
         r = enrich_one_call(
-            "x", "desc", api_key="sk-key", model="deepseek-chat",
+            "x",
+            "desc",
+            api_key="sk-key",
+            model="deepseek-chat",
             base_url="https://api.deepseek.com/v1/chat/completions",
             need_desc=True,
         )
@@ -114,10 +123,14 @@ def test_find_pending_skills() -> None:
     d2 = root / "skills" / "o" / "r" / "b"
     d1.mkdir(parents=True)
     d2.mkdir(parents=True)
-    (d1 / "SKILL.md").write_text('---\nname: a\ndescription: "D"\n---\n', encoding="utf-8")
-    (d2 / "SKILL.md").write_text('---\nname: b\ndescription: "D"\n---\n', encoding="utf-8")
-    _mk_meta(d1 / "skill-meta.yaml", has_rec=True, has_tags=True)   # 完整 → 跳过
-    _mk_meta(d2 / "skill-meta.yaml")                                  # 缺 → 收集
+    (d1 / "SKILL.md").write_text(
+        '---\nname: a\ndescription: "D"\n---\n', encoding="utf-8"
+    )
+    (d2 / "SKILL.md").write_text(
+        '---\nname: b\ndescription: "D"\n---\n', encoding="utf-8"
+    )
+    _mk_meta(d1 / "skill-meta.yaml", has_rec=True, has_tags=True)  # 完整 → 跳过
+    _mk_meta(d2 / "skill-meta.yaml")  # 缺 → 收集
 
     pending = find_pending_skills(root)
     ids = [sid for sid, _ in pending]
