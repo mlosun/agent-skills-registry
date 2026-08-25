@@ -6,7 +6,7 @@
 ## 0. 前置条件
 
 ```bash
-cd /Users/mlosun/CNB/agent-skills-registry
+cd <本仓库目录>   # 例如 cd ~/CNB/agent-skills-registry
 python3 --version        # 需 ≥ 3.10
 python3 -c "import yaml" # 需已安装 PyYAML
 git --version            # import.py 依赖 git clone
