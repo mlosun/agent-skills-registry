@@ -15,6 +15,7 @@ from unittest import mock
 from scripts.enrich import (
     _parse_result,
     enrich_one_call,
+    enrich_skill,
     find_pending_skills,
 )
 
@@ -135,6 +136,27 @@ def test_find_pending_skills() -> None:
     pending = find_pending_skills(root)
     ids = [sid for sid, _ in pending]
     assert ids == ["o/r/b"], f"只收集缺内容的（实际 {ids}）"
+
+
+def test_enrich_skill_missing_skillmd() -> None:
+    """无 SKILL.md 的 skill：dry-run 正常列出，真实运行优雅报错而非崩溃。"""
+    root = Path(tempfile.mkdtemp(prefix="reg-enrich-"))
+    d = root / "skills" / "o" / "r" / "x"
+    d.mkdir(parents=True)
+    _mk_meta(d / "skill-meta.yaml")
+
+    sid = "o/r/x"
+    # dry-run 不崩溃
+    _, msg = enrich_skill(
+        root, sid, api_key="k", model="m", base_url="u", dry_run=True
+    )
+    assert "待处理" in msg, f"dry-run 应返回待处理（实际 {msg}）"
+    # 真实运行优雅报错
+    try:
+        enrich_skill(root, sid, api_key="k", model="m", base_url="u", dry_run=False)
+        raise AssertionError("应报缺少 description")
+    except ValueError as exc:
+        assert "缺少英文 description" in str(exc), str(exc)
 
 
 def main() -> None:
