@@ -5,6 +5,7 @@
 覆盖：峰谷时段判断边界、API key 解析优先级、LLM 调用格式、幂等扫描。
 （不实际调用 LLM API——用 monkeypatch 拦截网络。）
 """
+
 from __future__ import annotations
 
 import tempfile
@@ -52,8 +53,9 @@ def test_resolve_api_key() -> None:
         auth = Path(tmp) / "auth.json"
         auth.write_text('{"deepseek": {"key": "sk-test123"}}', encoding="utf-8")
         with mock.patch("scripts.translate.os.environ.get", return_value=""):
-            with mock.patch("scripts.translate.Path.home",
-                            return_value=Path(tmp) / ".." / ".."):  # 不实际依赖
+            with mock.patch(
+                "scripts.translate.Path.home", return_value=Path(tmp) / ".." / ".."
+            ):  # 不实际依赖
                 pass  # 环境变量分支：env 优先
         # 直接测 auth.json 解析（mock home 不可靠，改为直接测核心解析）
         got = _auth_key_from_path(auth)
@@ -80,10 +82,13 @@ def test_translate_description_payload() -> None:
         captured["body"] = req.data.decode()
         return FakeResp()
 
-    with mock.patch("scripts.translate.urllib.request.urlopen", side_effect=fake_urlopen):
+    with mock.patch(
+        "scripts.translate.urllib.request.urlopen", side_effect=fake_urlopen
+    ):
         zh = translate_description(
             "Review the code changes",
-            api_key="sk-key", model="deepseek-v4-flash",
+            api_key="sk-key",
+            model="deepseek-v4-flash",
             base_url="https://api.deepseek.com/v1/chat/completions",
         )
     _assert(zh == "中文译文", f"返回译文（实际 {zh!r}）")
@@ -99,10 +104,18 @@ def test_find_pending_skills() -> None:
     d2 = root / "skills" / "o" / "r" / "engineering" / "b"
     d1.mkdir(parents=True)
     d2.mkdir(parents=True)
-    (d1 / "SKILL.md").write_text('---\nname: a\ndescription: "AAA"\n---\n', encoding="utf-8")
-    (d2 / "SKILL.md").write_text('---\nname: b\ndescription: "BBB"\n---\n', encoding="utf-8")
-    (d1 / "skill-meta.yaml").write_text("name: a\ndescription_zh: 已有中文\n", encoding="utf-8")
-    (d2 / "skill-meta.yaml").write_text("name: b\ndescription_zh: ''\n", encoding="utf-8")
+    (d1 / "SKILL.md").write_text(
+        '---\nname: a\ndescription: "AAA"\n---\n', encoding="utf-8"
+    )
+    (d2 / "SKILL.md").write_text(
+        '---\nname: b\ndescription: "BBB"\n---\n', encoding="utf-8"
+    )
+    (d1 / "skill-meta.yaml").write_text(
+        "name: a\ndescription_zh: 已有中文\n", encoding="utf-8"
+    )
+    (d2 / "skill-meta.yaml").write_text(
+        "name: b\ndescription_zh: ''\n", encoding="utf-8"
+    )
 
     pending = find_pending_skills(root)
     ids = [sid for sid, _ in pending]

@@ -2,6 +2,7 @@
 
 集中 SKILL.md 的解析逻辑，供 import / translate 等脚本复用。
 """
+
 from __future__ import annotations
 
 from pathlib import Path

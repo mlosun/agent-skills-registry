@@ -20,6 +20,7 @@ LLM 接入（零第三方依赖，urllib 直连 DeepSeek，OpenAI 兼容协议�
 
 幂等：只翻译 ``description_zh`` 为空的 skill；已有中文的跳过，重复跑不重复消耗。
 """
+
 from __future__ import annotations
 
 import argparse
@@ -65,6 +66,7 @@ PROMPT_TEMPLATE = """你是 AI Skill 描述的翻译员。把下面的英文 ski
 
 # ---------------- 时段护栏 ----------------
 
+
 def is_peak_hour(now: datetime | None = None) -> bool:
     """判断当前北京时间的 `now`（缺省取当前时刻）是否处于高峰时段。
 
@@ -84,6 +86,7 @@ def _describe_window() -> str:
 
 
 # ---------------- LLM 接入 ----------------
+
 
 def _auth_key_from_path(auth_path: Path) -> str:
     """从给定 auth.json 路径读取 deepseek.key；不存在/损坏返回空串。"""
@@ -128,7 +131,10 @@ def translate_description(
     payload = {
         "model": model,
         "messages": [
-            {"role": "user", "content": PROMPT_TEMPLATE.format(description=description)},
+            {
+                "role": "user",
+                "content": PROMPT_TEMPLATE.format(description=description),
+            },
         ],
         "max_tokens": MAX_TOKENS,
         "temperature": 0.3,
@@ -166,6 +172,7 @@ def translate_description(
 
 
 # ---------------- 翻译主流程 ----------------
+
 
 def find_pending_skills(root: Path) -> list[tuple[str, Path]]:
     """扫描所有 skill-meta.yaml，返回需要翻译的 (skill_id, meta_path) 列表。
@@ -207,7 +214,9 @@ def translate_skill(
         return sid, "✗ SKILL.md 缺少英文 description，跳过"
     if dry_run:
         return sid, f"✓ 待翻译（{len(description)} 字符）"
-    zh = translate_description(description, api_key=api_key, model=model, base_url=base_url)
+    zh = translate_description(
+        description, api_key=api_key, model=model, base_url=base_url
+    )
     meta = load_meta(root, sid) or {}
     meta["description_zh"] = zh
     save_meta(root, sid, meta)
@@ -215,6 +224,7 @@ def translate_skill(
 
 
 # ---------------- CLI ----------------
+
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
@@ -231,7 +241,9 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="高峰时段强制运行（接受全价，不推荐）",
     )
-    parser.add_argument("--model", default=DEFAULT_MODEL, help=f"模型（默认 {DEFAULT_MODEL}）")
+    parser.add_argument(
+        "--model", default=DEFAULT_MODEL, help=f"模型（默认 {DEFAULT_MODEL}）"
+    )
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="API 地址")
     parser.add_argument(
         "--interval",
@@ -279,8 +291,12 @@ def main(argv: list[str] | None = None) -> int:
     for i, (sid, _meta_file) in enumerate(pending, start=1):
         try:
             _, msg = translate_skill(
-                root, sid, api_key=api_key, model=args.model,
-                base_url=args.base_url, dry_run=args.dry_run,
+                root,
+                sid,
+                api_key=api_key,
+                model=args.model,
+                base_url=args.base_url,
+                dry_run=args.dry_run,
             )
             print(f"  [{i}/{len(pending)}] {sid}  {msg}")
             ok += 1
@@ -290,7 +306,10 @@ def main(argv: list[str] | None = None) -> int:
         if i < len(pending):
             time.sleep(args.interval)
 
-    print(f"\n完成：成功 {ok}，失败 {fail}" + ("（演练模式，未写盘）" if args.dry_run else ""))
+    print(
+        f"\n完成：成功 {ok}，失败 {fail}"
+        + ("（演练模式，未写盘）" if args.dry_run else "")
+    )
     return 0 if fail == 0 else 1
 
 
