@@ -4,7 +4,7 @@
 
 从 GitHub 搜集 skills 入库，统一维护版本与安全标签，供 `agent-skills-manager` (asm CLI) 作为唯一安装源。
 
-> 项目定位与技术方案见 `agent-skills-studio/docs/`，架构演进见 `docs/superpowers/specs/`。
+> 项目定位与技术方案见 `agent-skills-studio/docs/`。本仓库文档导航见 [docs/README.md](docs/README.md)。
 
 ## 目录结构
 
@@ -22,8 +22,10 @@
 │   ├── security_scan.py     安全扫描引擎（rules.yaml 驱动，支持 --rescan-all）
 │   ├── translate.py         中文描述翻译（DeepSeek 非推理模型，带峰谷时段护栏）
 │   ├── enrich.py            内容化（推荐理由 + 场景标签，JSON 结构化）
-│   └── sync.py              同步上游更新（version patch+1 + 重扫）
-└── docs/                   设计定稿 + 验收清单 + 端到端报告
+│   ├── sync.py              上游同步更新（version patch+1 + 重扫）
+│   └── web.py               生成 GitHub Pages 站点
+├── web/             ← 站点产物（web.py 生成，GitHub Pages 部署，勿手改）
+└── docs/            ← 中文文档（架构/贡献/维护/决策/验收，见 docs/README.md）
 ```
 
 ## 使用
