@@ -147,9 +147,7 @@ def test_enrich_skill_missing_skillmd() -> None:
 
     sid = "o/r/x"
     # dry-run 不崩溃
-    _, msg = enrich_skill(
-        root, sid, api_key="k", model="m", base_url="u", dry_run=True
-    )
+    _, msg = enrich_skill(root, sid, api_key="k", model="m", base_url="u", dry_run=True)
     assert "待处理" in msg, f"dry-run 应返回待处理（实际 {msg}）"
     # 真实运行优雅报错
     try:
