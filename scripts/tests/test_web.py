@@ -5,6 +5,7 @@
 
 覆盖：站点生成、数据完整性、JSON 有效性、risk 颜色映射注入。
 """
+
 from __future__ import annotations
 
 import json
@@ -21,7 +22,7 @@ def _make_skill_dir(root: Path, sid: str, *, risk: str = "clean") -> None:
         f'---\nname: {sid.split("/")[-1]}\ndescription: "desc"\n---\n', encoding="utf-8"
     )
     (d / "skill-meta.yaml").write_text(
-        f'name: {sid.split("/")[-1]}\n'
+        f"name: {sid.split('/')[-1]}\n"
         "source:\n  owner: o\n  repo: r\n"
         "upstream_sha: abc1234\nversion: 1.0.0\nlast_synced_at: '2026-08-25'\n"
         f"risk: {risk}\ndescription_zh: 中文\nrecommendation: 推荐\n"
@@ -62,8 +63,17 @@ def test_skills_data_complete() -> None:
     data = json.loads((root / "docs" / "skills-data.json").read_text())
     assert len(data) == 1
     s = data[0]
-    for field in ["id", "name", "repo", "category", "version", "risk",
-                  "description_zh", "recommendation", "tags"]:
+    for field in [
+        "id",
+        "name",
+        "repo",
+        "category",
+        "version",
+        "risk",
+        "description_zh",
+        "recommendation",
+        "tags",
+    ]:
         assert field in s, f"缺字段 {field}"
     assert s["risk"] == "clean"
     assert s["tags"] == ["标签1", "标签2"]

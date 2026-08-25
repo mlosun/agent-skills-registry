@@ -12,6 +12,7 @@
 数据来源：index.yaml（id/name/version/risk/category）+ 各 skill-meta.yaml（描述/推荐/标签/来源/SHA）。
 零第三方依赖，仅标准库。
 """
+
 from __future__ import annotations
 
 import json
@@ -266,21 +267,27 @@ def build_site(root: Path) -> dict[str, Any]:
     skills: list[dict[str, Any]] = []
     for row in sorted(index.get("skills", []), key=lambda r: r.get("id", "")):
         meta_path = root / "skills" / row["id"] / "skill-meta.yaml"
-        meta = yaml.safe_load(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
+        meta = (
+            yaml.safe_load(meta_path.read_text(encoding="utf-8"))
+            if meta_path.exists()
+            else {}
+        )
         parts = row["id"].split("/")
-        skills.append({
-            "id": row["id"],
-            "name": row.get("name", parts[-1]),
-            "repo": f"{parts[0]}/{parts[1]}",
-            "category": row.get("category") or None,
-            "version": row.get("version"),
-            "risk": row.get("risk", "clean"),
-            "upstream_sha": meta.get("upstream_sha", ""),
-            "last_synced_at": meta.get("last_synced_at", ""),
-            "description_zh": meta.get("description_zh", ""),
-            "recommendation": meta.get("recommendation", ""),
-            "tags": meta.get("tags", []),
-        })
+        skills.append(
+            {
+                "id": row["id"],
+                "name": row.get("name", parts[-1]),
+                "repo": f"{parts[0]}/{parts[1]}",
+                "category": row.get("category") or None,
+                "version": row.get("version"),
+                "risk": row.get("risk", "clean"),
+                "upstream_sha": meta.get("upstream_sha", ""),
+                "last_synced_at": meta.get("last_synced_at", ""),
+                "description_zh": meta.get("description_zh", ""),
+                "recommendation": meta.get("recommendation", ""),
+                "tags": meta.get("tags", []),
+            }
+        )
 
     out_dir = root / OUTPUT_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -301,7 +308,9 @@ def build_site(root: Path) -> dict[str, Any]:
 def main(argv: list[str] | None = None) -> int:
     import argparse
 
-    parser = argparse.ArgumentParser(prog="web", description="生成 GitHub Pages 静态站点")
+    parser = argparse.ArgumentParser(
+        prog="web", description="生成 GitHub Pages 静态站点"
+    )
     parser.add_argument("--no-open", action="store_true", help="生成后不打开浏览器")
     args = parser.parse_args(argv)
 
