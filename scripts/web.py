@@ -2,12 +2,12 @@
 
 用法（在仓库根目录）::
 
-    python3 -m scripts.web                    # 生成 docs/index.html + docs/skills-data.json
+    python3 -m scripts.web                    # 生成 web/index.html + web/skills-data.json
     python3 -m scripts.web --no-open          # 生成但不尝试打开
 
-输出到 ``docs/``（GitHub Pages 从 main 分支的 docs/ 部署）：
-- ``docs/index.html``       单页应用（深色现代风：卡片网格 + 搜索 + 筛选 + 标签云 + 详情弹层）
-- ``docs/skills-data.json`` 全部 skill 的结构化数据（页面运行时 fetch）
+输出到 ``web/``（GitHub Pages 由 GitHub Actions 部署，上传该目录）：
+- ``web/index.html``        单页应用（深色现代风：卡片网格 + 搜索 + 筛选 + 标签云 + 详情弹层）
+- ``web/skills-data.json``  全部 skill 的结构化数据（页面运行时 fetch）
 
 数据来源：index.yaml（id/name/version/risk/category）+ 各 skill-meta.yaml（描述/推荐/标签/来源/SHA）。
 零第三方依赖，仅标准库。
@@ -24,8 +24,8 @@ import yaml
 
 from .lib.index import load_index, repo_root
 
-# 输出目录（相对仓库根）
-OUTPUT_DIR = "docs"
+# 输出目录（相对仓库根）——站点产物独立于文档目录
+OUTPUT_DIR = "web"
 
 RISK_LABEL = {"clean": "安全", "medium": "中风险", "high": "高风险"}
 RISK_COLOR = {"clean": "#3fb950", "medium": "#d29922", "high": "#f85149"}

@@ -51,7 +51,7 @@ jobs:
       - name: 上传站点产物
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
-          path: docs
+          path: web
 
       - name: 部署到 GitHub Pages
         id: deployment

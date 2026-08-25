@@ -50,8 +50,8 @@ def test_build_site_generates_files() -> None:
 
     stats = build_site(root)
     assert stats["total"] == 1
-    assert (root / "docs" / "index.html").exists()
-    assert (root / "docs" / "skills-data.json").exists()
+    assert (root / "web" / "index.html").exists()
+    assert (root / "web" / "skills-data.json").exists()
 
 
 def test_skills_data_complete() -> None:
@@ -60,7 +60,7 @@ def test_skills_data_complete() -> None:
     _make_index(root, ["o/r/eng/skill-a"])
 
     build_site(root)
-    data = json.loads((root / "docs" / "skills-data.json").read_text())
+    data = json.loads((root / "web" / "skills-data.json").read_text())
     assert len(data) == 1
     s = data[0]
     for field in [
@@ -85,7 +85,7 @@ def test_risk_mapping_in_html() -> None:
     _make_index(root, ["o/r/eng/skill-a"])
 
     build_site(root)
-    html = (root / "docs" / "index.html").read_text()
+    html = (root / "web" / "index.html").read_text()
     # 颜色映射注入
     for color in RISK_COLOR.values():
         assert color in html, f"缺颜色 {color}"
