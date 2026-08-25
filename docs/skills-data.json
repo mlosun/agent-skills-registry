@@ -1,0 +1,2049 @@
+[
+ {
+  "id": "mattpocock/skills/engineering/ask-matt",
+  "name": "ask-matt",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "询问哪种技能或流程适合你的情况。本仓库中技能的路由器。",
+  "recommendation": "当你不确定该用哪个技能时，ask-matt 能帮你快速找到最合适的工具，节省摸索时间，尤其适合技能库庞大、选择困难的情况。",
+  "tags": [
+   "技能推荐",
+   "路由",
+   "选择辅助"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/code-review",
+  "name": "code-review",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "审查自固定点（提交、分支、标签或合并基点）以来的变更，沿两个维度进行：标准（代码是否符合本仓库记录的编码标准？）和规格（代码是否匹配原始问题/规格的要求？）。并行运行两个子代理进行审查，并并排报告结果。当用户想要审查分支、拉取请求、进行中的更改，或要求“自X起审查”时使用。",
+  "recommendation": "适合需要同时检查代码规范与需求符合性的团队，通过并行子代理高效完成双重审查，节省时间并提升代码质量。",
+  "tags": [
+   "代码审查",
+   "并行处理",
+   "规范检查",
+   "需求验证",
+   "开发工具"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/codebase-design",
+  "name": "codebase-design",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "用于设计深度模块的共享词汇。当用户想要设计或改进模块接口、寻找深化机会、决定接缝位置、使代码更可测试或更易于AI导航，或当其他技能需要深度模块词汇时使用。",
+  "recommendation": "适合需要设计或重构模块接口、提升代码可测试性和可维护性的开发者，提供统一术语和思考框架，帮助识别模块的深度和边界。",
+  "tags": [
+   "模块设计",
+   "接口设计",
+   "代码重构",
+   "可测试性",
+   "AI辅助开发"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/diagnosing-bugs",
+  "name": "diagnosing-bugs",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "硬性缺陷和性能回退的诊断循环。当用户说“诊断”/“调试这个”，或报告某些东西损坏/抛出异常/失败/缓慢时使用。",
+  "recommendation": "适合需要系统化排查复杂问题或性能瓶颈的开发者，能提供结构化的诊断流程，避免遗漏关键步骤，提升调试效率。",
+  "tags": [
+   "调试",
+   "性能优化",
+   "问题排查",
+   "开发工具"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/domain-modeling",
+  "name": "domain-modeling",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "构建并完善项目的领域模型。在讨论代码库术语、编写或编辑CONTEXT.md，或记录或编辑ADR时使用。",
+  "recommendation": "适合需要清晰梳理项目核心概念和术语的团队，能帮助维护文档一致性，尤其适合在项目初期或重构时使用。",
+  "tags": [
+   "领域建模",
+   "文档维护",
+   "架构决策",
+   "代码库理解"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/grill-with-docs",
+  "name": "grill-with-docs",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "一场持续深入的访谈，旨在打磨计划或设计，同时沿途生成文档（ADR和术语表）。",
+  "recommendation": "适合在项目早期或设计评审阶段使用，通过结构化提问快速暴露计划漏洞，并自动产出决策记录和术语表，提升团队协作效率。",
+  "tags": [
+   "设计评审",
+   "文档生成",
+   "项目规划",
+   "团队协作"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/implement",
+  "name": "implement",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "根据规格或一组工单实施一项工作。",
+  "recommendation": "适合需要将需求或工单转化为代码的开发者，能确保实现过程规范有序，减少遗漏。",
+  "tags": [
+   "编码",
+   "需求实现",
+   "工单处理",
+   "开发流程"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/improve-codebase-architecture",
+  "name": "improve-codebase-architecture",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "扫描代码库以寻找深化机会，将其呈现为可视化HTML报告，然后针对你选择的任一机会进行深入探究。",
+  "recommendation": "适合架构重构或技术债清理前，快速定位代码库中的改进点，并以直观报告辅助决策，提升重构效率。",
+  "tags": [
+   "代码审查",
+   "架构优化",
+   "技术债",
+   "可视化报告"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/prototype",
+  "name": "prototype",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "构建一个一次性原型来回答设计问题。当用户想要验证状态模型或逻辑是否合理，或探索UI应该是什么样子时使用。",
+  "recommendation": "适合在设计阶段快速验证想法，避免在错误方向投入过多开发成本。尤其适合需要探索交互逻辑或界面方案的场景，能快速获得反馈。",
+  "tags": [
+   "原型设计",
+   "UI/UX",
+   "状态建模",
+   "快速验证"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/research",
+  "name": "research",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "针对高可信度的一手来源调查问题，并将发现结果以 Markdown 文件形式保存到仓库中。当用户需要研究某个主题、收集文档或 API 事实，或将阅读工作委托给后台代理时使用。",
+  "recommendation": "适合需要快速获取可靠资料并整理成文档的场景，能自动化研究流程，节省手动搜索和整理时间。",
+  "tags": [
+   "研究",
+   "文档整理",
+   "信息收集",
+   "自动化"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/resolving-merge-conflicts",
+  "name": "resolving-merge-conflicts",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "当您需要解决进行中的git合并/变基冲突时使用。",
+  "recommendation": "适合频繁处理 Git 合并或变基冲突的开发者，能快速定位并解决冲突，减少手动排查时间，提升协作效率。",
+  "tags": [
+   "Git",
+   "版本控制",
+   "冲突解决",
+   "开发工具",
+   "工作流"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/setup-matt-pocock-skills",
+  "name": "setup-matt-pocock-skills",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "为工程技能配置此仓库：设置其问题追踪器、分类标签词汇表和领域文档布局。在首次使用其他工程技能前运行一次。",
+  "recommendation": "适合需要系统化工程管理流程的团队，一次性初始化仓库结构，确保后续技能高效运行。",
+  "tags": [
+   "工程管理",
+   "仓库配置",
+   "初始化",
+   "工作流"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/tdd",
+  "name": "tdd",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "测试驱动开发。当用户希望以测试优先的方式构建功能或修复错误、提到“红绿重构”或需要集成测试时使用。",
+  "recommendation": "适合追求高质量代码、希望减少回归缺陷的开发者。它强制先写测试再写实现，能帮你快速验证逻辑，尤其适合需要频繁重构或集成测试的项目。",
+  "tags": [
+   "测试驱动开发",
+   "编码",
+   "测试",
+   "重构",
+   "缺陷修复"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/to-spec",
+  "name": "to-spec",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将当前对话转化为规格说明，并发布到项目问题追踪器中：无需访谈，仅综合你们已讨论的内容。",
+  "recommendation": "适合在需求讨论结束后快速生成结构化规格文档，减少手动整理时间，确保所有决策被记录。",
+  "tags": [
+   "需求管理",
+   "文档生成",
+   "项目管理"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/to-tickets",
+  "name": "to-tickets",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将计划、规格或当前对话分解为一组曳光弹工单，每个工单声明其阻塞边，并发布到配置的跟踪器（阻塞边以文本形式保存在本地每个工单的一个文件中，或在真实跟踪器上以原生阻塞链接形式呈现）。",
+  "recommendation": "适合需要将大型计划或需求快速拆解为可执行任务并跟踪依赖关系的团队，能自动生成工单并标注阻塞关系，提升任务管理效率。",
+  "tags": [
+   "任务拆解",
+   "项目管理",
+   "需求分析",
+   "工作流"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/triage",
+  "name": "triage",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "通过分诊角色的状态机推进问题和外部PR，进行分类、验证，必要时进行盘问，并编写可供代理使用的简报。",
+  "recommendation": "适合需要高效管理GitHub Issue和外部PR的团队，能自动化分诊流程，确保每个问题都被正确分类和验证，并生成清晰的代理简报，提升协作效率。",
+  "tags": [
+   "问题管理",
+   "PR处理",
+   "工作流自动化",
+   "团队协作",
+   "GitHub"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/wayfinder",
+  "name": "wayfinder",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将一大块工作（超过一个代理会话所能容纳的量）规划为问题跟踪器上决策工单的共享地图，并逐一解决它们，直到通往目标的路径清晰为止。",
+  "recommendation": "适合需要分阶段处理复杂项目或长期任务的场景，通过将工作分解为可追踪的决策点，帮助团队保持方向清晰并逐步推进，尤其适用于多代理协作或需要持续迭代的项目管理。",
+  "tags": [
+   "项目管理",
+   "任务分解",
+   "协作",
+   "工作流",
+   "规划"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/engineering/wizard",
+  "name": "wizard",
+  "repo": "mattpocock/skills",
+  "category": "engineering",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "生成一个交互式bash向导，引导人类完成仅能由他们执行的步骤。在配置基础设施、设置凭据或CI密钥、浏览不熟悉的第三方仪表板，或运行一次性迁移或切换时使用。不要为代理自身可以执行的步骤调用此功能。",
+  "recommendation": "当需要人工介入的关键步骤（如输入凭证、确认迁移）时，此技能可提供清晰指引，减少错误和来回沟通，尤其适合运维和 DevOps 场景。",
+  "tags": [
+   "基础设施",
+   "凭证管理",
+   "CI/CD",
+   "运维",
+   "迁移"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/misc/git-guardrails-claude-code",
+  "name": "git-guardrails-claude-code",
+  "repo": "mattpocock/skills",
+  "category": "misc",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "设置Claude Code钩子，在执行危险git命令（如push、reset --hard、clean、branch -D等）前进行拦截。当用户希望防止破坏性git操作、添加git安全钩子，或在Claude Code中阻止git push/reset时使用。",
+  "recommendation": "适合所有使用 Claude Code 进行自动化编码的开发者，能有效防止误操作导致代码丢失或远程仓库被污染，为 AI 辅助编程增加一道安全防线。",
+  "tags": [
+   "Git",
+   "安全",
+   "Claude Code",
+   "开发工具",
+   "自动化"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/misc/migrate-to-shoehorn",
+  "name": "migrate-to-shoehorn",
+  "repo": "mattpocock/skills",
+  "category": "misc",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将测试文件从 `as` 类型断言迁移到 @total-typescript/shoehorn。当用户提到 shoehorn、想要替换测试中的 `as`，或需要部分测试数据时使用。",
+  "recommendation": "适合需要简化测试数据构造、避免冗长类型断言的 TypeScript 项目，能提升测试代码的可读性和可维护性。",
+  "tags": [
+   "测试",
+   "TypeScript",
+   "代码迁移",
+   "类型安全"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/misc/scaffold-exercises",
+  "name": "scaffold-exercises",
+  "repo": "mattpocock/skills",
+  "category": "misc",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "创建包含章节、问题、解答和讲解的练习目录结构，并通过代码检查。当用户想要搭建练习框架、创建练习模板或建立新的课程章节时使用。",
+  "recommendation": "适合教育者和课程开发者快速搭建标准化的练习框架，确保结构合规，节省手动创建和检查的时间。",
+  "tags": [
+   "教育",
+   "练习脚手架",
+   "课程开发",
+   "自动化"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/misc/setup-pre-commit",
+  "name": "setup-pre-commit",
+  "repo": "mattpocock/skills",
+  "category": "misc",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在当前仓库中设置 Husky pre-commit 钩子，配合 lint-staged（Prettier）、类型检查和测试。当用户想要添加 pre-commit 钩子、设置 Husky、配置 lint-staged，或添加提交时的格式化/类型检查/测试时使用。",
+  "recommendation": "适合希望自动化代码质量检查的团队，能在提交前统一格式化、捕获类型错误和测试失败，减少CI反馈循环，提升代码一致性。",
+  "tags": [
+   "代码质量",
+   "Git钩子",
+   "自动化",
+   "前端开发",
+   "工作流"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/productivity/grill-me",
+  "name": "grill-me",
+  "repo": "mattpocock/skills",
+  "category": "productivity",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "一场持续深入的访谈，旨在完善计划或设计。",
+  "recommendation": "适合在项目启动前或方案设计阶段使用，通过高强度的提问帮助团队发现潜在漏洞，确保计划更加严谨。",
+  "tags": [
+   "计划评审",
+   "设计审查",
+   "团队协作",
+   "项目管理"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/productivity/grilling",
+  "name": "grilling",
+  "repo": "mattpocock/skills",
+  "category": "productivity",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "对用户的计划、决策或想法进行毫不留情的盘问。当用户想要对自己的思考进行压力测试，或使用任何“盘问”触发短语时使用。",
+  "recommendation": "适合需要严谨验证想法、避免盲点的决策者或创业者，能有效暴露逻辑漏洞，提升思考质量。",
+  "tags": [
+   "决策分析",
+   "思维训练",
+   "创业",
+   "计划评估"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/productivity/handoff",
+  "name": "handoff",
+  "repo": "mattpocock/skills",
+  "category": "productivity",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将当前对话压缩为交接文档，供另一个代理接手。",
+  "recommendation": "适合多代理协作或需要中断后恢复任务的场景，能高效传递上下文，避免重复沟通。",
+  "tags": [
+   "多代理协作",
+   "任务交接",
+   "上下文管理",
+   "工作流"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/productivity/teach",
+  "name": "teach",
+  "repo": "mattpocock/skills",
+  "category": "productivity",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在此工作区内，向用户传授一项新技能或概念。",
+  "recommendation": "适合需要快速上手新知识或技能的场合，如学习编程、新工具或理论概念，能提供即时、互动的教学体验。",
+  "tags": [
+   "技能教学",
+   "知识学习",
+   "互动教学",
+   "个人成长"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/productivity/to-questionnaire",
+  "name": "to-questionnaire",
+  "repo": "mattpocock/skills",
+  "category": "productivity",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将你无法完全回答的决策转化为一份问卷，供他人填写。",
+  "recommendation": "适合需要收集他人意见或信息来辅助决策的场景，能帮你系统化地梳理问题并获取结构化反馈，尤其适用于团队协作或用户调研。",
+  "tags": [
+   "决策辅助",
+   "问卷生成",
+   "团队协作",
+   "信息收集"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/productivity/wait-what",
+  "name": "wait-what",
+  "repo": "mattpocock/skills",
+  "category": "productivity",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "停止。最后一条消息没有达到预期效果：请重新表述。",
+  "recommendation": "当你的消息被误解或未得到预期回应时，这个技能能帮你快速调整表达方式，适合在沟通不畅或需要澄清时使用。",
+  "tags": [
+   "沟通",
+   "澄清",
+   "消息重述"
+  ]
+ },
+ {
+  "id": "mattpocock/skills/productivity/writing-for-agents",
+  "name": "writing-for-agents",
+  "repo": "mattpocock/skills",
+  "category": "productivity",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "为智能体编写文档。在创建或编辑技能，或修改AGENTS.md或CLAUDE.md时使用。",
+  "recommendation": "适合需要为 AI 智能体编写或维护说明文档的开发者，能帮助生成清晰、结构化的指令，提升智能体的协作效率。",
+  "tags": [
+   "文档编写",
+   "智能体",
+   "技能开发",
+   "配置管理"
+  ]
+ },
+ {
+  "id": "obra/superpowers/brainstorming",
+  "name": "brainstorming",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在任何创意工作之前，你必须使用此技能——创建功能、构建组件、添加功能或修改行为。在实施之前，探索用户的意图、需求和设计。",
+  "recommendation": "适合需要在编码前明确需求与设计的开发者，能有效避免返工，提升项目规划效率。",
+  "tags": [
+   "需求分析",
+   "设计规划",
+   "创意工作",
+   "开发流程"
+  ]
+ },
+ {
+  "id": "obra/superpowers/dispatching-parallel-agents",
+  "name": "dispatching-parallel-agents",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "当面对2个及以上相互独立、无需共享状态或顺序依赖即可推进的任务时使用。",
+  "recommendation": "适合需要并行处理多个独立子任务的工作流，能显著提升效率，尤其适用于批量操作、多文件处理或并行数据抓取等场景。",
+  "tags": [
+   "并行处理",
+   "任务调度",
+   "效率提升",
+   "工作流",
+   "自动化"
+  ]
+ },
+ {
+  "id": "obra/superpowers/executing-plans",
+  "name": "executing-plans",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "当您有书面实施计划需要在单独的会话中执行并设有审查检查点时使用",
+  "recommendation": "适合需要分阶段执行复杂任务并确保每个阶段质量可控的场景，能有效避免偏离计划。",
+  "tags": [
+   "任务执行",
+   "项目管理",
+   "质量检查"
+  ]
+ },
+ {
+  "id": "obra/superpowers/finishing-a-development-branch",
+  "name": "finishing-a-development-branch",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "当实现完成、所有测试通过，且需要决定如何整合工作时使用。",
+  "recommendation": "适合开发者在功能开发收尾阶段使用，帮助规范分支合并流程，避免遗漏测试或误合并，提升代码集成效率。",
+  "tags": [
+   "开发流程",
+   "分支管理",
+   "代码合并",
+   "测试通过"
+  ]
+ },
+ {
+  "id": "obra/superpowers/receiving-code-review",
+  "name": "receiving-code-review",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在收到代码审查反馈时、实施建议之前使用，尤其是当反馈看起来不清晰或技术上存疑时——需要技术严谨性和验证，而非表面上的同意或盲目实施",
+  "recommendation": "适合开发者处理代码审查反馈时保持理性，避免盲目接受或拒绝，强调技术验证和严谨性，提升代码质量。",
+  "tags": [
+   "代码审查",
+   "技术验证",
+   "开发流程",
+   "沟通协作"
+  ]
+ },
+ {
+  "id": "obra/superpowers/requesting-code-review",
+  "name": "requesting-code-review",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在完成任务、实现主要功能或合并之前使用，以验证工作是否符合要求",
+  "recommendation": "适合开发者在合并代码前自动触发审查流程，确保代码质量与需求对齐，减少人工检查遗漏。",
+  "tags": [
+   "代码审查",
+   "开发流程",
+   "质量保障"
+  ]
+ },
+ {
+  "id": "obra/superpowers/subagent-driven-development",
+  "name": "subagent-driven-development",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在当前会话中执行包含独立任务的实施计划时使用",
+  "recommendation": "适合需要将大型实施计划拆解为独立任务并并行推进的团队，能显著提升复杂项目的执行效率与协作清晰度。",
+  "tags": [
+   "任务管理",
+   "实施计划",
+   "团队协作",
+   "项目执行"
+  ]
+ },
+ {
+  "id": "obra/superpowers/systematic-debugging",
+  "name": "systematic-debugging",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "遇到任何错误、测试失败或意外行为时，在提出修复方案之前使用。",
+  "recommendation": "适合开发者在排查问题时遵循系统化流程，避免盲目猜测，快速定位根因。",
+  "tags": [
+   "调试",
+   "问题排查",
+   "开发流程",
+   "测试"
+  ]
+ },
+ {
+  "id": "obra/superpowers/test-driven-development",
+  "name": "test-driven-development",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在编写实现代码之前，当实现任何功能或修复缺陷时使用。",
+  "recommendation": "适合采用测试驱动开发（TDD）的团队或个人，能强制先写测试再写实现，提升代码质量和可维护性。",
+  "tags": [
+   "测试驱动开发",
+   "编码实践",
+   "缺陷修复",
+   "功能开发"
+  ]
+ },
+ {
+  "id": "obra/superpowers/using-git-worktrees",
+  "name": "using-git-worktrees",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在开始需要与当前工作区隔离的功能开发，或执行实施计划之前使用——确保通过原生工具或git worktree回退方案存在一个隔离的工作区。",
+  "recommendation": "适合需要并行开发多个功能或避免工作区冲突的开发者，通过git worktree提供干净的隔离环境，提升多任务处理效率。",
+  "tags": [
+   "Git",
+   "工作流",
+   "多任务开发",
+   "代码隔离"
+  ]
+ },
+ {
+  "id": "obra/superpowers/using-superpowers",
+  "name": "using-superpowers",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在开始任何对话时使用——确立如何查找和使用技能，要求在任何回复（包括澄清问题）之前先调用技能",
+  "recommendation": "适合希望系统化使用AI技能库的用户，能确保每次交互都遵循既定流程，提升协作效率和一致性。",
+  "tags": [
+   "AI技能管理",
+   "工作流",
+   "对话管理"
+  ]
+ },
+ {
+  "id": "obra/superpowers/verification-before-completion",
+  "name": "verification-before-completion",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在提交或创建PR之前，当即将声称工作已完成、已修复或通过时使用——需要先运行验证命令并确认输出，再做出任何成功声明；始终先有证据，后有断言。",
+  "recommendation": "适合开发者或团队在提交代码或创建PR前，强制进行验证，避免虚假完成声明，提升代码质量和交付可靠性。",
+  "tags": [
+   "编码",
+   "代码审查",
+   "工作流",
+   "质量保障"
+  ]
+ },
+ {
+  "id": "obra/superpowers/writing-plans",
+  "name": "writing-plans",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "当您拥有多步骤任务的规格或需求时使用，在接触代码之前。",
+  "recommendation": "适合在编码前梳理复杂任务，确保步骤清晰，减少返工。",
+  "tags": [
+   "任务规划",
+   "编码前",
+   "工作流"
+  ]
+ },
+ {
+  "id": "obra/superpowers/writing-skills",
+  "name": "writing-skills",
+  "repo": "obra/superpowers",
+  "category": null,
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "在创建新技能、编辑现有技能或部署前验证技能是否正常工作时使用。",
+  "recommendation": "适合需要频繁创建或修改AI技能的用户，能确保技能在部署前正确无误，提升开发效率。",
+  "tags": [
+   "技能开发",
+   "技能编辑",
+   "技能验证",
+   "AI工作流"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-ai-shipping/skills/intended-vs-implemented",
+  "name": "intended-vs-implemented",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-ai-shipping/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "查找系统应做之事与实际代码行为之间差距的方法——这类通用扫描器因缺乏意图模型而遗漏的缺陷类别。定义了何为文档化意图、何为实现证据、哪些不匹配值得关注，以及如何避免含糊其辞的发现。在审计AI生成的代码、对照文档化权限审查访问控制，或检查代码库是否与其自身文档一致时使用。",
+  "recommendation": "如果你经常审计AI生成的代码，或需要确保代码实现与文档/权限声明一致，这个skill能帮你精准定位意图与实现的偏差，避免泛泛而谈的结论。",
+  "tags": [
+   "代码审查",
+   "AI审计",
+   "权限验证",
+   "文档一致性",
+   "缺陷检测"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-ai-shipping/skills/shipping-artifacts",
+  "name": "shipping-artifacts",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-ai-shipping/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "一套持久化的文档集，使AI构建（vibe-coded）应用在发布前可审查。每个应用所需的小核心——架构、用户/权限流程、权限、变量/密钥，以及测试覆盖映射——加上仅在适用时添加的条件文档：邮件、定时任务、SEO，以及嵌入式代理/自动化。定义每份文档必须捕获的内容，以及审查者或审计者如何使用它。在记录代码库以供交接、映射用户旅程和信任边界跨越、规划测试覆盖，或准备安全或性能审计时使用。",
+  "recommendation": "适合需要将AI生成代码规范化、可审查化的团队，尤其适用于交接、安全审计或性能优化前的文档准备，能显著提升代码可维护性和审查效率。",
+  "tags": [
+   "AI编码",
+   "代码审查",
+   "文档化",
+   "交接",
+   "安全审计",
+   "性能优化"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-data-analytics/skills/ab-test-analysis",
+  "name": "ab-test-analysis",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-data-analytics/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用统计显著性、样本量验证、置信区间以及发布/延长/停止建议来分析A/B测试结果。在评估实验结果、检查测试是否达到显著性、解读分流测试数据或决定是否发布某个变体时使用。",
+  "recommendation": "适合产品经理、数据科学家和增长团队，能快速判断测试是否有效，避免误判，并给出明确的行动建议，提升决策效率。",
+  "tags": [
+   "A/B测试",
+   "数据分析",
+   "统计显著性",
+   "实验评估",
+   "产品决策"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-data-analytics/skills/cohort-analysis",
+  "name": "cohort-analysis",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-data-analytics/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "对用户参与数据进行队列分析——留存曲线、功能采用趋势和细分洞察。在按队列分析用户留存、研究功能随时间的采用情况、调查流失模式或识别参与趋势时使用。",
+  "recommendation": "适合需要深入理解用户行为的产品、运营或数据分析师，能快速生成留存与功能采用的可视化洞察，辅助决策。",
+  "tags": [
+   "数据分析",
+   "用户留存",
+   "功能采用",
+   "流失分析",
+   "产品运营"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-data-analytics/skills/sql-queries",
+  "name": "sql-queries",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-data-analytics/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "根据自然语言描述生成SQL查询。支持BigQuery、PostgreSQL、MySQL及其他方言。从上传的图表或文档中读取数据库模式。在编写SQL、构建数据报告、探索数据库或将业务问题转化为查询时使用。",
+  "recommendation": "如果你经常需要将业务问题转化为SQL查询，或在不同数据库方言间切换，这个技能能显著提升效率，尤其适合数据分析师和开发者。",
+  "tags": [
+   "数据库查询",
+   "数据分析",
+   "SQL生成",
+   "数据报告"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/brainstorm-okrs",
+  "name": "brainstorm-okrs",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "头脑风暴团队级OKR，使其与公司目标对齐——定性目标配以可衡量的关键结果。在设定季度OKR、将团队目标与公司战略对齐、起草目标或学习如何撰写有效OKR时使用。",
+  "recommendation": "适合需要将团队目标与公司战略对齐的团队，尤其适合季度OKR制定初期，能帮助快速产出结构清晰、可衡量的OKR草案。",
+  "tags": [
+   "目标管理",
+   "OKR制定",
+   "团队协作",
+   "战略对齐"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/create-prd",
+  "name": "create-prd",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用一个全面的8部分模板创建产品需求文档，涵盖问题、目标、细分市场、价值主张、解决方案和发布规划。在编写PRD、记录产品需求、准备功能规格或审查现有PRD时使用。",
+  "recommendation": "适合产品经理和团队快速生成结构化的PRD，确保覆盖关键要素，提升文档质量与评审效率。",
+  "tags": [
+   "产品管理",
+   "需求文档",
+   "文档编写",
+   "产品规划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/dummy-dataset",
+  "name": "dummy-dataset",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "生成用于测试的逼真模拟数据集，支持自定义列、约束和输出格式（CSV、JSON、SQL、Python脚本）。在创建测试数据、构建模拟数据集或为开发和演示生成示例数据时使用。",
+  "recommendation": "适合开发者在测试、演示或构建原型时快速生成多样化的模拟数据，节省手动造数时间，且支持多种输出格式，灵活适配不同需求。",
+  "tags": [
+   "数据生成",
+   "测试数据",
+   "模拟数据",
+   "开发工具",
+   "数据导出"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/job-stories",
+  "name": "job-stories",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用“当[情境]时，我想要[动机]，以便我能[结果]”的格式创建用户故事，并附带详细的验收标准。适用于撰写用户故事、创建JTBD风格的后台任务项，或表达用户情境与动机。",
+  "recommendation": "适合采用JTBD方法进行产品需求梳理的团队，能清晰捕捉用户真实动机，提升需求优先级排序的准确性。",
+  "tags": [
+   "需求分析",
+   "用户研究",
+   "产品管理",
+   "JTBD",
+   "工作流"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/outcome-roadmap",
+  "name": "outcome-roadmap",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将面向输出的路线图转变为面向结果的路线图，以传达战略意图。将举措改写为反映用户和业务影响的结果陈述。在转向结果路线图、使路线图更具战略性或将功能列表改写为结果时使用。",
+  "recommendation": "适合产品经理或战略团队在规划迭代时，将功能清单升级为以用户价值为导向的路线图，提升沟通效率和战略对齐度。",
+  "tags": [
+   "产品管理",
+   "路线图规划",
+   "战略沟通",
+   "需求分析"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/pre-mortem",
+  "name": "pre-mortem",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "对PRD或发布计划进行事前风险分析。将风险分类为老虎（真正的问题）、纸老虎（被夸大的担忧）和大象（未言明的顾虑），然后归类为阻碍发布、快速跟进或持续跟踪。适用于准备发布、压力测试产品计划或识别可能出错之处时使用。",
+  "recommendation": "适合产品经理和团队在发布前进行系统性风险排查，避免遗漏关键问题，提升计划稳健性。",
+  "tags": [
+   "产品管理",
+   "风险管理",
+   "发布前检查",
+   "计划评估",
+   "团队协作"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/prioritization-frameworks",
+  "name": "prioritization-frameworks",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "9种优先级框架的参考指南，包含公式、使用时机指导及模板——RICE、ICE、Kano、MoSCoW、Opportunity Score等。适用于选择优先级方法、比较RICE与ICE等框架，或了解不同优先级方法的工作原理时使用。",
+  "recommendation": "产品经理和项目决策者的实用工具，快速对比9种主流优先级框架，附公式和模板，帮助你在不同场景下选择最合适的排序方法，提升决策效率。",
+  "tags": [
+   "产品管理",
+   "项目决策",
+   "优先级排序",
+   "框架对比",
+   "效率工具"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/release-notes",
+  "name": "release-notes",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "从工单、PRD或变更日志生成面向用户的发布说明。创建按类别（新功能、改进、修复）组织的清晰、有吸引力的摘要。在编写发布说明、创建变更日志、宣布产品更新或总结已发布内容时使用。",
+  "recommendation": "适合需要快速将技术变更整理为清晰用户文档的团队，尤其适用于频繁迭代的产品，能节省编写发布说明的时间并提升可读性。",
+  "tags": [
+   "发布说明",
+   "文档生成",
+   "产品更新",
+   "变更日志",
+   "效率工具"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/retro",
+  "name": "retro",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "促进结构化的冲刺回顾——哪些做得好，哪些做得不好，并确定带有负责人和截止日期的优先行动项。在运行回顾、反思冲刺、从团队反馈中创建行动项，或学习如何运行有效的回顾时使用。",
+  "recommendation": "适合敏捷团队定期进行回顾，帮助系统化总结迭代经验并生成可执行的改进计划，提升团队协作效率。",
+  "tags": [
+   "敏捷开发",
+   "团队协作",
+   "项目管理",
+   "流程改进",
+   "冲刺回顾"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/sprint-plan",
+  "name": "sprint-plan",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用容量估算、故事选择、依赖映射和风险识别来规划冲刺。在准备冲刺规划、估算团队容量、选择故事或根据速度平衡冲刺范围时使用。",
+  "recommendation": "适合敏捷团队在冲刺规划时使用，能系统化处理容量、依赖和风险，提升规划效率和准确性。",
+  "tags": [
+   "敏捷开发",
+   "冲刺规划",
+   "容量估算",
+   "依赖管理",
+   "风险管理"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/stakeholder-map",
+  "name": "stakeholder-map",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用权力/利益网格构建利益相关者地图，识别每个象限的沟通策略，并生成沟通计划。在管理利益相关者、准备发布、协调跨职能团队或规划利益相关者参与时使用。",
+  "recommendation": "适合需要系统化梳理利益相关者关系、制定针对性沟通策略的项目经理或团队负责人，能有效提升跨部门协作和发布准备效率。",
+  "tags": [
+   "项目管理",
+   "沟通策略",
+   "利益相关者",
+   "跨职能协作",
+   "发布准备"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/strategy-red-team",
+  "name": "strategy-red-team",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "对PRD、路线图或策略进行红队测试，在现实之前攻击其承重假设。Steelmans随后攻击每项声明，按影响×可能性×测试成本对失败模式排序，并为每项返回最便宜的测试和终止标准。在压力测试计划、加压测试策略、挑战假设或为高管评审准备文档时使用。",
+  "recommendation": "适合产品经理、战略规划者或团队领导在重大决策前，用红队思维快速识别计划中的脆弱假设，以低成本测试避免高代价失败，尤其适用于高管评审前的文档打磨。",
+  "tags": [
+   "战略规划",
+   "风险评估",
+   "产品管理",
+   "决策支持",
+   "假设检验"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/summarize-meeting",
+  "name": "summarize-meeting",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将会议记录总结为结构化笔记，包含日期、参与者、主题、关键决策、摘要要点和行动项。适用于处理会议录音、创建会议笔记、撰写会议纪要或回顾讨论时使用。",
+  "recommendation": "适合需要快速整理会议纪要的职场人士，能自动提取关键信息并生成结构化行动项，节省手动整理时间，确保不遗漏重要决策。",
+  "tags": [
+   "会议纪要",
+   "效率工具",
+   "工作流",
+   "团队协作"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/test-scenarios",
+  "name": "test-scenarios",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "根据用户故事创建全面的测试场景，包含测试目标、起始条件、用户角色、逐步操作和预期结果。在编写QA测试用例、创建测试计划、定义验收测试或准备功能验证时使用。",
+  "recommendation": "适合QA工程师和产品经理，能快速将用户故事转化为结构化测试用例，确保测试覆盖完整，提升验收效率。",
+  "tags": [
+   "测试用例",
+   "QA",
+   "用户故事",
+   "验收测试",
+   "测试计划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/user-stories",
+  "name": "user-stories",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "遵循3C原则（卡片、对话、确认）和INVEST标准创建用户故事，包含描述、设计链接和验收标准。在编写用户故事、将功能拆分为待办事项或定义验收标准时使用。",
+  "recommendation": "适合敏捷团队在需求梳理和迭代规划时使用，能确保用户故事结构完整、标准统一，提升需求质量与团队协作效率。",
+  "tags": [
+   "敏捷开发",
+   "需求管理",
+   "用户故事",
+   "验收标准"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-execution/skills/wwas",
+  "name": "wwas",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-execution/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "以“为什么-是什么-验收标准”格式创建产品待办事项——独立、有价值、可测试且具有战略背景的事项。在编写结构化待办事项、将功能拆分为工作项或使用WWA格式时使用。",
+  "recommendation": "适合敏捷团队规范产品待办事项，提升条目质量与可执行性，尤其适用于需求拆分和验收标准制定。",
+  "tags": [
+   "产品管理",
+   "敏捷开发",
+   "需求拆分",
+   "待办事项"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-go-to-market/skills/beachhead-segment",
+  "name": "beachhead-segment",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-go-to-market/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "识别产品发布的首个滩头市场细分。根据痛点紧迫性、支付意愿、可赢得的市场份额和推荐潜力来评估各细分市场。适用于选择首个市场、锁定初始客户细分或规划市场进入策略时。",
+  "recommendation": "适合初创团队或新产品负责人，在资源有限时精准锁定首个目标市场，避免盲目铺开。通过评估痛点、支付意愿等关键维度，快速筛选出最易突破的客户群，提高市场进入成功率。",
+  "tags": [
+   "市场细分",
+   "产品发布",
+   "市场进入策略",
+   "目标客户",
+   "初创企业"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-go-to-market/skills/competitive-battlecard",
+  "name": "competitive-battlecard",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-go-to-market/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "创建销售就绪的竞争对战卡，将你的产品与特定竞争对手进行比较——包括定位、功能对比、异议处理和赢单/输单模式。在准备销售团队、创建竞争材料或回应“为什么不选竞争对手X？”时使用。",
+  "recommendation": "适合销售团队快速掌握竞品差异，提升赢单率。尤其适用于B2B SaaS或产品竞争激烈场景，能系统化整理销售话术和应对策略。",
+  "tags": [
+   "销售",
+   "竞争分析",
+   "话术",
+   "产品对比",
+   "销售赋能"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-go-to-market/skills/growth-loops",
+  "name": "growth-loops",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-go-to-market/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "识别可持续牵引力的增长循环（飞轮）。评估5种循环类型：病毒式、使用型、协作型、用户生成型和推荐型。在设计增长机制、构建产品驱动的牵引力或理解增长循环运作方式时使用。",
+  "recommendation": "适合产品经理和增长黑客，用于系统化设计增长策略，避免盲目尝试，快速找到可持续的增长引擎。",
+  "tags": [
+   "增长策略",
+   "产品设计",
+   "用户增长",
+   "飞轮效应",
+   "增长黑客"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-go-to-market/skills/gtm-motions",
+  "name": "gtm-motions",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-go-to-market/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "识别7种GTM动议和工具中的最佳方案：入站、出站、付费数字、社区、合作伙伴、ABM和PLG。在选择营销渠道、决定入站与出站策略，或规划跨渠道活动时使用。",
+  "recommendation": "适合营销团队在制定渠道策略时快速获取最佳实践和工具推荐，帮助系统化比较不同GTM运动，提升跨渠道活动规划效率。",
+  "tags": [
+   "营销策略",
+   "渠道选择",
+   "GTM",
+   "工具推荐",
+   "跨渠道规划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-go-to-market/skills/gtm-strategy",
+  "name": "gtm-strategy",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-go-to-market/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "制定上市策略，涵盖营销渠道、信息传达、成功指标和发布时间线。在规划产品发布、从零开始制定GTM计划，或为新市场定义发布策略时使用。",
+  "recommendation": "适合产品经理、市场负责人或创业者，在准备新品上市或进入新市场时，能快速生成结构化的GTM计划，确保覆盖关键要素，避免遗漏。",
+  "tags": [
+   "产品发布",
+   "市场策略",
+   "营销计划",
+   "增长策略",
+   "商业规划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-go-to-market/skills/ideal-customer-profile",
+  "name": "ideal-customer-profile",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-go-to-market/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "从研究数据中识别理想客户画像（ICP），包括人口统计特征、行为、待完成任务（JTBD）和需求。在定义ICP、分析PMF调查数据或了解最佳客户是谁时使用。",
+  "recommendation": "适合初创团队或产品经理在定义目标客户、分析产品市场契合度时使用，能快速从数据中提炼关键客户特征，避免主观臆断。",
+  "tags": [
+   "客户画像",
+   "市场分析",
+   "产品策略",
+   "用户研究"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-market-research/skills/competitor-analysis",
+  "name": "competitor-analysis",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-market-research/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "分析竞争对手的优势、劣势和差异化机会。识别直接竞争对手并绘制竞争格局。在进行竞争研究、准备竞争简报或寻找差异化机会时使用。",
+  "recommendation": "适合市场调研、产品规划或战略制定时快速梳理竞争格局，帮助发现差异化切入点，节省手动收集和分析竞品信息的时间。",
+  "tags": [
+   "竞争分析",
+   "市场调研",
+   "产品战略",
+   "差异化定位"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-market-research/skills/customer-journey-map",
+  "name": "customer-journey-map",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-market-research/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "创建端到端客户旅程地图，包含阶段、触点、情绪、痛点和机会。在映射客户体验、识别摩擦点、改进入门流程或可视化用户旅程时使用。",
+  "recommendation": "适合产品经理、用户体验设计师和增长团队，能系统梳理客户全流程体验，快速定位关键摩擦点并发现优化机会，提升用户满意度和转化率。",
+  "tags": [
+   "用户体验",
+   "产品设计",
+   "客户分析",
+   "流程优化",
+   "用户研究"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-market-research/skills/market-segments",
+  "name": "market-segments",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-market-research/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "识别3-5个潜在客户细分市场，包括人口统计特征、JTBD和产品契合度分析。在探索市场细分、识别目标受众、评估新市场或学习如何细分市场时使用。",
+  "recommendation": "适合市场调研、产品定位或创业初期验证市场时使用，能快速梳理客户画像与产品匹配度，帮助聚焦高价值目标群体。",
+  "tags": [
+   "市场细分",
+   "客户分析",
+   "产品定位",
+   "市场调研",
+   "目标受众"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-market-research/skills/market-sizing",
+  "name": "market-sizing",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-market-research/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用TAM、SAM和SOM，结合自上而下和自下而上的方法估算市场规模。适用于评估市场机会、估算可寻址市场、准备投资者推介或评估市场进入时。",
+  "recommendation": "适合创业者、产品经理和市场分析师，能快速搭建市场规模估算框架，提升商业计划或投资路演的专业度。",
+  "tags": [
+   "市场分析",
+   "商业计划",
+   "投资路演",
+   "市场进入",
+   "创业"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-market-research/skills/sentiment-analysis",
+  "name": "sentiment-analysis",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-market-research/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "分析用户反馈数据，识别带有情感评分、JTBD和产品满意度洞察的细分群体。适用于大规模分析用户反馈、对评论或调查进行情感分析，或识别满意度模式时使用。",
+  "recommendation": "适合产品、用户研究或客户体验团队，可快速从大量反馈中提取情感倾向和用户需求，辅助产品迭代与满意度优化。",
+  "tags": [
+   "情感分析",
+   "用户反馈",
+   "产品满意度",
+   "数据分析",
+   "JTBD"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-market-research/skills/user-personas",
+  "name": "user-personas",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-market-research/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "从研究数据中创建精细的用户画像 — 3个画像，包含JTBD、痛点、收益和意外洞察。适用于从调查数据构建画像、从研究中创建用户档案，或为产品决策进行用户细分时使用。",
+  "recommendation": "如果你经常处理用户调研数据，需要快速提炼出有洞察的用户画像，这个skill能帮你系统化整理，节省时间并提升决策质量。",
+  "tags": [
+   "用户研究",
+   "产品决策",
+   "数据分析",
+   "用户画像"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-market-research/skills/user-segmentation",
+  "name": "user-segmentation",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-market-research/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "根据行为、JTBD和需求从反馈数据中细分用户。识别至少3个不同的用户细分群体。在细分用户群、分析多样化的用户反馈或构建细分模型时使用。",
+  "recommendation": "适合需要从用户反馈中提炼差异化洞察的产品经理或用户研究员，能自动识别多个用户群体，节省手动聚类时间，提升分析效率。",
+  "tags": [
+   "用户研究",
+   "数据分析",
+   "产品策略",
+   "用户细分"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-marketing-growth/skills/marketing-ideas",
+  "name": "marketing-ideas",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-marketing-growth/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "生成5个有创意且成本效益高的营销点子，包含渠道、信息传递和互动理由。在头脑风暴营销活动、规划产品推广或寻找创意营销策略时使用。",
+  "recommendation": "适合营销人员快速获取低成本高创意的推广方案，尤其在预算有限或需要新鲜点子时，能提供具体可执行的渠道和互动策略。",
+  "tags": [
+   "营销创意",
+   "推广策略",
+   "成本效益",
+   "产品推广",
+   "头脑风暴"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-marketing-growth/skills/north-star-metric",
+  "name": "north-star-metric",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-marketing-growth/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "定义一个北极星指标及3-5个支持性输入指标，形成指标星座。将业务游戏分类（注意力、交易、生产力），并依据7项有效北极星标准进行验证。适用于选择北极星指标、建立指标框架、学习北极星框架或决定衡量内容时使用。",
+  "recommendation": "适合产品经理和数据团队明确核心增长目标，通过系统化框架避免指标选择偏差，快速搭建可落地的指标体系。",
+  "tags": [
+   "指标框架",
+   "产品分析",
+   "增长策略",
+   "数据驱动",
+   "决策支持"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-marketing-growth/skills/positioning-ideas",
+  "name": "positioning-ideas",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-marketing-growth/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "头脑风暴与竞争对手差异化的产品定位思路。识别主要竞争对手，并生成带有理由的定位陈述。在制定产品定位、与竞争对手差异化或制定品牌定位策略时使用。",
+  "recommendation": "适合产品经理、市场营销和品牌战略团队，在制定或调整产品定位时快速生成差异化思路和论据，节省调研时间并激发创意。",
+  "tags": [
+   "产品定位",
+   "竞争分析",
+   "品牌策略",
+   "市场营销",
+   "头脑风暴"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-marketing-growth/skills/product-name",
+  "name": "product-name",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-marketing-growth/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "头脑风暴5个独特、易记的产品名称，并附上与品牌价值观和目标受众一致的 rationale。在命名新产品、品牌重塑或探索产品名称创意时使用。",
+  "recommendation": "适合产品经理、创业者或品牌团队在命名或重塑品牌时快速获得灵感，确保名称与品牌定位一致，提升记忆点。",
+  "tags": [
+   "产品命名",
+   "品牌创意",
+   "头脑风暴",
+   "市场营销"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-marketing-growth/skills/value-prop-statements",
+  "name": "value-prop-statements",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-marketing-growth/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "从现有的价值主张中为营销、销售和入职流程生成价值主张陈述。适用于撰写营销文案、创建销售信息或制作入职消息时。",
+  "recommendation": "适合需要快速生成一致且有效营销文案的团队，尤其适用于产品上线、销售培训和用户引导场景，能大幅提升文案产出效率。",
+  "tags": [
+   "营销文案",
+   "销售信息",
+   "用户引导",
+   "内容生成"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/analyze-feature-requests",
+  "name": "analyze-feature-requests",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "按主题、战略一致性、影响、工作量及风险，对功能请求列表进行分析和排序。在审阅客户功能请求、对积压工作进行分类或做出优先级决策时使用。",
+  "recommendation": "适合产品经理和团队在需求评审会上快速梳理功能请求，通过多维度评估辅助决策，提升优先级排序的效率和客观性。",
+  "tags": [
+   "产品管理",
+   "需求分析",
+   "优先级排序",
+   "决策支持"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/brainstorm-experiments-existing",
+  "name": "brainstorm-experiments-existing",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "为现有产品设计实验以测试假设——包括原型、A/B测试、技术预研及其他低成本的验证方法。适用于验证假设、低成本测试功能想法或规划产品实验时。",
+  "recommendation": "适合产品经理和开发者快速验证新功能想法，避免过度投入。内置多种实验模板，能显著提升测试效率。",
+  "tags": [
+   "产品实验",
+   "A/B测试",
+   "原型验证",
+   "低成本测试",
+   "假设验证"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/brainstorm-experiments-new",
+  "name": "brainstorm-experiments-new",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "为新产品设计精益创业实验（预型测试）。创建XYZ假设，并建议低成本的验证方法，如落地页、解说视频和预购。在验证新产品创意、创建预型测试或测试市场需求时使用。",
+  "recommendation": "适合创业者和产品经理在早期验证想法时使用，能快速低成本测试市场需求，避免盲目开发。",
+  "tags": [
+   "创业",
+   "产品验证",
+   "精益创业",
+   "市场测试",
+   "预原型"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/brainstorm-ideas-existing",
+  "name": "brainstorm-ideas-existing",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用PM、设计师和工程师的多视角构思，为现有产品头脑风暴产品创意。适用于生成新功能创意、为已识别的机会头脑风暴解决方案，或与产品三人组进行构思时。",
+  "recommendation": "适合产品团队在功能规划或机会探索时，快速获得多角色视角的创意，避免单一思维盲区，提升讨论效率。",
+  "tags": [
+   "产品构思",
+   "头脑风暴",
+   "团队协作",
+   "功能规划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/brainstorm-ideas-new",
+  "name": "brainstorm-ideas-new",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "从产品经理、设计师和工程师的角度，为新产品的初始探索阶段头脑风暴功能创意。适用于启动新产品的探索、为创业想法挖掘功能，或进行初步构思时使用。",
+  "recommendation": "适合产品团队在新产品启动或初创想法探索初期，快速获得多角色视角的功能创意，促进跨职能协作，避免遗漏关键需求。",
+  "tags": [
+   "产品设计",
+   "头脑风暴",
+   "初创",
+   "功能规划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/identify-assumptions-existing",
+  "name": "identify-assumptions-existing",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "识别现有产品中功能想法在价值、可用性、生存力和可行性方面的风险假设。采用多视角的魔鬼代言人思维。适用于对功能想法进行压力测试、风险评估或准备假设映射时。",
+  "recommendation": "该技能通过多维度批判性分析，帮助你在产品迭代前发现潜在风险，适合产品经理、设计师和开发者在功能规划阶段进行风险预判和假设验证。",
+  "tags": [
+   "产品设计",
+   "风险评估",
+   "假设验证",
+   "产品管理",
+   "决策支持"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/identify-assumptions-new",
+  "name": "identify-assumptions-new",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "识别新产品创意在8个风险类别中的风险假设，包括市场进入、战略和团队。在评估初创风险、评估新产品概念或为新企业绘制假设时使用。",
+  "recommendation": "适合创业团队或产品经理在项目启动前系统性地识别潜在风险，避免盲目投入资源，提高决策质量。",
+  "tags": [
+   "创业",
+   "产品评估",
+   "风险管理",
+   "战略规划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/interview-script",
+  "name": "interview-script",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "创建结构化客户访谈脚本，包含JTBD探询问题、热身、核心探索和收尾部分。遵循《妈妈测试》原则——不设引导性问题，不推销，关注过去行为。在准备用户访谈、创建访谈指南或规划发现性研究时使用。",
+  "recommendation": "如果你正在做用户研究或产品发现，这个技能能帮你快速生成符合《The Mom Test》原则的访谈脚本，避免常见提问误区，提高访谈质量。",
+  "tags": [
+   "用户访谈",
+   "产品研究",
+   "访谈脚本",
+   "JTBD",
+   "发现研究"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/metrics-dashboard",
+  "name": "metrics-dashboard",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "定义并设计产品指标仪表盘，包含关键指标、数据来源、可视化类型和告警阈值。在创建指标仪表盘、定义KPI、设置产品分析或构建数据监控计划时使用。",
+  "recommendation": "适合产品经理和数据团队快速搭建可落地的指标监控体系，内置可视化与告警设计建议，能显著提升数据驱动决策的效率。",
+  "tags": [
+   "产品分析",
+   "数据可视化",
+   "KPI管理",
+   "监控告警",
+   "仪表盘设计"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/opportunity-solution-tree",
+  "name": "opportunity-solution-tree",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "构建机会解决方案树（OST）以结构化产品发现——将期望结果映射到机会、解决方案和实验。基于Teresa Torres的《持续发现习惯》。在结构化发现工作、将机会映射到解决方案或决定下一步构建内容时使用。",
+  "recommendation": "如果你正在实践持续发现或需要系统化梳理产品机会与解决方案，这个技能能帮你可视化决策路径，避免盲目开发，尤其适合产品经理和团队在规划迭代时使用。",
+  "tags": [
+   "产品管理",
+   "产品发现",
+   "决策制定",
+   "路线图规划",
+   "用户研究"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/prioritize-assumptions",
+  "name": "prioritize-assumptions",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用影响×风险矩阵对假设进行优先级排序，并为每个假设建议实验。适用于对假设列表进行分类、决定首先测试什么，或应用假设优先级画布时。",
+  "recommendation": "当团队面对大量未验证的假设时，该技能能快速聚焦高影响高风险的假设，并给出具体实验建议，适合产品决策、创业验证或项目规划阶段使用。",
+  "tags": [
+   "假设验证",
+   "优先级排序",
+   "产品决策",
+   "实验设计",
+   "风险管理"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/prioritize-features",
+  "name": "prioritize-features",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "根据影响、工作量、风险和战略一致性，对功能创意积压进行优先级排序，并给出前5条建议。在功能积压排序、范围决策或产品创意排名时使用。",
+  "recommendation": "适合产品经理和团队在规划迭代或版本范围时，快速、客观地评估功能优先级，避免主观决策，确保资源投入与战略目标对齐。",
+  "tags": [
+   "产品管理",
+   "优先级排序",
+   "功能规划",
+   "决策支持",
+   "需求管理"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-discovery/skills/summarize-interview",
+  "name": "summarize-interview",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-discovery/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "将客户访谈记录总结为结构化模板，包含JTBD、满意度信号和行动项。适用于处理访谈录音或记录、综合探索性访谈或创建访谈摘要时。",
+  "recommendation": "适合产品经理、用户研究员或创业者，能快速将访谈原始数据转化为可执行的洞察，节省整理时间并确保关键信息不遗漏。",
+  "tags": [
+   "客户访谈",
+   "用户研究",
+   "产品分析",
+   "数据整理"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/ansoff-matrix",
+  "name": "ansoff-matrix",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "生成安索夫矩阵分析，将增长战略映射到市场渗透、市场开发、产品开发和多元化四个维度。在考虑增长选项、规划市场扩张或评估战略增长路径时使用。",
+  "recommendation": "适合需要系统梳理增长路径的创业者或产品经理，能快速生成结构化的战略分析框架，辅助决策。",
+  "tags": [
+   "战略规划",
+   "市场分析",
+   "增长策略",
+   "商业分析"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/business-model",
+  "name": "business-model",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "生成包含全部9个构建块的商业模式画布。在创建商业模式、记录企业如何创造价值或分析现有商业模式时使用。",
+  "recommendation": "适合创业者、产品经理和战略规划者，快速梳理和可视化商业模式，帮助团队对齐思路、发现盲点。",
+  "tags": [
+   "商业模式",
+   "创业",
+   "战略规划",
+   "产品管理",
+   "可视化"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/lean-canvas",
+  "name": "lean-canvas",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "生成一份精益画布，包含问题、解决方案、指标、成本结构、独特价值主张、不公平优势、渠道、客户细分和收入。在探索精益创业画布、测试商业假设或建模新创企业时使用。",
+  "recommendation": "适合创业者或产品经理快速梳理商业模式，通过结构化模板验证假设，避免遗漏关键环节，是精益创业的实用工具。",
+  "tags": [
+   "商业模式",
+   "创业",
+   "精益创业",
+   "产品规划",
+   "假设验证"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/monetization-strategy",
+  "name": "monetization-strategy",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "与受众匹配度、风险和验证实验一起头脑风暴3-5个变现策略。在探索收入模式、评估定价策略或决定如何将产品变现时使用。",
+  "recommendation": "适合产品经理、创业者和独立开发者，在商业化早期快速生成多种变现方案，并通过风险与验证实验评估可行性，避免盲目定价。",
+  "tags": [
+   "变现策略",
+   "商业模式",
+   "定价",
+   "产品验证",
+   "创业"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/pestle-analysis",
+  "name": "pestle-analysis",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "执行PESTLE分析，涵盖政治、经济、社会、技术、法律和环境因素。在评估宏观环境、进行战略规划或评估影响业务的外部因素时使用。",
+  "recommendation": "适合需要系统化评估外部环境的企业战略规划者、市场分析师或创业者，能快速生成结构化的PESTLE分析框架，帮助全面识别机会与风险。",
+  "tags": [
+   "战略规划",
+   "市场分析",
+   "风险评估",
+   "商业分析",
+   "决策支持"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/porters-five-forces",
+  "name": "porters-five-forces",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "执行波特五力分析——竞争对抗、供应商议价能力、买方议价能力、替代品威胁和新进入者威胁。在分析行业动态、评估竞争力量或评价市场吸引力时使用。",
+  "recommendation": "适合需要快速梳理行业竞争格局的决策者或分析师，能系统化评估市场吸引力，辅助战略制定。",
+  "tags": [
+   "战略分析",
+   "行业研究",
+   "市场评估",
+   "竞争分析",
+   "商业决策"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/pricing-strategy",
+  "name": "pricing-strategy",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "分析并设计定价策略，包括定价模型、竞争性定价分析、支付意愿估算和价格弹性。在设定价格、评估定价模型、准备价格调整或比较免费增值模式与付费模式时使用。",
+  "recommendation": "适合产品经理、创业者或定价策略制定者，能系统化分析定价模型与市场反应，辅助做出数据驱动的定价决策，尤其适用于SaaS或订阅制产品的定价优化。",
+  "tags": [
+   "定价策略",
+   "产品定价",
+   "市场分析",
+   "商业决策",
+   "SaaS"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/product-strategy",
+  "name": "product-strategy",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用9个部分的产品策略画布创建全面的产品策略——愿景、细分市场、成本、价值主张、权衡、指标、增长、能力和防御性。在制定产品策略、创建战略计划或定义产品方向时使用。",
+  "recommendation": "适合产品经理在规划新产品或调整现有产品方向时使用，通过结构化画布快速梳理关键要素，确保策略全面且逻辑清晰。",
+  "tags": [
+   "产品策略",
+   "战略规划",
+   "产品管理",
+   "决策支持"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/product-vision",
+  "name": "product-vision",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "构思一个鼓舞人心、可实现且富有情感的产品愿景，以激励团队并统一利益相关者的共识。在定义或完善产品愿景、创建愿景声明或围绕共同方向凝聚团队时使用。",
+  "recommendation": "适合产品经理、创业团队或任何需要明确产品方向的人，能快速生成有感染力且可落地的愿景，帮助团队对齐目标、激发动力。",
+  "tags": [
+   "产品管理",
+   "愿景规划",
+   "团队对齐",
+   "战略规划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/startup-canvas",
+  "name": "startup-canvas",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "生成一份创业画布，结合产品策略（9个部分）和商业模式（成本+收入），适用于新产品。作为BMC和精益画布的替代方案，将策略与商业模式分离。在推出新产品或评估创业概念时使用。",
+  "recommendation": "适合在创业初期或产品定义阶段使用，帮助团队清晰区分策略与商业模式，避免混淆，快速梳理产品全貌。",
+  "tags": [
+   "创业规划",
+   "产品策略",
+   "商业模式",
+   "画布工具",
+   "创业评估"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/swot-analysis",
+  "name": "swot-analysis",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "进行详细的SWOT分析——优势、劣势、机会和威胁，并附上可操作的建议。在进行战略评估、竞争分析或评估产品或业务定位时使用。",
+  "recommendation": "适合需要快速梳理战略定位的创业者、产品经理或市场分析师，能系统化生成SWOT矩阵并给出针对性行动建议，提升决策效率。",
+  "tags": [
+   "战略分析",
+   "竞争分析",
+   "产品评估",
+   "商业规划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-product-strategy/skills/value-proposition",
+  "name": "value-proposition",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-product-strategy/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "使用6部分JTBD模板设计详细的价值主张——谁、为什么、之前是什么、如何、之后是什么、替代方案。在创建价值主张、分析客户价值交付或阐明客户为何应选择你的产品时使用。",
+  "recommendation": "适合产品经理、创业者或营销人员，在定义产品价值或优化客户沟通时，能系统梳理客户需求与产品优势，提升说服力。",
+  "tags": [
+   "产品管理",
+   "营销策略",
+   "客户分析",
+   "价值主张",
+   "商业计划"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-toolkit/skills/draft-nda",
+  "name": "draft-nda",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-toolkit/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "起草一份详细的双方保密协议，涵盖信息类型、管辖法律及需法律审查的条款。在创建保密协议或为合作关系准备NDA时使用。",
+  "recommendation": "适合需要快速生成合规NDA模板的商务人士或初创团队，能覆盖关键条款并提示法律审查，节省起草时间并降低法律风险。",
+  "tags": [
+   "法律文书",
+   "保密协议",
+   "商务合作",
+   "合同起草",
+   "合规"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-toolkit/skills/grammar-check",
+  "name": "grammar-check",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-toolkit/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "识别文本中的语法、逻辑和流程错误，并建议有针对性的修改，而不重写整个文本。适用于校对内容、检查写作质量或审阅草稿时。",
+  "recommendation": "适合需要快速提升文本质量的写作者和编辑，能精准定位问题并提供改进建议，节省反复修改的时间。",
+  "tags": [
+   "写作校对",
+   "语法检查",
+   "文本优化",
+   "草稿审查"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-toolkit/skills/privacy-policy",
+  "name": "privacy-policy",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-toolkit/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "起草一份详细的隐私政策，涵盖数据类型、司法管辖区、GDPR及合规性考量，以及需要法律审查的条款。在创建隐私政策、更新数据保护文档或准备合规事宜时使用。",
+  "recommendation": "适合需要快速生成合规隐私政策草案的产品或网站，能覆盖 GDPR 等关键要求，但需注意最终需法律审查。",
+  "tags": [
+   "隐私政策",
+   "GDPR",
+   "合规",
+   "法律文书",
+   "数据保护"
+  ]
+ },
+ {
+  "id": "phuryn/pm-skills/pm-toolkit/skills/review-resume",
+  "name": "review-resume",
+  "repo": "phuryn/pm-skills",
+  "category": "pm-toolkit/skills",
+  "version": "1.0.0",
+  "risk": "clean",
+  "upstream_sha": "18468a95b427e70e258b51389796367c6f684e7d",
+  "last_synced_at": "2026-08-25",
+  "description_zh": "全面的产品经理简历审阅与定制，依据10项最佳实践，包括XYZ+S公式、关键词优化、针对特定职位的定制以及结构。在审阅产品经理简历、准备求职申请或提升简历影响力时使用。",
+  "recommendation": "专为产品经理求职者设计，涵盖从关键词到结构的全面优化，能显著提升简历与目标职位的匹配度。适合正在求职或准备跳槽的PM，尤其是需要突出量化成果和针对性调整简历的场合。",
+  "tags": [
+   "简历优化",
+   "求职",
+   "产品经理",
+   "职业发展",
+   "内容定制"
+  ]
+ }
+]

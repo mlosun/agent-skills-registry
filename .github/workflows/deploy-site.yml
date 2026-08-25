@@ -1,0 +1,58 @@
+---
+name: deploy-site
+
+# 自动生成并部署 GitHub Pages 站点。
+# 触发：push 到 main、每日同步后、手动触发。
+
+"on":
+  push:
+    branches: [main]
+    paths:
+      - "index.yaml"
+      - "skills/**"
+      - "scripts/web.py"
+      - "rules.yaml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 串行部署，避免并发冲突
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - name: 安装 Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖（仅 PyYAML）
+        run: pip install pyyaml
+
+      - name: 生成静态站点
+        run: python -m scripts.web --no-open
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@983dcca6abf6d1fdf2a5d71e91da8551cf2cfa08
+
+      - name: 上传站点产物
+        uses: actions/upload-pages-artifact@b8cd83d7920dcd88269e8f99e432c058dd1fdef0
+        with:
+          path: docs
+
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86a2a6e1a7d7498c7d43f77cac
