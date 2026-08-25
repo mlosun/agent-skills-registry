@@ -114,3 +114,27 @@ skills:
 - **阶段 1**：封装 index / meta 的 YAML 读写模块（唯一入口），约定 `skill-meta.yaml` + `index.yaml` 的 schema；提供「按 id 更新 index 单行」的能力。
 - **阶段 2（import.py）**：输入 GitHub URL → 识别合集/单 skill → 克隆并校验 SKILL.md → 复制到分层路径 → 生成 `skill-meta.yaml` → 更新 `index.yaml` 对应行 → （预留安全扫描挂钩）。依赖仅 `PyYAML` + `git`。
 - **阶段 3-5**：`security_scan.py`（§2.5 规则）挂 import 之后；`translate.py` 只补 `description_zh`；`sync.py` 对比 `upstream_sha` 并 version+1。
+
+---
+
+## 决策 4 · 同步/翻译分工（2026-08-25 确认）
+
+**问题**：GitHub Action 定时跑 sync，但 Action 环境无本地 DeepSeek key，翻译是否需要/能否自动化？
+
+**结论**：当前保持「自动同步 + 手动翻译」分工。
+
+| 任务 | 工具 | 需要 API key？ | 运行方式 |
+|------|------|--------------|---------|
+| 同步上游（拉新代码 / version+1 / 重扫） | `sync.py` | ❌ 不需要（纯 git+文件+静态扫描） | ✅ GitHub Action 每天 03:00 UTC 自动跑 |
+| 翻译描述（英→中） | `translate.py` | ✅ DeepSeek key | ⏰ 本地手动、低谷时段运行 |
+
+**理由**：
+1. `sync.py` 无任何 LLM/API 依赖，Action 环境（无 key）可正常运行——已实测通过。
+2. `translate.py` 依赖 key + 受 DeepSeek 峰谷定价限制（工作日北京时间 09-12/14-18 全价，其余含周末 5 折）；Action cron 为 UTC 时间，自动翻译易撞高峰（贵）。
+3. 权衡：自动同步保证内容不过时，手动翻译控制成本。
+
+**未来改进（已计划，待项目稳定后）**：
+- 在 GitHub Settings → Secrets 配置 `DEEPSEEK_API_KEY`。
+- Action 中用 `${{ secrets.DEEPSEEK_API_KEY }}` 注入 translate 步骤。
+- 处理 cron UTC → 北京时间高峰规避（或接受全价自动翻译）。
+- 届时改为「全自动同步 + 全自动翻译」。
