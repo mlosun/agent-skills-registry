@@ -14,6 +14,10 @@ venv/
 dist/
 build/
 
+# 工具缓存（自带内部 .gitignore，但显式声明以防变更）
+.ruff_cache/
+.pytest_cache/
+
 # 临时 / 缓存（脚本克隆上游的临时目录、扫描中间产物等）
 .tmp/
 tmp/
