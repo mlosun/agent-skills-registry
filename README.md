@@ -15,14 +15,15 @@
 │   └── <owner>/<repo>/[<category>/]<skill>/
 │       ├── SKILL.md          skill 主文件
 │       ├── ...               上游辅助文件（原样保留）
-│       ├── skill-meta.yaml   skill 级元数据（version/upstream_sha/risk/description_zh）
+│       ├── skill-meta.yaml   skill 级元数据（version/upstream_sha/risk/description_zh/recommendation/tags）
 │       └── security-report.md 安全扫描报告（入库时生成）
 ├── scripts/         ← 维护脚本
 │   ├── import.py            入库新 skill（GitHub URL → 镜像 + 元数据 + 扫描）
-│   ├── security_scan.py     安全扫描引擎（rules.yaml 驱动）
+│   ├── security_scan.py     安全扫描引擎（rules.yaml 驱动，支持 --rescan-all）
 │   ├── translate.py         中文描述翻译（DeepSeek 非推理模型，带峰谷时段护栏）
+│   ├── enrich.py            内容化（推荐理由 + 场景标签，JSON 结构化）
 │   └── sync.py              同步上游更新（version patch+1 + 重扫）
-└── docs/superpowers/specs/  设计定稿文档
+└── docs/                   设计定稿 + 验收清单 + 端到端报告
 ```
 
 ## 使用

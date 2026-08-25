@@ -1,6 +1,6 @@
-# 阶段 1-5 验收清单
+# 阶段 1-6 验收清单
 
-> 这是 agent-skills-registry 已完成阶段的验收指引（阶段 0 初始化 → 1 数据层 → 2 入库 → 3 安全扫描 → 4 中文翻译 → 5 上游同步）。
+> 这是 agent-skills-registry 已完成阶段的验收指引（阶段 0 初始化 → 1 数据层 → 2 入库 → 3 安全扫描 → 4 中文翻译 → 5 上游同步 → 6 内容化/端到端）。
 > 每次改完相关脚本后，按此清单自测。
 
 ## 0. 前置条件
@@ -110,7 +110,25 @@ gh run list --repo mlosun/agent-skills-registry --workflow=check-updates.yml
 # 预期：run 显示 success；日志含 "无上游更新，跳过提交" 或 "已提交并推送同步结果"
 ```
 
-## 6. 一致性自检（数据不漂移）
+## 6. 阶段 6 · enrich.py 内容化 + 端到端
+
+```bash
+# enrich 引擎测试（JSON 解析容错 + 幂等扫描 + LLM 调用构造 mock）
+python3 -m pytest scripts/tests/test_enrich.py -v
+# 预期：7 passed
+
+# 预览：哪些 skill 缺推荐+标签（不调用 API）
+python3 -m scripts.enrich --dry-run --force
+# 预期：输出待处理 skill 列表及需要补的内容（高峰时段需 --force 预览）
+
+# 真实生成（低谷时段运行，避免 --force 全价）
+python3 -m scripts.enrich
+
+# 端到端验证报告
+# 见 docs/END_TO_END.md（入库→扫描→翻译→同步→内容化 五环闭环）
+```
+
+## 7. 一致性自检（数据不漂移）
 
 ```bash
 python3 - <<'PY'
@@ -130,7 +148,7 @@ PY
 # 预期：一一对应: True，不一致: 0
 ```
 
-## 7. 静态检查
+## 8. 静态检查
 
 ```bash
 # 语法编译检查
@@ -143,15 +161,14 @@ git status --short   # 预期：空输出
 
 ## 验收通过标准
 
-- [ ] 四套测试（test_index / test_security_scan / test_translate / test_sync）全绿（17 项）
+- [ ] 五套测试（test_index / test_security_scan / test_translate / test_sync / test_enrich）全绿（24 项）
 - [ ] `--dry-run` 不写盘、重复导入幂等、sync 无更新不 version+1
 - [ ] 恶意样例能命中 R1-R4（high），正常代码不误报（clean）
 - [ ] 高峰时段默认拒绝（退出码 1），低谷放行；幂等跳过已翻译
 - [ ] sync 更新时 version patch+1、保留 description_zh、重扫报告
+- [ ] enrich 幂等（已有推荐+标签跳过），JSON 解析容错
+- [ ] `security_scan --rescan-all` 全量重扫并同步 risk 到 meta/index
 - [ ] index.yaml 与磁盘目录一一对应，risk/version 双份一致
 - [ ] `python3 -m py_compile` 无错、git 工作区干净
 - [ ] GitHub Action 可手动触发且 success
-- [ ] 恶意样例能命中 R1-R4（high），正常代码不误报（clean）
-- [ ] 高峰时段默认拒绝（退出码 1），低谷放行；幂等跳过已翻译
-- [ ] index.yaml 与磁盘目录一一对应，risk/version 双份一致
-- [ ] `python3 -m py_compile` 无错、git 工作区干净
+- [ ] 端到端报告（docs/END_TO_END.md）与仓库实际状态一致
