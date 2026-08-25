@@ -6,11 +6,11 @@ name: check-updates
 
 "on":
   schedule:
-    - cron: "0 3 * * *"        # 每天 03:00 UTC = 11:00 北京时间
-  workflow_dispatch: {}        # 支持手动触发（Actions 页点 Run workflow）
+    - cron: "0 3 * * *" # 每天 03:00 UTC = 11:00 北京时间
+  workflow_dispatch: {} # 支持手动触发（Actions 页点 Run workflow）
 
 permissions:
-  contents: write              # 允许自动 commit + push
+  contents: write # 允许自动 commit + push
 
 jobs:
   sync:

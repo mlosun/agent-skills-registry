@@ -20,6 +20,7 @@
 说明：sync 只处理"内容更新"。description_zh（人工/LLM 产物）在更新时**保留**，
 不被上游覆盖；版本号是 registry 内部计数，patch 步进。
 """
+
 from __future__ import annotations
 
 import argparse
@@ -127,8 +128,12 @@ def _bump_patch(version: str) -> str:
 
 
 def _copy_category_readme(
-    root: Path, owner: str, repo: str, clone: Path,
-    category_parts: list[str], container: bool,
+    root: Path,
+    owner: str,
+    repo: str,
+    clone: Path,
+    category_parts: list[str],
+    container: bool,
 ) -> None:
     """来源分类目录的 README.md 保留到 registry 对应分类（缺失才复制）。"""
     if not category_parts:
@@ -147,14 +152,22 @@ def _copy_category_readme(
 def sync_repo(root: Path, owner: str, repo: str, *, dry_run: bool) -> dict[str, Any]:
     """同步一个来源仓库，返回统计 {updated, added, removed, unchanged, failed}。"""
     stats = {
-        "updated": [], "added": [], "removed": [], "unchanged": [], "failed": [],
+        "updated": [],
+        "added": [],
+        "removed": [],
+        "unchanged": [],
+        "failed": [],
     }
 
     index = load_index(root)
     # 收集该仓库下的 skill（owner/repo 前缀匹配）
-    repo_skills = [r for r in index.get("skills", []) if r["id"].startswith(f"{owner}/{repo}/")]
+    repo_skills = [
+        r for r in index.get("skills", []) if r["id"].startswith(f"{owner}/{repo}/")
+    ]
     if not repo_skills:
-        stats["failed"].append((f"{owner}/{repo}", "index 中无此仓库的 skill，先用 import"))
+        stats["failed"].append(
+            (f"{owner}/{repo}", "index 中无此仓库的 skill，先用 import")
+        )
         return stats
     recorded_sha = _read_recorded_sha(root, repo_skills[0]["id"])
 
@@ -172,7 +185,9 @@ def sync_repo(root: Path, owner: str, repo: str, *, dry_run: bool) -> dict[str, 
             return stats
 
         if recorded_sha and head_sha == recorded_sha:
-            stats["unchanged"].append((f"{owner}/{repo}", f"无更新 (SHA {head_sha[:8]})"))
+            stats["unchanged"].append(
+                (f"{owner}/{repo}", f"无更新 (SHA {head_sha[:8]})")
+            )
             return stats
 
         # 上游有更新：枚举所有 SKILL.md，逐 skill 处理
@@ -185,11 +200,31 @@ def sync_repo(root: Path, owner: str, repo: str, *, dry_run: bool) -> dict[str, 
             exists = any(r.get("id") == sid for r in repo_skills)
             try:
                 if exists:
-                    _sync_existing(root, clone, owner, repo, head_sha, branch, sk,
-                                   dry_run=dry_run, stats=stats, index=index)
+                    _sync_existing(
+                        root,
+                        clone,
+                        owner,
+                        repo,
+                        head_sha,
+                        branch,
+                        sk,
+                        dry_run=dry_run,
+                        stats=stats,
+                        index=index,
+                    )
                 else:
-                    _sync_new(root, clone, owner, repo, head_sha, branch, sk,
-                              dry_run=dry_run, stats=stats, index=index)
+                    _sync_new(
+                        root,
+                        clone,
+                        owner,
+                        repo,
+                        head_sha,
+                        branch,
+                        sk,
+                        dry_run=dry_run,
+                        stats=stats,
+                        index=index,
+                    )
             except Exception as exc:  # noqa: BLE001 —— 单 skill 失败不影响其余
                 stats["failed"].append((sid, f"{type(exc).__name__}: {exc}"))
 
@@ -206,8 +241,9 @@ def sync_repo(root: Path, owner: str, repo: str, *, dry_run: bool) -> dict[str, 
                 if key in seen_cats:
                     continue
                 seen_cats.add(key)
-                _copy_category_readme(root, owner, repo, clone,
-                                      sk["category_parts"], sk["container"])
+                _copy_category_readme(
+                    root, owner, repo, clone, sk["category_parts"], sk["container"]
+                )
 
     return stats
 
@@ -219,8 +255,17 @@ def _read_recorded_sha(root: Path, sid: str) -> str:
 
 
 def _sync_existing(
-    root: Path, clone: Path, owner: str, repo: str, head_sha: str, branch: str,
-    sk: dict[str, Any], *, dry_run: bool, stats: dict[str, Any], index: dict,
+    root: Path,
+    clone: Path,
+    owner: str,
+    repo: str,
+    head_sha: str,
+    branch: str,
+    sk: dict[str, Any],
+    *,
+    dry_run: bool,
+    stats: dict[str, Any],
+    index: dict,
 ) -> None:
     """更新已有 skill：覆盖新代码 + version patch+1 + 重扫；保留 description_zh。"""
     cp = sk["category_parts"]
@@ -273,14 +318,21 @@ def _sync_existing(
     save_meta(root, sid, meta)
     upsert_skill(index, row_from_meta(meta))
     save_index(index, root)
-    stats["updated"].append(
-        (sid, f"v{old_version} → v{new_version}（risk={risk}）")
-    )
+    stats["updated"].append((sid, f"v{old_version} → v{new_version}（risk={risk}）"))
 
 
 def _sync_new(
-    root: Path, clone: Path, owner: str, repo: str, head_sha: str, branch: str,
-    sk: dict[str, Any], *, dry_run: bool, stats: dict[str, Any], index: dict,
+    root: Path,
+    clone: Path,
+    owner: str,
+    repo: str,
+    head_sha: str,
+    branch: str,
+    sk: dict[str, Any],
+    *,
+    dry_run: bool,
+    stats: dict[str, Any],
+    index: dict,
 ) -> None:
     """上游新增的 skill：入库 version=1.0.0（与 import.py 相同语义）。"""
     cp = sk["category_parts"]
@@ -377,7 +429,10 @@ def main(argv: list[str] | None = None) -> int:
         else:
             ok += 1
 
-    print(f"\n完成：{ok} 个仓库成功，{fail} 个有失败" + ("（演练模式，未写盘）" if args.dry_run else ""))
+    print(
+        f"\n完成：{ok} 个仓库成功，{fail} 个有失败"
+        + ("（演练模式，未写盘）" if args.dry_run else "")
+    )
     return 0 if fail == 0 else 1
 
 
