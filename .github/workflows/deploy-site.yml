@@ -46,13 +46,13 @@ jobs:
         run: python -m scripts.web --no-open
 
       - name: 配置 Pages
-        uses: actions/configure-pages@983dcca6abf6d1fdf2a5d71e91da8551cf2cfa08
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
 
       - name: 上传站点产物
-        uses: actions/upload-pages-artifact@b8cd83d7920dcd88269e8f99e432c058dd1fdef0
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
           path: docs
 
       - name: 部署到 GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86a2a6e1a7d7498c7d43f77cac
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
