@@ -11,4 +11,11 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 使用TAM、SAM和SOM，结合自上而下和自下而上的方法估算市场规模。适用于评估市场机会、估算可寻址市场、准备投资者推介或评估市场进入时。
+recommendation: 适合创业者、产品经理和市场分析师，能快速搭建市场规模估算框架，提升商业计划或投资路演的专业度。
+tags:
+- 市场分析
+- 商业计划
+- 投资路演
+- 市场进入
+- 创业

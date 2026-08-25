@@ -11,4 +11,11 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 生成用于测试的逼真模拟数据集，支持自定义列、约束和输出格式（CSV、JSON、SQL、Python脚本）。在创建测试数据、构建模拟数据集或为开发和演示生成示例数据时使用。
+recommendation: 适合开发者在测试、演示或构建原型时快速生成多样化的模拟数据，节省手动造数时间，且支持多种输出格式，灵活适配不同需求。
+tags:
+- 数据生成
+- 测试数据
+- 模拟数据
+- 开发工具
+- 数据导出

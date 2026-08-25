@@ -12,3 +12,9 @@ version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
 description_zh: 为智能体编写文档。在创建或编辑技能，或修改AGENTS.md或CLAUDE.md时使用。
+recommendation: 适合需要为 AI 智能体编写或维护说明文档的开发者，能帮助生成清晰、结构化的指令，提升智能体的协作效率。
+tags:
+- 文档编写
+- 智能体
+- 技能开发
+- 配置管理

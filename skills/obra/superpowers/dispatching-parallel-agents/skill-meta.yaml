@@ -11,4 +11,11 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 当面对2个及以上相互独立、无需共享状态或顺序依赖即可推进的任务时使用。
+recommendation: 适合需要并行处理多个独立子任务的工作流，能显著提升效率，尤其适用于批量操作、多文件处理或并行数据抓取等场景。
+tags:
+- 并行处理
+- 任务调度
+- 效率提升
+- 工作流
+- 自动化

@@ -11,4 +11,10 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 遵循3C原则（卡片、对话、确认）和INVEST标准创建用户故事，包含描述、设计链接和验收标准。在编写用户故事、将功能拆分为待办事项或定义验收标准时使用。
+recommendation: 适合敏捷团队在需求梳理和迭代规划时使用，能确保用户故事结构完整、标准统一，提升需求质量与团队协作效率。
+tags:
+- 敏捷开发
+- 需求管理
+- 用户故事
+- 验收标准

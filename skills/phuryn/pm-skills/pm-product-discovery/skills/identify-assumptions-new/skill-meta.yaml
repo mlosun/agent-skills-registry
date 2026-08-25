@@ -11,4 +11,10 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 识别新产品创意在8个风险类别中的风险假设，包括市场进入、战略和团队。在评估初创风险、评估新产品概念或为新企业绘制假设时使用。
+recommendation: 适合创业团队或产品经理在项目启动前系统性地识别潜在风险，避免盲目投入资源，提高决策质量。
+tags:
+- 创业
+- 产品评估
+- 风险管理
+- 战略规划

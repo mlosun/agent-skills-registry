@@ -11,4 +11,11 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 创建结构化客户访谈脚本，包含JTBD探询问题、热身、核心探索和收尾部分。遵循《妈妈测试》原则——不设引导性问题，不推销，关注过去行为。在准备用户访谈、创建访谈指南或规划发现性研究时使用。
+recommendation: 如果你正在做用户研究或产品发现，这个技能能帮你快速生成符合《The Mom Test》原则的访谈脚本，避免常见提问误区，提高访谈质量。
+tags:
+- 用户访谈
+- 产品研究
+- 访谈脚本
+- JTBD
+- 发现研究

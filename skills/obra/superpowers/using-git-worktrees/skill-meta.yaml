@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在开始需要与当前工作区隔离的功能开发，或执行实施计划之前使用——确保通过原生工具或git worktree回退方案存在一个隔离的工作区。
+recommendation: 适合需要并行开发多个功能或避免工作区冲突的开发者，通过git worktree提供干净的隔离环境，提升多任务处理效率。
+tags:
+- Git
+- 工作流
+- 多任务开发
+- 代码隔离

@@ -11,4 +11,9 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在开始任何对话时使用——确立如何查找和使用技能，要求在任何回复（包括澄清问题）之前先调用技能
+recommendation: 适合希望系统化使用AI技能库的用户，能确保每次交互都遵循既定流程，提升协作效率和一致性。
+tags:
+- AI技能管理
+- 工作流
+- 对话管理

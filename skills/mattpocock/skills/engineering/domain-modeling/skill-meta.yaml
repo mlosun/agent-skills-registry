@@ -12,3 +12,9 @@ version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
 description_zh: 构建并完善项目的领域模型。在讨论代码库术语、编写或编辑CONTEXT.md，或记录或编辑ADR时使用。
+recommendation: 适合需要清晰梳理项目核心概念和术语的团队，能帮助维护文档一致性，尤其适合在项目初期或重构时使用。
+tags:
+- 领域建模
+- 文档维护
+- 架构决策
+- 代码库理解

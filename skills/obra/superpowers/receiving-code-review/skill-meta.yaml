@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在收到代码审查反馈时、实施建议之前使用，尤其是当反馈看起来不清晰或技术上存疑时——需要技术严谨性和验证，而非表面上的同意或盲目实施
+recommendation: 适合开发者处理代码审查反馈时保持理性，避免盲目接受或拒绝，强调技术验证和严谨性，提升代码质量。
+tags:
+- 代码审查
+- 技术验证
+- 开发流程
+- 沟通协作

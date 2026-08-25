@@ -12,3 +12,9 @@ version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
 description_zh: 根据规格或一组工单实施一项工作。
+recommendation: 适合需要将需求或工单转化为代码的开发者，能确保实现过程规范有序，减少遗漏。
+tags:
+- 编码
+- 需求实现
+- 工单处理
+- 开发流程

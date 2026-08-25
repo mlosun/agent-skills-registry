@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在任何创意工作之前，你必须使用此技能——创建功能、构建组件、添加功能或修改行为。在实施之前，探索用户的意图、需求和设计。
+recommendation: 适合需要在编码前明确需求与设计的开发者，能有效避免返工，提升项目规划效率。
+tags:
+- 需求分析
+- 设计规划
+- 创意工作
+- 开发流程

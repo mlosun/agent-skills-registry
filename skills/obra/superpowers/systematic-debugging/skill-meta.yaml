@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 遇到任何错误、测试失败或意外行为时，在提出修复方案之前使用。
+recommendation: 适合开发者在排查问题时遵循系统化流程，避免盲目猜测，快速定位根因。
+tags:
+- 调试
+- 问题排查
+- 开发流程
+- 测试

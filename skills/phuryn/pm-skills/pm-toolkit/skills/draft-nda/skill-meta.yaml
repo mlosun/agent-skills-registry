@@ -11,4 +11,11 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 起草一份详细的双方保密协议，涵盖信息类型、管辖法律及需法律审查的条款。在创建保密协议或为合作关系准备NDA时使用。
+recommendation: 适合需要快速生成合规NDA模板的商务人士或初创团队，能覆盖关键条款并提示法律审查，节省起草时间并降低法律风险。
+tags:
+- 法律文书
+- 保密协议
+- 商务合作
+- 合同起草
+- 合规

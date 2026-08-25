@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在提交或创建PR之前，当即将声称工作已完成、已修复或通过时使用——需要先运行验证命令并确认输出，再做出任何成功声明；始终先有证据，后有断言。
+recommendation: 适合开发者或团队在提交代码或创建PR前，强制进行验证，避免虚假完成声明，提升代码质量和交付可靠性。
+tags:
+- 编码
+- 代码审查
+- 工作流
+- 质量保障

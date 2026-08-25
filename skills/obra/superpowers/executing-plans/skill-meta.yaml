@@ -11,4 +11,9 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 当您有书面实施计划需要在单独的会话中执行并设有审查检查点时使用
+recommendation: 适合需要分阶段执行复杂任务并确保每个阶段质量可控的场景，能有效避免偏离计划。
+tags:
+- 任务执行
+- 项目管理
+- 质量检查

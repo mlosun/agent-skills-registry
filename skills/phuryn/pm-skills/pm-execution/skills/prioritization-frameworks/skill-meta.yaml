@@ -11,4 +11,11 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 9种优先级框架的参考指南，包含公式、使用时机指导及模板——RICE、ICE、Kano、MoSCoW、Opportunity Score等。适用于选择优先级方法、比较RICE与ICE等框架，或了解不同优先级方法的工作原理时使用。
+recommendation: 产品经理和项目决策者的实用工具，快速对比9种主流优先级框架，附公式和模板，帮助你在不同场景下选择最合适的排序方法，提升决策效率。
+tags:
+- 产品管理
+- 项目决策
+- 优先级排序
+- 框架对比
+- 效率工具

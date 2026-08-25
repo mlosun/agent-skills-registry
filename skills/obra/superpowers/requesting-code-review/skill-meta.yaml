@@ -11,4 +11,9 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在完成任务、实现主要功能或合并之前使用，以验证工作是否符合要求
+recommendation: 适合开发者在合并代码前自动触发审查流程，确保代码质量与需求对齐，减少人工检查遗漏。
+tags:
+- 代码审查
+- 开发流程
+- 质量保障

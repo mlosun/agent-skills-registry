@@ -11,4 +11,10 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 从研究数据中创建精细的用户画像 — 3个画像，包含JTBD、痛点、收益和意外洞察。适用于从调查数据构建画像、从研究中创建用户档案，或为产品决策进行用户细分时使用。
+recommendation: 如果你经常处理用户调研数据，需要快速提炼出有洞察的用户画像，这个skill能帮你系统化整理，节省时间并提升决策质量。
+tags:
+- 用户研究
+- 产品决策
+- 数据分析
+- 用户画像

@@ -11,4 +11,9 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 当您拥有多步骤任务的规格或需求时使用，在接触代码之前。
+recommendation: 适合在编码前梳理复杂任务，确保步骤清晰，减少返工。
+tags:
+- 任务规划
+- 编码前
+- 工作流

@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在创建新技能、编辑现有技能或部署前验证技能是否正常工作时使用。
+recommendation: 适合需要频繁创建或修改AI技能的用户，能确保技能在部署前正确无误，提升开发效率。
+tags:
+- 技能开发
+- 技能编辑
+- 技能验证
+- AI工作流

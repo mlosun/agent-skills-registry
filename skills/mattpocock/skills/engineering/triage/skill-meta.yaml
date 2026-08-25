@@ -12,3 +12,10 @@ version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
 description_zh: 通过分诊角色的状态机推进问题和外部PR，进行分类、验证，必要时进行盘问，并编写可供代理使用的简报。
+recommendation: 适合需要高效管理GitHub Issue和外部PR的团队，能自动化分诊流程，确保每个问题都被正确分类和验证，并生成清晰的代理简报，提升协作效率。
+tags:
+- 问题管理
+- PR处理
+- 工作流自动化
+- 团队协作
+- GitHub

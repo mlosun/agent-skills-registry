@@ -12,3 +12,8 @@ version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
 description_zh: 停止。最后一条消息没有达到预期效果：请重新表述。
+recommendation: 当你的消息被误解或未得到预期回应时，这个技能能帮你快速调整表达方式，适合在沟通不畅或需要澄清时使用。
+tags:
+- 沟通
+- 澄清
+- 消息重述

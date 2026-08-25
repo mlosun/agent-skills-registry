@@ -11,4 +11,10 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 进行详细的SWOT分析——优势、劣势、机会和威胁，并附上可操作的建议。在进行战略评估、竞争分析或评估产品或业务定位时使用。
+recommendation: 适合需要快速梳理战略定位的创业者、产品经理或市场分析师，能系统化生成SWOT矩阵并给出针对性行动建议，提升决策效率。
+tags:
+- 战略分析
+- 竞争分析
+- 产品评估
+- 商业规划

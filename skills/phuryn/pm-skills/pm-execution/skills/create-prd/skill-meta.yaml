@@ -11,4 +11,10 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 使用一个全面的8部分模板创建产品需求文档，涵盖问题、目标、细分市场、价值主张、解决方案和发布规划。在编写PRD、记录产品需求、准备功能规格或审查现有PRD时使用。
+recommendation: 适合产品经理和团队快速生成结构化的PRD，确保覆盖关键要素，提升文档质量与评审效率。
+tags:
+- 产品管理
+- 需求文档
+- 文档编写
+- 产品规划

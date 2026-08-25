@@ -12,3 +12,9 @@ version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
 description_zh: 将当前对话压缩为交接文档，供另一个代理接手。
+recommendation: 适合多代理协作或需要中断后恢复任务的场景，能高效传递上下文，避免重复沟通。
+tags:
+- 多代理协作
+- 任务交接
+- 上下文管理
+- 工作流

@@ -12,3 +12,8 @@ version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
 description_zh: 询问哪种技能或流程适合你的情况。本仓库中技能的路由器。
+recommendation: 当你不确定该用哪个技能时，ask-matt 能帮你快速找到最合适的工具，节省摸索时间，尤其适合技能库庞大、选择困难的情况。
+tags:
+- 技能推荐
+- 路由
+- 选择辅助

@@ -11,4 +11,10 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 将客户访谈记录总结为结构化模板，包含JTBD、满意度信号和行动项。适用于处理访谈录音或记录、综合探索性访谈或创建访谈摘要时。
+recommendation: 适合产品经理、用户研究员或创业者，能快速将访谈原始数据转化为可执行的洞察，节省整理时间并确保关键信息不遗漏。
+tags:
+- 客户访谈
+- 用户研究
+- 产品分析
+- 数据整理

@@ -11,4 +11,11 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 使用“当[情境]时，我想要[动机]，以便我能[结果]”的格式创建用户故事，并附带详细的验收标准。适用于撰写用户故事、创建JTBD风格的后台任务项，或表达用户情境与动机。
+recommendation: 适合采用JTBD方法进行产品需求梳理的团队，能清晰捕捉用户真实动机，提升需求优先级排序的准确性。
+tags:
+- 需求分析
+- 用户研究
+- 产品管理
+- JTBD
+- 工作流

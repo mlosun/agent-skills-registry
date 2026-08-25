@@ -13,3 +13,10 @@ last_synced_at: '2026-08-25'
 risk: clean
 description_zh: 设置Claude Code钩子，在执行危险git命令（如push、reset --hard、clean、branch -D等）前进行拦截。当用户希望防止破坏性git操作、添加git安全钩子，或在Claude
   Code中阻止git push/reset时使用。
+recommendation: 适合所有使用 Claude Code 进行自动化编码的开发者，能有效防止误操作导致代码丢失或远程仓库被污染，为 AI 辅助编程增加一道安全防线。
+tags:
+- Git
+- 安全
+- Claude Code
+- 开发工具
+- 自动化

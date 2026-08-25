@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在编写实现代码之前，当实现任何功能或修复缺陷时使用。
+recommendation: 适合采用测试驱动开发（TDD）的团队或个人，能强制先写测试再写实现，提升代码质量和可维护性。
+tags:
+- 测试驱动开发
+- 编码实践
+- 缺陷修复
+- 功能开发

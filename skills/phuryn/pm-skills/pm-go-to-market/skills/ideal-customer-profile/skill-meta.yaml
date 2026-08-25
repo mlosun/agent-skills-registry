@@ -11,4 +11,10 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 从研究数据中识别理想客户画像（ICP），包括人口统计特征、行为、待完成任务（JTBD）和需求。在定义ICP、分析PMF调查数据或了解最佳客户是谁时使用。
+recommendation: 适合初创团队或产品经理在定义目标客户、分析产品市场契合度时使用，能快速从数据中提炼关键客户特征，避免主观臆断。
+tags:
+- 客户画像
+- 市场分析
+- 产品策略
+- 用户研究

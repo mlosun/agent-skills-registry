@@ -11,4 +11,11 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 执行PESTLE分析，涵盖政治、经济、社会、技术、法律和环境因素。在评估宏观环境、进行战略规划或评估影响业务的外部因素时使用。
+recommendation: 适合需要系统化评估外部环境的企业战略规划者、市场分析师或创业者，能快速生成结构化的PESTLE分析框架，帮助全面识别机会与风险。
+tags:
+- 战略规划
+- 市场分析
+- 风险评估
+- 商业分析
+- 决策支持

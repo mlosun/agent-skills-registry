@@ -11,4 +11,10 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 识别文本中的语法、逻辑和流程错误，并建议有针对性的修改，而不重写整个文本。适用于校对内容、检查写作质量或审阅草稿时。
+recommendation: 适合需要快速提升文本质量的写作者和编辑，能精准定位问题并提供改进建议，节省反复修改的时间。
+tags:
+- 写作校对
+- 语法检查
+- 文本优化
+- 草稿审查

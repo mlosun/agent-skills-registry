@@ -11,4 +11,11 @@ upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 起草一份详细的隐私政策，涵盖数据类型、司法管辖区、GDPR及合规性考量，以及需要法律审查的条款。在创建隐私政策、更新数据保护文档或准备合规事宜时使用。
+recommendation: 适合需要快速生成合规隐私政策草案的产品或网站，能覆盖 GDPR 等关键要求，但需注意最终需法律审查。
+tags:
+- 隐私政策
+- GDPR
+- 合规
+- 法律文书
+- 数据保护

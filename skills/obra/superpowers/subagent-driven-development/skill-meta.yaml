@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 在当前会话中执行包含独立任务的实施计划时使用
+recommendation: 适合需要将大型实施计划拆解为独立任务并并行推进的团队，能显著提升复杂项目的执行效率与协作清晰度。
+tags:
+- 任务管理
+- 实施计划
+- 团队协作
+- 项目执行

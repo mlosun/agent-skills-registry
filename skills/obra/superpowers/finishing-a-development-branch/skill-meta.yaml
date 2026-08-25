@@ -11,4 +11,10 @@ upstream_sha: b36e0829c6d0140e93cfef2ca599b1b07d4a7797
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 当实现完成、所有测试通过，且需要决定如何整合工作时使用。
+recommendation: 适合开发者在功能开发收尾阶段使用，帮助规范分支合并流程，避免遗漏测试或误合并，提升代码集成效率。
+tags:
+- 开发流程
+- 分支管理
+- 代码合并
+- 测试通过
