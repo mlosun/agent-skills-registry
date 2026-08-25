@@ -137,8 +137,8 @@ def scan_skill(skill_dir: Path, rules: list[dict[str, Any]] | None = None) -> Sc
         if any(p in _SKIP_DIRS for p in parts[:-1]) or path.suffix.lower() in _SKIP_EXTS:
             skipped += 1
             continue
-        if path.name == "skill-meta.yaml":
-            continue  # 元数据是脚本自己生成的，跳过
+        if path.name in ("skill-meta.yaml", "security-report.md"):
+            continue  # 元数据/报告是脚本自己生成的，跳过避免自我污染
         scanned += 1
         types = _classify(path)
 
@@ -176,15 +176,26 @@ def _scan_file(path: Path, rel: str, rule: dict[str, Any], types: set[str]) -> l
                     if count >= _MAX_HITS_PER_RULE_PER_FILE:
                         break
         elif mtype == "pair":
-            # 组合检测：同文件内 a 与 b 都出现即触发（MVP 近似，不跨文件/语句级）
-            text = "\n".join(lines)
-            ma = matcher["_rx_a"].search(text)
-            mb = matcher["_rx_b"].search(text)
-            if ma and mb:
-                line_no = text.count("\n", 0, ma.start()) + 1
-                hits.append(Finding(rule["id"], rule["name"], rule["severity"],
-                                    rel, line_no, f"组合: {ma.group(0)!r} + {mb.group(0)!r}",
-                                    rule.get("suggestion", "")))
+            # 组合检测。scope: same_line（a、b 在同一行出现）或 same_file（同文件内都出现，默认）。
+            scope = matcher.get("scope", "same_file")
+            if scope == "same_line":
+                for i, line in enumerate(lines, start=1):
+                    if matcher["_rx_a"].search(line) and matcher["_rx_b"].search(line):
+                        hits.append(Finding(
+                            rule["id"], rule["name"], rule["severity"],
+                            rel, i, "组合(同行): a 与 b 同现",
+                            rule.get("suggestion", ""),
+                        ))
+                        break
+            else:
+                text = "\n".join(lines)
+                ma = matcher["_rx_a"].search(text)
+                mb = matcher["_rx_b"].search(text)
+                if ma and mb:
+                    line_no = text.count("\n", 0, ma.start()) + 1
+                    hits.append(Finding(rule["id"], rule["name"], rule["severity"],
+                                        rel, line_no, f"组合: {ma.group(0)!r} + {mb.group(0)!r}",
+                                        rule.get("suggestion", "")))
         else:  # literal
             needle = matcher.get("value", "")
             count = 0

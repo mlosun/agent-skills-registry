@@ -24,16 +24,32 @@ rules:
     severity: block
     file_types: [script, executable]
     matchers:
+      # 精确根目录删除（rm -rf / 或 /*，不匹配 /tmp 等正常清理）
       - type: regex
-        pattern: 'rm\s+(-[a-zA-Z]+\s+)*/?\s*$|rm\s+-rf\s+/'
+        pattern: 'rm\s+-rf\s+/(?![A-Za-z0-9_.-])'
+      # 行尾无目标 rm -rf（半成品危险命令）
       - type: regex
-        pattern: '\bsudo\b'
+        pattern: 'rm\s+-rf\s*$'
+      # 下载即执行
       - type: regex
         pattern: '(curl|wget)\s+[^|;&]*\|\s*(bash|sh|zsh)'
-      - type: regex
-        pattern: 'base64\s+-\s*d'
-      - type: regex
-        pattern: '\beval\s*\('
+      # 解码后执行（base64 -d 与 bash/sh/eval 组合）
+      - type: pair
+        scope: same_line
+        a: 'base64\s+-\s*d'
+        b: '(\|\s*(bash|sh)|\beval|\bexec|os\.system|subprocess)'
+      # eval 组合：eval + 下载/输入/执行/编码（同一行，单独 eval 不危险）
+      - type: pair
+        scope: same_line
+        a: '\beval\s*\('
+        b: >-
+          (curl|wget|requests|urllib|socket|subprocess|os\.system|input\(|argv|environ|base64|exec)
+      # sudo 组合：sudo + 高危操作（同一行，文档提到 sudo 不再误报）
+      - type: pair
+        scope: same_line
+        a: '\bsudo\b'
+        b: >-
+          (rm\s+-rf\s+/|>\s*/etc/|mkfs\.|dd\s+if=/dev/|\bcurl|\bwget|chmod\s+-R\s*777)
       - type: regex
         pattern: 'mkfs\.'
       - type: regex
@@ -92,7 +108,8 @@ rules:
       - type: regex
         pattern: 'ignore\s+(the\s+)?(system|your)\s+(prompt|instructions|rules)'
       - type: regex
-        pattern: '(show|print|reveal|give)\s+(me\s+)?your\s+system\s+(prompt|instructions)'
+        pattern: >-
+          (show|print|reveal|give)\s+(me\s+)?your\s+system\s+(prompt|instructions)
       - type: regex
         pattern: 'self[-_ ]?(replicat|improv|evolv|modify)'
     suggestion: 文档含操纵性指令/疑似 prompt 注入，需人工判定
