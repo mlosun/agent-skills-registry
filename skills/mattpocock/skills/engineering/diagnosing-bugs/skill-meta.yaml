@@ -11,4 +11,4 @@ upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 硬性缺陷和性能回退的诊断循环。当用户说“诊断”/“调试这个”，或报告某些东西损坏/抛出异常/失败/缓慢时使用。

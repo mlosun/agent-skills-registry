@@ -11,4 +11,4 @@ upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 用于设计深度模块的共享词汇。当用户想要设计或改进模块接口、寻找深化机会、决定接缝位置、使代码更可测试或更易于AI导航，或当其他技能需要深度模块词汇时使用。

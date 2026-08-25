@@ -11,4 +11,4 @@ upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 创建包含章节、问题、解答和讲解的练习目录结构，并通过代码检查。当用户想要搭建练习框架、创建练习模板或建立新的课程章节时使用。

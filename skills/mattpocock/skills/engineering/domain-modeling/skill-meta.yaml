@@ -11,4 +11,4 @@ upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 构建并完善项目的领域模型。在讨论代码库术语、编写或编辑CONTEXT.md，或记录或编辑ADR时使用。

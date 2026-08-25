@@ -11,4 +11,4 @@ upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 将当前对话转化为规格说明，并发布到项目问题追踪器中：无需访谈，仅综合你们已讨论的内容。

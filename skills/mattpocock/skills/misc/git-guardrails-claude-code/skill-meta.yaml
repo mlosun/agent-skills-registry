@@ -11,4 +11,5 @@ upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 设置Claude Code钩子，在执行危险git命令（如push、reset --hard、clean、branch -D等）前进行拦截。当用户希望防止破坏性git操作、添加git安全钩子，或在Claude
+  Code中阻止git push/reset时使用。

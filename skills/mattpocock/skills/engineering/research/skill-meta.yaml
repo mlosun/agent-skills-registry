@@ -11,4 +11,5 @@ upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
 version: 1.0.0
 last_synced_at: '2026-08-25'
 risk: clean
-description_zh: ''
+description_zh: 针对高可信度的一手来源调查问题，并将发现结果以 Markdown 文件形式保存到仓库中。当用户需要研究某个主题、收集文档或 API
+  事实，或将阅读工作委托给后台代理时使用。
