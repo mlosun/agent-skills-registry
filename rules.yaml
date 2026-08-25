@@ -78,9 +78,14 @@ rules:
         pattern: '\bAKIA[0-9A-Z]{16}'
       - type: regex
         pattern: "-----BEGIN [A-Z ]*PRIVATE KEY-----"
+      # 带引号的赋值（password="xxx" / token='sk-...' / api_key=`...`）
       - type: regex
         pattern: >-
-          (password|passwd|api_key|apikey|secret|token)\s*=\s*["\x27]?[^"\x27\s]{8,}
+          (password|passwd|api_key|apikey|secret|token)\s*=\s*["\x27`][^"\x27`]{6,}["\x27`]
+      # 高熵无引号赋值（16+ 位混合字符，随机密钥形态）
+      - type: regex
+        pattern: >-
+          (password|passwd|api_key|apikey|secret|token)\s*=\s*[A-Za-z0-9+/]{16,}
     suggestion: 疑似硬编码敏感凭据，需确认是否真实密钥
 
   # ---- R3 数据外传组合 · warn · 脚本 ----

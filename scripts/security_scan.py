@@ -24,7 +24,13 @@ from typing import Any
 
 import yaml
 
-from .lib.index import repo_root
+from .lib.index import (
+    load_index,
+    load_meta,
+    repo_root,
+    save_index,
+    save_meta,
+)
 
 # ---- 文件类型判定 ----
 _SCRIPT_EXTS = {
@@ -350,17 +356,83 @@ def write_report(skill_dir: Path, result: ScanResult) -> Path:
 # ---------------- CLI ----------------
 
 
+def rescan_all(rules: list[dict[str, Any]] | None = None) -> int:
+    """重扫全部 skill 并同步 risk 到 skill-meta.yaml 与 index.yaml。
+
+    用于规则库更新后（rules.yaml 改过），批量刷新已有 skill 的扫描结论。
+    返回非 clean 的 skill 数。
+    """
+    rules = rules if rules is not None else load_rules()
+    root = repo_root()
+    index = load_index(root)
+    changed = 0
+    flagged: list[tuple[str, str, int]] = []
+    total = 0
+
+    for d in sorted((root / "skills").rglob("*")):
+        if not (d.is_dir() and (d / "SKILL.md").exists()):
+            continue
+        total += 1
+        sid = str(d.relative_to(root / "skills"))
+        result = scan_skill(d, rules)
+        write_report(d, result)  # 报告始终刷新
+        meta = load_meta(root, sid)
+        if meta is not None and meta.get("risk") != result.risk:
+            meta["risk"] = result.risk
+            save_meta(root, sid, meta)
+            changed += 1
+        if result.risk != "clean":
+            flagged.append((sid, result.risk, len(result.findings)))
+
+    # index 行同步 risk
+    idx_changed = 0
+    for row in index.get("skills", []):
+        mp = root / "skills" / row["id"] / "skill-meta.yaml"
+        if not mp.exists():
+            continue
+        meta = load_meta(root, row["id"])
+        if meta is None:
+            continue
+        meta_risk = meta.get("risk")
+        if meta_risk is not None and row.get("risk") != meta_risk:
+            row["risk"] = meta_risk
+            idx_changed += 1
+    if idx_changed:
+        save_index(index, root)
+
+    print(f"重扫 {total} 个 skill：risk 变更 {changed}，index 同步 {idx_changed}")
+    if flagged:
+        for sid, risk, n in sorted(flagged):
+            print(f"  ⚠ {sid}: {risk}（{n} 命中）")
+    else:
+        print("全部 clean")
+    return len(flagged)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="security_scan", description="扫描 skill 目录安全性"
     )
-    parser.add_argument("skill_dir", help="要扫描的 skill 目录")
+    parser.add_argument(
+        "skill_dir", nargs="?", help="要扫描的 skill 目录（--rescan-all 时忽略）"
+    )
     parser.add_argument(
         "--no-report", action="store_true", help="不写 security-report.md"
     )
     parser.add_argument("--rules", help="自定义 rules.yaml 路径")
+    parser.add_argument(
+        "--rescan-all",
+        action="store_true",
+        help="重扫全部 skill 并同步 risk 到 meta/index（规则更新后用）",
+    )
     args = parser.parse_args(argv)
 
+    if args.rescan_all:
+        rules = load_rules(Path(args.rules) if args.rules else None)
+        return rescan_all(rules)
+
+    if not args.skill_dir:
+        parser.error("需要 skill_dir 或 --rescan-all")
     skill_dir = Path(args.skill_dir).resolve()
     if not skill_dir.is_dir():
         print(f"✗ 目录不存在: {skill_dir}", file=sys.stderr)

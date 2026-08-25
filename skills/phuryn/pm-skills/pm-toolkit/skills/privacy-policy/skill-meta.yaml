@@ -1,0 +1,14 @@
+# skill 级元数据 · 由 scripts 自动维护，请谨慎手改
+
+name: privacy-policy
+source:
+  owner: phuryn
+  repo: pm-skills
+  category: pm-toolkit/skills
+  path_in_repo: pm-toolkit/skills/privacy-policy
+upstream_branch: main
+upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
+version: 1.0.0
+last_synced_at: '2026-08-25'
+risk: clean
+description_zh: ''
