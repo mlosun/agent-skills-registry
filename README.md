@@ -21,7 +21,7 @@
 │   ├── import.py            入库新 skill（GitHub URL → 镜像 + 元数据 + 扫描）
 │   ├── security_scan.py     安全扫描引擎（rules.yaml 驱动）
 │   ├── translate.py         中文描述翻译（DeepSeek 非推理模型，带峰谷时段护栏）
-│   └── sync.py              同步上游更新（待实现）
+│   └── sync.py              同步上游更新（version patch+1 + 重扫）
 └── docs/superpowers/specs/  设计定稿文档
 ```
 

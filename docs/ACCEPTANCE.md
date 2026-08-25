@@ -1,6 +1,6 @@
-# 阶段 1-4 验收清单
+# 阶段 1-5 验收清单
 
-> 这是 agent-skills-registry 已完成阶段的验收指引（阶段 0 初始化 → 1 数据层 → 2 入库 → 3 安全扫描 → 4 中文翻译）。
+> 这是 agent-skills-registry 已完成阶段的验收指引（阶段 0 初始化 → 1 数据层 → 2 入库 → 3 安全扫描 → 4 中文翻译 → 5 上游同步）。
 > 每次改完相关脚本后，按此清单自测。
 
 ## 0. 前置条件
@@ -86,7 +86,31 @@ python3 -m scripts.translate --dry-run
 # 预期：输出 "✓ 当前为低谷时段（5 折）"
 ```
 
-## 5. 一致性自检（数据不漂移）
+## 5. 阶段 5 · sync.py 上游同步 + GitHub Action
+
+```bash
+# sync 引擎测试（patch 版本步进 + 合集发现 + 无更新/更新路径）
+python3 -m pytest scripts/tests/test_sync.py -v
+# 预期：4 passed（含 version+1、保留 description_zh、重扫）
+
+# 演练：报告哪些仓库有更新，不写盘
+python3 -m scripts.sync --dry-run
+# 预期：输出每个来源仓库的状态（无更新时："无更新 (SHA xxxx)"）
+
+# 真实同步（有上游更新时 version patch+1）
+python3 -m scripts.sync
+```
+
+GitHub Action（`check-updates.yml`，每天 03:00 UTC 自动跑）：
+
+```bash
+# 验证工作流在远端仓库可用（需已 push）
+gh workflow run check-updates.yml --repo mlosun/agent-skills-registry
+gh run list --repo mlosun/agent-skills-registry --workflow=check-updates.yml
+# 预期：run 显示 success；日志含 "无上游更新，跳过提交" 或 "已提交并推送同步结果"
+```
+
+## 6. 一致性自检（数据不漂移）
 
 ```bash
 python3 - <<'PY'
@@ -106,12 +130,11 @@ PY
 # 预期：一一对应: True，不一致: 0
 ```
 
-## 6. 静态检查
+## 7. 静态检查
 
 ```bash
 # 语法编译检查
-python3 -m py_compile scripts/import.py scripts/security_scan.py \
-    scripts/translate.py scripts/lib/index.py scripts/lib/skillfile.py
+python3 -m py_compile scripts/*.py scripts/lib/*.py
 # 预期：无输出、exit 0
 
 # git 工作区应干净
@@ -120,8 +143,14 @@ git status --short   # 预期：空输出
 
 ## 验收通过标准
 
-- [ ] 三套测试（test_index / test_security_scan / test_translate）全绿
-- [ ] `--dry-run` 不写盘、重复导入幂等
+- [ ] 四套测试（test_index / test_security_scan / test_translate / test_sync）全绿（17 项）
+- [ ] `--dry-run` 不写盘、重复导入幂等、sync 无更新不 version+1
+- [ ] 恶意样例能命中 R1-R4（high），正常代码不误报（clean）
+- [ ] 高峰时段默认拒绝（退出码 1），低谷放行；幂等跳过已翻译
+- [ ] sync 更新时 version patch+1、保留 description_zh、重扫报告
+- [ ] index.yaml 与磁盘目录一一对应，risk/version 双份一致
+- [ ] `python3 -m py_compile` 无错、git 工作区干净
+- [ ] GitHub Action 可手动触发且 success
 - [ ] 恶意样例能命中 R1-R4（high），正常代码不误报（clean）
 - [ ] 高峰时段默认拒绝（退出码 1），低谷放行；幂等跳过已翻译
 - [ ] index.yaml 与磁盘目录一一对应，risk/version 双份一致
