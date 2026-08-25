@@ -1,0 +1,46 @@
+---
+name: check-updates
+
+# 定期同步上游：每天运行一次 sync.py，有更新则自动 commit + push。
+# 上游一更新，精选仓库 24 小时内自动跟进，无需人工干预。
+
+"on":
+  schedule:
+    - cron: "0 3 * * *"        # 每天 03:00 UTC = 11:00 北京时间
+  workflow_dispatch: {}        # 支持手动触发（Actions 页点 Run workflow）
+
+permissions:
+  contents: write              # 允许自动 commit + push
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+
+      - name: 安装 Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖（仅 PyYAML）
+        run: pip install pyyaml
+
+      - name: 同步上游
+        run: python -m scripts.sync
+
+      - name: 有改动则提交
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "无上游更新，跳过提交"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: 自动同步上游更新"
+            git push
+            echo "已提交并推送同步结果"
+          fi
