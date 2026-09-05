@@ -7,15 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/wizard
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 生成一个交互式bash向导，引导人类完成仅能由他们执行的步骤。在配置基础设施、设置凭据或CI密钥、浏览不熟悉的第三方仪表板，或运行一次性迁移或切换时使用。不要为代理自身可以执行的步骤调用此功能。
-recommendation: 当需要人工介入的关键步骤（如输入凭证、确认迁移）时，此技能可提供清晰指引，减少错误和来回沟通，尤其适合运维和 DevOps 场景。
-tags:
-- 基础设施
-- 凭证管理
-- CI/CD
-- 运维
-- 迁移

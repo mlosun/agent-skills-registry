@@ -7,13 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/to-spec
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 将当前对话转化为规格说明，并发布到项目问题追踪器中：无需访谈，仅综合你们已讨论的内容。
-recommendation: 适合在需求讨论结束后快速生成结构化规格文档，减少手动整理时间，确保所有决策被记录。
-tags:
-- 需求管理
-- 文档生成
-- 项目管理

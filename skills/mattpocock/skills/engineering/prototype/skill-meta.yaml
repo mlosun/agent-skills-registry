@@ -7,14 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/prototype
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 构建一个一次性原型来回答设计问题。当用户想要验证状态模型或逻辑是否合理，或探索UI应该是什么样子时使用。
-recommendation: 适合在设计阶段快速验证想法，避免在错误方向投入过多开发成本。尤其适合需要探索交互逻辑或界面方案的场景，能快速获得反馈。
-tags:
-- 原型设计
-- UI/UX
-- 状态建模
-- 快速验证

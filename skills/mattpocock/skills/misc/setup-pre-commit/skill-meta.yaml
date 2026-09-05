@@ -7,16 +7,9 @@ source:
   category: misc
   path_in_repo: skills/misc/setup-pre-commit
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 在当前仓库中设置 Husky pre-commit 钩子，配合 lint-staged（Prettier）、类型检查和测试。当用户想要添加
   pre-commit 钩子、设置 Husky、配置 lint-staged，或添加提交时的格式化/类型检查/测试时使用。
-recommendation: 适合希望自动化代码质量检查的团队，能在提交前统一格式化、捕获类型错误和测试失败，减少CI反馈循环，提升代码一致性。
-tags:
-- 代码质量
-- Git钩子
-- 自动化
-- 前端开发
-- 工作流

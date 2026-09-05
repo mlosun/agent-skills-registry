@@ -7,15 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/tdd
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 测试驱动开发。当用户希望以测试优先的方式构建功能或修复错误、提到“红绿重构”或需要集成测试时使用。
-recommendation: 适合追求高质量代码、希望减少回归缺陷的开发者。它强制先写测试再写实现，能帮你快速验证逻辑，尤其适合需要频繁重构或集成测试的项目。
-tags:
-- 测试驱动开发
-- 编码
-- 测试
-- 重构
-- 缺陷修复

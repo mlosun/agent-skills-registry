@@ -7,14 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/to-tickets
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 将计划、规格或当前对话分解为一组曳光弹工单，每个工单声明其阻塞边，并发布到配置的跟踪器（阻塞边以文本形式保存在本地每个工单的一个文件中，或在真实跟踪器上以原生阻塞链接形式呈现）。
-recommendation: 适合需要将大型计划或需求快速拆解为可执行任务并跟踪依赖关系的团队，能自动生成工单并标注阻塞关系，提升任务管理效率。
-tags:
-- 任务拆解
-- 项目管理
-- 需求分析
-- 工作流

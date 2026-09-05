@@ -7,15 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/wayfinder
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 将一大块工作（超过一个代理会话所能容纳的量）规划为问题跟踪器上决策工单的共享地图，并逐一解决它们，直到通往目标的路径清晰为止。
-recommendation: 适合需要分阶段处理复杂项目或长期任务的场景，通过将工作分解为可追踪的决策点，帮助团队保持方向清晰并逐步推进，尤其适用于多代理协作或需要持续迭代的项目管理。
-tags:
-- 项目管理
-- 任务分解
-- 协作
-- 工作流
-- 规划

@@ -7,14 +7,8 @@ source:
   category: productivity
   path_in_repo: skills/productivity/handoff
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 将当前对话压缩为交接文档，供另一个代理接手。
-recommendation: 适合多代理协作或需要中断后恢复任务的场景，能高效传递上下文，避免重复沟通。
-tags:
-- 多代理协作
-- 任务交接
-- 上下文管理
-- 工作流

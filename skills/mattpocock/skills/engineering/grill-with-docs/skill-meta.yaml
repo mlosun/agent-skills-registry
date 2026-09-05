@@ -7,14 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/grill-with-docs
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 一场持续深入的访谈，旨在打磨计划或设计，同时沿途生成文档（ADR和术语表）。
-recommendation: 适合在项目早期或设计评审阶段使用，通过结构化提问快速暴露计划漏洞，并自动产出决策记录和术语表，提升团队协作效率。
-tags:
-- 设计评审
-- 文档生成
-- 项目规划
-- 团队协作

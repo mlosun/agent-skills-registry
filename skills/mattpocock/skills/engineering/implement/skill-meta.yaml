@@ -7,14 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/implement
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 根据规格或一组工单实施一项工作。
-recommendation: 适合需要将需求或工单转化为代码的开发者，能确保实现过程规范有序，减少遗漏。
-tags:
-- 编码
-- 需求实现
-- 工单处理
-- 开发流程

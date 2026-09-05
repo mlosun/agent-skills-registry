@@ -7,15 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/resolving-merge-conflicts
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 当您需要解决进行中的git合并/变基冲突时使用。
-recommendation: 适合频繁处理 Git 合并或变基冲突的开发者，能快速定位并解决冲突，减少手动排查时间，提升协作效率。
-tags:
-- Git
-- 版本控制
-- 冲突解决
-- 开发工具
-- 工作流

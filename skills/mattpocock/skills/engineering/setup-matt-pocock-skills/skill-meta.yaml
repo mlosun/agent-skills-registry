@@ -7,14 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/setup-matt-pocock-skills
 upstream_branch: main
-upstream_sha: 6654f6b60cd9d5be8b54c6fafe44346dabeb3b76
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
+version: 1.0.1
+last_synced_at: '2026-09-05'
 risk: clean
 description_zh: 为工程技能配置此仓库：设置其问题追踪器、分类标签词汇表和领域文档布局。在首次使用其他工程技能前运行一次。
-recommendation: 适合需要系统化工程管理流程的团队，一次性初始化仓库结构，确保后续技能高效运行。
-tags:
-- 工程管理
-- 仓库配置
-- 初始化
-- 工作流
