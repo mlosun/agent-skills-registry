@@ -7,14 +7,8 @@ source:
   category: pm-market-research/skills
   path_in_repo: pm-market-research/skills/competitor-analysis
 upstream_branch: main
-upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
+version: 1.0.1
+last_synced_at: '2026-09-15'
 risk: clean
 description_zh: 分析竞争对手的优势、劣势和差异化机会。识别直接竞争对手并绘制竞争格局。在进行竞争研究、准备竞争简报或寻找差异化机会时使用。
-recommendation: 适合市场调研、产品规划或战略制定时快速梳理竞争格局，帮助发现差异化切入点，节省手动收集和分析竞品信息的时间。
-tags:
-- 竞争分析
-- 市场调研
-- 产品战略
-- 差异化定位

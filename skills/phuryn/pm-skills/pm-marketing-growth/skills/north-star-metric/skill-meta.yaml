@@ -7,15 +7,8 @@ source:
   category: pm-marketing-growth/skills
   path_in_repo: pm-marketing-growth/skills/north-star-metric
 upstream_branch: main
-upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
+version: 1.0.1
+last_synced_at: '2026-09-15'
 risk: clean
 description_zh: 定义一个北极星指标及3-5个支持性输入指标，形成指标星座。将业务游戏分类（注意力、交易、生产力），并依据7项有效北极星标准进行验证。适用于选择北极星指标、建立指标框架、学习北极星框架或决定衡量内容时使用。
-recommendation: 适合产品经理和数据团队明确核心增长目标，通过系统化框架避免指标选择偏差，快速搭建可落地的指标体系。
-tags:
-- 指标框架
-- 产品分析
-- 增长策略
-- 数据驱动
-- 决策支持

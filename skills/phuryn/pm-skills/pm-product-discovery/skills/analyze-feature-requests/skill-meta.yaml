@@ -7,14 +7,8 @@ source:
   category: pm-product-discovery/skills
   path_in_repo: pm-product-discovery/skills/analyze-feature-requests
 upstream_branch: main
-upstream_sha: 18468a95b427e70e258b51389796367c6f684e7d
-version: 1.0.0
-last_synced_at: '2026-08-25'
+upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
+version: 1.0.1
+last_synced_at: '2026-09-15'
 risk: clean
 description_zh: 按主题、战略一致性、影响、工作量及风险，对功能请求列表进行分析和排序。在审阅客户功能请求、对积压工作进行分类或做出优先级决策时使用。
-recommendation: 适合产品经理和团队在需求评审会上快速梳理功能请求，通过多维度评估辅助决策，提升优先级排序的效率和客观性。
-tags:
-- 产品管理
-- 需求分析
-- 优先级排序
-- 决策支持

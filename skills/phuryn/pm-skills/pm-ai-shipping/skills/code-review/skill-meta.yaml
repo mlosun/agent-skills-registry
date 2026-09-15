@@ -1,0 +1,14 @@
+# skill 级元数据 · 由 scripts 自动维护，请谨慎手改
+
+name: code-review
+source:
+  owner: phuryn
+  repo: pm-skills
+  category: pm-ai-shipping/skills
+  path_in_repo: pm-ai-shipping/skills/code-review
+upstream_branch: main
+upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
+version: 1.0.0
+last_synced_at: '2026-09-15'
+risk: clean
+description_zh: ''
