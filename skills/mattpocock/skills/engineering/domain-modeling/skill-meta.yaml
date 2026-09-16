@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/domain-modeling
 upstream_branch: main
-upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
-version: 1.0.1
-last_synced_at: '2026-09-05'
+upstream_sha: 959a8e9f1edc3adbe2f7e3054bb6fbefa6696260
+version: 1.0.2
+last_synced_at: '2026-09-16'
 risk: clean
 description_zh: 构建并完善项目的领域模型。在讨论代码库术语、编写或编辑CONTEXT.md，或记录或编辑ADR时使用。

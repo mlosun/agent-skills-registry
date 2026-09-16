@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/code-review
 upstream_branch: main
-upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
-version: 1.0.1
-last_synced_at: '2026-09-05'
+upstream_sha: 959a8e9f1edc3adbe2f7e3054bb6fbefa6696260
+version: 1.0.2
+last_synced_at: '2026-09-16'
 risk: clean
 description_zh: 审查自固定点（提交、分支、标签或合并基点）以来的变更，沿两个维度进行：标准（代码是否符合本仓库记录的编码标准？）和规格（代码是否匹配原始问题/规格的要求？）。并行运行两个子代理进行审查，并并排报告结果。当用户想要审查分支、拉取请求、进行中的更改，或要求“自X起审查”时使用。

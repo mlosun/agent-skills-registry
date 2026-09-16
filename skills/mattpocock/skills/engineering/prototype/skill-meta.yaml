@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/prototype
 upstream_branch: main
-upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
-version: 1.0.1
-last_synced_at: '2026-09-05'
+upstream_sha: 959a8e9f1edc3adbe2f7e3054bb6fbefa6696260
+version: 1.0.2
+last_synced_at: '2026-09-16'
 risk: clean
 description_zh: 构建一个一次性原型来回答设计问题。当用户想要验证状态模型或逻辑是否合理，或探索UI应该是什么样子时使用。

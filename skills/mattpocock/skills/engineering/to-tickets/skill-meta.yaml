@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/to-tickets
 upstream_branch: main
-upstream_sha: 3cca18b368ae95cdbdebbff572ccafa662551015
-version: 1.0.1
-last_synced_at: '2026-09-05'
+upstream_sha: 959a8e9f1edc3adbe2f7e3054bb6fbefa6696260
+version: 1.0.2
+last_synced_at: '2026-09-16'
 risk: clean
 description_zh: 将计划、规格或当前对话分解为一组曳光弹工单，每个工单声明其阻塞边，并发布到配置的跟踪器（阻塞边以文本形式保存在本地每个工单的一个文件中，或在真实跟踪器上以原生阻塞链接形式呈现）。
