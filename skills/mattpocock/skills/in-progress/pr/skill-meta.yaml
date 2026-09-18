@@ -1,14 +1,14 @@
 # skill 级元数据 · 由 scripts 自动维护，请谨慎手改
 
-name: ask-matt
+name: pr
 source:
   owner: mattpocock
   repo: skills
-  category: engineering
-  path_in_repo: skills/engineering/ask-matt
+  category: in-progress
+  path_in_repo: skills/in-progress/pr
 upstream_branch: main
 upstream_sha: 74ca5fe077456a0b3b2f5310cf9430999fd0b5fd
-version: 1.0.3
+version: 1.0.0
 last_synced_at: '2026-09-18'
 risk: clean
-description_zh: 询问哪种技能或流程适合你的情况。本仓库中技能的路由器。
+description_zh: ''

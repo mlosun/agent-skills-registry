@@ -7,9 +7,9 @@ source:
   category: misc
   path_in_repo: skills/misc/git-guardrails-claude-code
 upstream_branch: main
-upstream_sha: 959a8e9f1edc3adbe2f7e3054bb6fbefa6696260
-version: 1.0.2
-last_synced_at: '2026-09-16'
+upstream_sha: 74ca5fe077456a0b3b2f5310cf9430999fd0b5fd
+version: 1.0.3
+last_synced_at: '2026-09-18'
 risk: clean
 description_zh: 设置Claude Code钩子，在执行危险git命令（如push、reset --hard、clean、branch -D等）前进行拦截。当用户希望防止破坏性git操作、添加git安全钩子，或在Claude
   Code中阻止git push/reset时使用。
