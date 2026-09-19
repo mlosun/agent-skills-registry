@@ -1,0 +1,14 @@
+# skill 级元数据 · 由 scripts 自动维护，请谨慎手改
+
+name: diagnosing-superpowers
+source:
+  owner: obra
+  repo: superpowers
+  category: null
+  path_in_repo: skills/diagnosing-superpowers
+upstream_branch: main
+upstream_sha: 5bf4e78011075bcfc0dc295f0724994cd123ee71
+version: 1.0.0
+last_synced_at: '2026-09-19'
+risk: clean
+description_zh: ''

@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/setup-matt-pocock-skills
 upstream_branch: main
-upstream_sha: 74ca5fe077456a0b3b2f5310cf9430999fd0b5fd
-version: 1.0.3
-last_synced_at: '2026-09-18'
+upstream_sha: c55ee46073ed923f86ce59a5eb3b6d895095d1b7
+version: 1.0.4
+last_synced_at: '2026-09-19'
 risk: clean
 description_zh: 为工程技能配置此仓库：设置其问题追踪器、分类标签词汇表和领域文档布局。在首次使用其他工程技能前运行一次。

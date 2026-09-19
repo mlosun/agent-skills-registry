@@ -7,8 +7,8 @@ source:
   category: productivity
   path_in_repo: skills/productivity/grilling
 upstream_branch: main
-upstream_sha: 74ca5fe077456a0b3b2f5310cf9430999fd0b5fd
-version: 1.0.3
-last_synced_at: '2026-09-18'
+upstream_sha: c55ee46073ed923f86ce59a5eb3b6d895095d1b7
+version: 1.0.4
+last_synced_at: '2026-09-19'
 risk: clean
 description_zh: 对用户的计划、决策或想法进行毫不留情的盘问。当用户想要对自己的思考进行压力测试，或使用任何“盘问”触发短语时使用。

@@ -7,9 +7,9 @@ source:
   category: engineering
   path_in_repo: skills/engineering/research
 upstream_branch: main
-upstream_sha: 74ca5fe077456a0b3b2f5310cf9430999fd0b5fd
-version: 1.0.3
-last_synced_at: '2026-09-18'
+upstream_sha: c55ee46073ed923f86ce59a5eb3b6d895095d1b7
+version: 1.0.4
+last_synced_at: '2026-09-19'
 risk: clean
 description_zh: 针对高可信度的一手来源调查问题，并将发现结果以 Markdown 文件形式保存到仓库中。当用户需要研究某个主题、收集文档或 API
   事实，或将阅读工作委托给后台代理时使用。
