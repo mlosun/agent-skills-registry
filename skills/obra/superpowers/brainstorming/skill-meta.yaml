@@ -7,8 +7,8 @@ source:
   category: null
   path_in_repo: skills/brainstorming
 upstream_branch: main
-upstream_sha: 5bf4e78011075bcfc0dc295f0724994cd123ee71
-version: 1.0.1
-last_synced_at: '2026-09-19'
+upstream_sha: 8ca22dba9a94f28898bbce59f2537ff4d87c747d
+version: 1.0.2
+last_synced_at: '2026-09-26'
 risk: clean
 description_zh: 在任何创意工作之前，你必须使用此技能——创建功能、构建组件、添加功能或修改行为。在实施之前，探索用户的意图、需求和设计。
