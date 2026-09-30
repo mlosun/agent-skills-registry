@@ -1,0 +1,14 @@
+# skill 级元数据 · 由 scripts 自动维护，请谨慎手改
+
+name: retro
+source:
+  owner: mattpocock
+  repo: skills
+  category: engineering
+  path_in_repo: skills/engineering/retro
+upstream_branch: main
+upstream_sha: d81f3a183412e71a5b1e84ca21bc1a35eea03a60
+version: 1.0.0
+last_synced_at: '2026-09-30'
+risk: clean
+description_zh: ''
