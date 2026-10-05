@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/pr
 upstream_branch: main
-upstream_sha: d81f3a183412e71a5b1e84ca21bc1a35eea03a60
-version: 1.0.0
-last_synced_at: '2026-09-30'
+upstream_sha: f6abdeb8dd2a9be64f924ab44c7af374cb76726d
+version: 1.0.1
+last_synced_at: '2026-10-05'
 risk: clean
 description_zh: ''
