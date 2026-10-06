@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/implement-spec
 upstream_branch: main
-upstream_sha: f6abdeb8dd2a9be64f924ab44c7af374cb76726d
-version: 1.0.1
-last_synced_at: '2026-10-05'
+upstream_sha: 4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d
+version: 1.0.2
+last_synced_at: '2026-10-06'
 risk: clean
 description_zh: ''

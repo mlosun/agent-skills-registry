@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/wizard
 upstream_branch: main
-upstream_sha: f6abdeb8dd2a9be64f924ab44c7af374cb76726d
-version: 1.0.6
-last_synced_at: '2026-10-05'
+upstream_sha: 4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d
+version: 1.0.7
+last_synced_at: '2026-10-06'
 risk: clean
 description_zh: 生成一个交互式bash向导，引导人类完成仅能由他们执行的步骤。在配置基础设施、设置凭据或CI密钥、浏览不熟悉的第三方仪表板，或运行一次性迁移或切换时使用。不要为代理自身可以执行的步骤调用此功能。
