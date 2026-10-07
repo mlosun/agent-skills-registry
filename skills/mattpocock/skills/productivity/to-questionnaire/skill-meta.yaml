@@ -7,8 +7,8 @@ source:
   category: productivity
   path_in_repo: skills/productivity/to-questionnaire
 upstream_branch: main
-upstream_sha: 4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d
-version: 1.0.7
-last_synced_at: '2026-10-06'
+upstream_sha: dd400c3ad65e57c06f05e832e0aac92c7992f34d
+version: 1.0.8
+last_synced_at: '2026-10-07'
 risk: clean
 description_zh: 将你无法完全回答的决策转化为一份问卷，供他人填写。
