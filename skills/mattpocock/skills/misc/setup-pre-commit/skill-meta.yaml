@@ -7,9 +7,9 @@ source:
   category: misc
   path_in_repo: skills/misc/setup-pre-commit
 upstream_branch: main
-upstream_sha: dd400c3ad65e57c06f05e832e0aac92c7992f34d
-version: 1.0.8
-last_synced_at: '2026-10-07'
+upstream_sha: b0618bc436ad893b3c5e84e55fba86586d34a404
+version: 1.0.9
+last_synced_at: '2026-10-08'
 risk: clean
 description_zh: 在当前仓库中设置 Husky pre-commit 钩子，配合 lint-staged（Prettier）、类型检查和测试。当用户想要添加
   pre-commit 钩子、设置 Husky、配置 lint-staged，或添加提交时的格式化/类型检查/测试时使用。

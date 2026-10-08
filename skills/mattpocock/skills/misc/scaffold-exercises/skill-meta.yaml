@@ -7,8 +7,8 @@ source:
   category: misc
   path_in_repo: skills/misc/scaffold-exercises
 upstream_branch: main
-upstream_sha: dd400c3ad65e57c06f05e832e0aac92c7992f34d
-version: 1.0.8
-last_synced_at: '2026-10-07'
+upstream_sha: b0618bc436ad893b3c5e84e55fba86586d34a404
+version: 1.0.9
+last_synced_at: '2026-10-08'
 risk: clean
 description_zh: 创建包含章节、问题、解答和讲解的练习目录结构，并通过代码检查。当用户想要搭建练习框架、创建练习模板或建立新的课程章节时使用。
