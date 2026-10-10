@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/codebase-design
 upstream_branch: main
-upstream_sha: b0618bc436ad893b3c5e84e55fba86586d34a404
-version: 1.0.9
-last_synced_at: '2026-10-08'
+upstream_sha: 49dd158d1076134a641b33efb035946536778336
+version: 1.0.10
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 用于设计深度模块的共享词汇。当用户想要设计或改进模块接口、寻找深化机会、决定接缝位置、使代码更可测试或更易于AI导航，或当其他技能需要深度模块词汇时使用。

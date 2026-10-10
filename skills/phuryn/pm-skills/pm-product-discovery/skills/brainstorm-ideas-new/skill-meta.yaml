@@ -7,8 +7,8 @@ source:
   category: pm-product-discovery/skills
   path_in_repo: pm-product-discovery/skills/brainstorm-ideas-new
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 从产品经理、设计师和工程师的角度，为新产品的初始探索阶段头脑风暴功能创意。适用于启动新产品的探索、为创业想法挖掘功能，或进行初步构思时使用。

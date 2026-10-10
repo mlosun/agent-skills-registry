@@ -7,8 +7,8 @@ source:
   category: pm-toolkit/skills
   path_in_repo: pm-toolkit/skills/privacy-policy
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 起草一份详细的隐私政策，涵盖数据类型、司法管辖区、GDPR及合规性考量，以及需要法律审查的条款。在创建隐私政策、更新数据保护文档或准备合规事宜时使用。

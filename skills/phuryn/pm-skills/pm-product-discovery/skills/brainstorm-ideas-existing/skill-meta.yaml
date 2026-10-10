@@ -7,8 +7,8 @@ source:
   category: pm-product-discovery/skills
   path_in_repo: pm-product-discovery/skills/brainstorm-ideas-existing
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 使用PM、设计师和工程师的多视角构思，为现有产品头脑风暴产品创意。适用于生成新功能创意、为已识别的机会头脑风暴解决方案，或与产品三人组进行构思时。

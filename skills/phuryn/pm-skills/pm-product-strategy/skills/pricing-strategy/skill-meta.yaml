@@ -7,8 +7,8 @@ source:
   category: pm-product-strategy/skills
   path_in_repo: pm-product-strategy/skills/pricing-strategy
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 分析并设计定价策略，包括定价模型、竞争性定价分析、支付意愿估算和价格弹性。在设定价格、评估定价模型、准备价格调整或比较免费增值模式与付费模式时使用。

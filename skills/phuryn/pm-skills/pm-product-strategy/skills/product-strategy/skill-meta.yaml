@@ -7,8 +7,8 @@ source:
   category: pm-product-strategy/skills
   path_in_repo: pm-product-strategy/skills/product-strategy
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 使用9个部分的产品策略画布创建全面的产品策略——愿景、细分市场、成本、价值主张、权衡、指标、增长、能力和防御性。在制定产品策略、创建战略计划或定义产品方向时使用。

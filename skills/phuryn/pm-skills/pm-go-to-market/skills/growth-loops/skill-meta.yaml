@@ -7,8 +7,8 @@ source:
   category: pm-go-to-market/skills
   path_in_repo: pm-go-to-market/skills/growth-loops
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 识别可持续牵引力的增长循环（飞轮）。评估5种循环类型：病毒式、使用型、协作型、用户生成型和推荐型。在设计增长机制、构建产品驱动的牵引力或理解增长循环运作方式时使用。

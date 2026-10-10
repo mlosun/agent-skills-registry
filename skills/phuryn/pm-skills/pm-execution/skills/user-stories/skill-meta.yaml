@@ -7,8 +7,8 @@ source:
   category: pm-execution/skills
   path_in_repo: pm-execution/skills/user-stories
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 遵循3C原则（卡片、对话、确认）和INVEST标准创建用户故事，包含描述、设计链接和验收标准。在编写用户故事、将功能拆分为待办事项或定义验收标准时使用。

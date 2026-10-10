@@ -7,8 +7,8 @@ source:
   category: pm-product-strategy/skills
   path_in_repo: pm-product-strategy/skills/lean-canvas
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 生成一份精益画布，包含问题、解决方案、指标、成本结构、独特价值主张、不公平优势、渠道、客户细分和收入。在探索精益创业画布、测试商业假设或建模新创企业时使用。

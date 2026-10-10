@@ -7,8 +7,8 @@ source:
   category: null
   path_in_repo: skills/receiving-code-review
 upstream_branch: main
-upstream_sha: 8ca22dba9a94f28898bbce59f2537ff4d87c747d
-version: 1.0.2
-last_synced_at: '2026-09-26'
+upstream_sha: bb92a77741419a4ab5f06e711a283343f1ada0c3
+version: 1.0.3
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 在收到代码审查反馈时、实施建议之前使用，尤其是当反馈看起来不清晰或技术上存疑时——需要技术严谨性和验证，而非表面上的同意或盲目实施

@@ -7,8 +7,8 @@ source:
   category: pm-product-strategy/skills
   path_in_repo: pm-product-strategy/skills/ansoff-matrix
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 生成安索夫矩阵分析，将增长战略映射到市场渗透、市场开发、产品开发和多元化四个维度。在考虑增长选项、规划市场扩张或评估战略增长路径时使用。

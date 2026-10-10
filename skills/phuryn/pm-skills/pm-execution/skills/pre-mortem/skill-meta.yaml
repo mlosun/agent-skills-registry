@@ -7,8 +7,8 @@ source:
   category: pm-execution/skills
   path_in_repo: pm-execution/skills/pre-mortem
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 对PRD或发布计划进行事前风险分析。将风险分类为老虎（真正的问题）、纸老虎（被夸大的担忧）和大象（未言明的顾虑），然后归类为阻碍发布、快速跟进或持续跟踪。适用于准备发布、压力测试产品计划或识别可能出错之处时使用。

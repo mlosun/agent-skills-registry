@@ -7,8 +7,8 @@ source:
   category: pm-product-strategy/skills
   path_in_repo: pm-product-strategy/skills/value-proposition
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 使用6部分JTBD模板设计详细的价值主张——谁、为什么、之前是什么、如何、之后是什么、替代方案。在创建价值主张、分析客户价值交付或阐明客户为何应选择你的产品时使用。

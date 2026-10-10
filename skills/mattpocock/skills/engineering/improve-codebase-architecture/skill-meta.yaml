@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/improve-codebase-architecture
 upstream_branch: main
-upstream_sha: b0618bc436ad893b3c5e84e55fba86586d34a404
-version: 1.0.9
-last_synced_at: '2026-10-08'
+upstream_sha: 49dd158d1076134a641b33efb035946536778336
+version: 1.0.10
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 扫描代码库以寻找深化机会，将其呈现为可视化HTML报告，然后针对你选择的任一机会进行深入探究。

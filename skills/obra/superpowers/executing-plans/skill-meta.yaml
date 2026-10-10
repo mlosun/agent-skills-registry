@@ -7,8 +7,8 @@ source:
   category: null
   path_in_repo: skills/executing-plans
 upstream_branch: main
-upstream_sha: 8ca22dba9a94f28898bbce59f2537ff4d87c747d
-version: 1.0.2
-last_synced_at: '2026-09-26'
+upstream_sha: bb92a77741419a4ab5f06e711a283343f1ada0c3
+version: 1.0.3
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 当您有书面实施计划需要在单独的会话中执行并设有审查检查点时使用

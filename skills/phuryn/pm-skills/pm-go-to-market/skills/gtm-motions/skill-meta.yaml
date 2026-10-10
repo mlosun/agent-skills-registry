@@ -7,8 +7,8 @@ source:
   category: pm-go-to-market/skills
   path_in_repo: pm-go-to-market/skills/gtm-motions
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 识别7种GTM动议和工具中的最佳方案：入站、出站、付费数字、社区、合作伙伴、ABM和PLG。在选择营销渠道、决定入站与出站策略，或规划跨渠道活动时使用。

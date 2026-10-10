@@ -7,8 +7,8 @@ source:
   category: pm-ai-shipping/skills
   path_in_repo: pm-ai-shipping/skills/intended-vs-implemented
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 查找系统应做之事与实际代码行为之间差距的方法——这类通用扫描器因缺乏意图模型而遗漏的缺陷类别。定义了何为文档化意图、何为实现证据、哪些不匹配值得关注，以及如何避免含糊其辞的发现。在审计AI生成的代码、对照文档化权限审查访问控制，或检查代码库是否与其自身文档一致时使用。

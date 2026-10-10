@@ -7,8 +7,8 @@ source:
   category: pm-product-discovery/skills
   path_in_repo: pm-product-discovery/skills/interview-script
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 创建结构化客户访谈脚本，包含JTBD探询问题、热身、核心探索和收尾部分。遵循《妈妈测试》原则——不设引导性问题，不推销，关注过去行为。在准备用户访谈、创建访谈指南或规划发现性研究时使用。

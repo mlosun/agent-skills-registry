@@ -7,8 +7,8 @@ source:
   category: pm-data-analytics/skills
   path_in_repo: pm-data-analytics/skills/cohort-analysis
 upstream_branch: main
-upstream_sha: 8607e3b077817f89bf4a9b623246219734ac3be0
-version: 1.0.1
-last_synced_at: '2026-09-15'
+upstream_sha: 409a952e283e3271cf8ff0a247c6ff8e118c573b
+version: 1.0.2
+last_synced_at: '2026-10-10'
 risk: clean
 description_zh: 对用户参与数据进行队列分析——留存曲线、功能采用趋势和细分洞察。在按队列分析用户留存、研究功能随时间的采用情况、调查流失模式或识别参与趋势时使用。
