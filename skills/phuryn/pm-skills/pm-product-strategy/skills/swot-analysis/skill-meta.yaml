@@ -7,8 +7,8 @@ source:
   category: pm-product-strategy/skills
   path_in_repo: pm-product-strategy/skills/swot-analysis
 upstream_branch: main
-upstream_sha: c68487d721e419ec87af1ae6412a842978eab785
-version: 1.0.3
-last_synced_at: '2026-10-11'
+upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
+version: 1.0.4
+last_synced_at: '2026-10-17'
 risk: clean
 description_zh: 进行详细的SWOT分析——优势、劣势、机会和威胁，并附上可操作的建议。在进行战略评估、竞争分析或评估产品或业务定位时使用。

@@ -7,8 +7,8 @@ source:
   category: pm-product-discovery/skills
   path_in_repo: pm-product-discovery/skills/brainstorm-experiments-new
 upstream_branch: main
-upstream_sha: c68487d721e419ec87af1ae6412a842978eab785
-version: 1.0.3
-last_synced_at: '2026-10-11'
+upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
+version: 1.0.4
+last_synced_at: '2026-10-17'
 risk: clean
 description_zh: 为新产品设计精益创业实验（预型测试）。创建XYZ假设，并建议低成本的验证方法，如落地页、解说视频和预购。在验证新产品创意、创建预型测试或测试市场需求时使用。

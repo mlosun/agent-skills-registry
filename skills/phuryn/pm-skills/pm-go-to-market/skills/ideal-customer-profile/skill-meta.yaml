@@ -7,8 +7,8 @@ source:
   category: pm-go-to-market/skills
   path_in_repo: pm-go-to-market/skills/ideal-customer-profile
 upstream_branch: main
-upstream_sha: c68487d721e419ec87af1ae6412a842978eab785
-version: 1.0.3
-last_synced_at: '2026-10-11'
+upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
+version: 1.0.4
+last_synced_at: '2026-10-17'
 risk: clean
 description_zh: 从研究数据中识别理想客户画像（ICP），包括人口统计特征、行为、待完成任务（JTBD）和需求。在定义ICP、分析PMF调查数据或了解最佳客户是谁时使用。

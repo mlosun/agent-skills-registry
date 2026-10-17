@@ -7,8 +7,8 @@ source:
   category: pm-ai-shipping/skills
   path_in_repo: pm-ai-shipping/skills/code-review
 upstream_branch: main
-upstream_sha: c68487d721e419ec87af1ae6412a842978eab785
-version: 1.0.2
-last_synced_at: '2026-10-11'
+upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
+version: 1.0.3
+last_synced_at: '2026-10-17'
 risk: clean
 description_zh: ''

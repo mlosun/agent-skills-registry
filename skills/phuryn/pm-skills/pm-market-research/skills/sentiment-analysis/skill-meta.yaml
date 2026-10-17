@@ -7,8 +7,8 @@ source:
   category: pm-market-research/skills
   path_in_repo: pm-market-research/skills/sentiment-analysis
 upstream_branch: main
-upstream_sha: c68487d721e419ec87af1ae6412a842978eab785
-version: 1.0.3
-last_synced_at: '2026-10-11'
+upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
+version: 1.0.4
+last_synced_at: '2026-10-17'
 risk: clean
 description_zh: 分析用户反馈数据，识别带有情感评分、JTBD和产品满意度洞察的细分群体。适用于大规模分析用户反馈、对评论或调查进行情感分析，或识别满意度模式时使用。

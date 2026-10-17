@@ -7,8 +7,8 @@ source:
   category: pm-execution/skills
   path_in_repo: pm-execution/skills/outcome-roadmap
 upstream_branch: main
-upstream_sha: c68487d721e419ec87af1ae6412a842978eab785
-version: 1.0.3
-last_synced_at: '2026-10-11'
+upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
+version: 1.0.4
+last_synced_at: '2026-10-17'
 risk: clean
 description_zh: 将面向输出的路线图转变为面向结果的路线图，以传达战略意图。将举措改写为反映用户和业务影响的结果陈述。在转向结果路线图、使路线图更具战略性或将功能列表改写为结果时使用。
