@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/to-spec
 upstream_branch: main
-upstream_sha: 49dd158d1076134a641b33efb035946536778336
-version: 1.0.10
-last_synced_at: '2026-10-10'
+upstream_sha: 5beb35b040e3de97e54fa9e386d7e42d15c295c2
+version: 1.0.11
+last_synced_at: '2026-10-20'
 risk: clean
 description_zh: 将当前对话转化为规格说明，并发布到项目问题追踪器中：无需访谈，仅综合你们已讨论的内容。
