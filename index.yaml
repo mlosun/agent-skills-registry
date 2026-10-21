@@ -1,7 +1,7 @@
 # registry 装订页 · schema v1 · 由 scripts 自动维护，勿手改
 
 version: 1
-updated_at: '2026-10-20T08:13:10+00:00'
+updated_at: '2026-10-21T08:18:09+00:00'
 skills:
 - id: mattpocock/skills/engineering/ask-matt
   name: ask-matt
@@ -215,77 +215,77 @@ skills:
   category: productivity
 - id: obra/superpowers/brainstorming
   name: brainstorming
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/diagnosing-superpowers
   name: diagnosing-superpowers
-  version: 1.0.2
+  version: 1.0.3
   risk: clean
   category: null
 - id: obra/superpowers/dispatching-parallel-agents
   name: dispatching-parallel-agents
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/executing-plans
   name: executing-plans
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/finishing-a-development-branch
   name: finishing-a-development-branch
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/receiving-code-review
   name: receiving-code-review
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/requesting-code-review
   name: requesting-code-review
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/subagent-driven-development
   name: subagent-driven-development
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/systematic-debugging
   name: systematic-debugging
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/test-driven-development
   name: test-driven-development
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/using-git-worktrees
   name: using-git-worktrees
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/using-superpowers
   name: using-superpowers
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/verification-before-completion
   name: verification-before-completion
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/writing-plans
   name: writing-plans
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: obra/superpowers/writing-skills
   name: writing-skills
-  version: 1.0.3
+  version: 1.0.4
   risk: clean
   category: null
 - id: phuryn/pm-skills/pm-ai-shipping/skills/code-review
