@@ -7,8 +7,8 @@ source:
   category: null
   path_in_repo: skills/using-git-worktrees
 upstream_branch: main
-upstream_sha: b739a8af570e10a95898f2bdf6cec97467fa6c12
-version: 1.0.4
-last_synced_at: '2026-10-21'
+upstream_sha: 2ce8aa15d05bd57213e6f746f953aafb7ded7a8b
+version: 1.0.5
+last_synced_at: '2026-10-22'
 risk: clean
 description_zh: 在开始需要与当前工作区隔离的功能开发，或执行实施计划之前使用——确保通过原生工具或git worktree回退方案存在一个隔离的工作区。

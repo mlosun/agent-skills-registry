@@ -7,8 +7,8 @@ source:
   category: null
   path_in_repo: skills/finishing-a-development-branch
 upstream_branch: main
-upstream_sha: b739a8af570e10a95898f2bdf6cec97467fa6c12
-version: 1.0.4
-last_synced_at: '2026-10-21'
+upstream_sha: 2ce8aa15d05bd57213e6f746f953aafb7ded7a8b
+version: 1.0.5
+last_synced_at: '2026-10-22'
 risk: clean
 description_zh: 当实现完成、所有测试通过，且需要决定如何整合工作时使用。

@@ -7,8 +7,8 @@ source:
   category: null
   path_in_repo: skills/verification-before-completion
 upstream_branch: main
-upstream_sha: b739a8af570e10a95898f2bdf6cec97467fa6c12
-version: 1.0.4
-last_synced_at: '2026-10-21'
+upstream_sha: 2ce8aa15d05bd57213e6f746f953aafb7ded7a8b
+version: 1.0.5
+last_synced_at: '2026-10-22'
 risk: clean
 description_zh: 在提交或创建PR之前，当即将声称工作已完成、已修复或通过时使用——需要先运行验证命令并确认输出，再做出任何成功声明；始终先有证据，后有断言。
