@@ -7,9 +7,9 @@ source:
   category: misc
   path_in_repo: skills/misc/migrate-to-shoehorn
 upstream_branch: main
-upstream_sha: 5beb35b040e3de97e54fa9e386d7e42d15c295c2
-version: 1.0.11
-last_synced_at: '2026-10-20'
+upstream_sha: 59db609eb1e18aaf59b63284d0e52255aff0c63c
+version: 1.0.12
+last_synced_at: '2026-10-27'
 risk: clean
 description_zh: 将测试文件从 `as` 类型断言迁移到 @total-typescript/shoehorn。当用户提到 shoehorn、想要替换测试中的
   `as`，或需要部分测试数据时使用。
