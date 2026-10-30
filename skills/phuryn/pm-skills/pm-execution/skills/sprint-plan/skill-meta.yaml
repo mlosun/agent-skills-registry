@@ -7,8 +7,8 @@ source:
   category: pm-execution/skills
   path_in_repo: pm-execution/skills/sprint-plan
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 使用容量估算、故事选择、依赖映射和风险识别来规划冲刺。在准备冲刺规划、估算团队容量、选择故事或根据速度平衡冲刺范围时使用。

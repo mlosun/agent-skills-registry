@@ -7,8 +7,8 @@ source:
   category: pm-product-strategy/skills
   path_in_repo: pm-product-strategy/skills/product-vision
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 构思一个鼓舞人心、可实现且富有情感的产品愿景，以激励团队并统一利益相关者的共识。在定义或完善产品愿景、创建愿景声明或围绕共同方向凝聚团队时使用。

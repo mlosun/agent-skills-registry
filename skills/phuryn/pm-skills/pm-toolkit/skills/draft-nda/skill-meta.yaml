@@ -7,8 +7,8 @@ source:
   category: pm-toolkit/skills
   path_in_repo: pm-toolkit/skills/draft-nda
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 起草一份详细的双方保密协议，涵盖信息类型、管辖法律及需法律审查的条款。在创建保密协议或为合作关系准备NDA时使用。

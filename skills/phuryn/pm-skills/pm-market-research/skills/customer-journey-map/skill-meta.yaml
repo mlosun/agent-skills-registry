@@ -7,8 +7,8 @@ source:
   category: pm-market-research/skills
   path_in_repo: pm-market-research/skills/customer-journey-map
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 创建端到端客户旅程地图，包含阶段、触点、情绪、痛点和机会。在映射客户体验、识别摩擦点、改进入门流程或可视化用户旅程时使用。

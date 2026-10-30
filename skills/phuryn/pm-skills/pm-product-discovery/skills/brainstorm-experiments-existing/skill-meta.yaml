@@ -7,8 +7,8 @@ source:
   category: pm-product-discovery/skills
   path_in_repo: pm-product-discovery/skills/brainstorm-experiments-existing
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 为现有产品设计实验以测试假设——包括原型、A/B测试、技术预研及其他低成本的验证方法。适用于验证假设、低成本测试功能想法或规划产品实验时。

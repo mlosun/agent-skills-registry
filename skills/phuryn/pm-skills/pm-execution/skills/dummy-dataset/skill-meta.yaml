@@ -7,8 +7,8 @@ source:
   category: pm-execution/skills
   path_in_repo: pm-execution/skills/dummy-dataset
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 生成用于测试的逼真模拟数据集，支持自定义列、约束和输出格式（CSV、JSON、SQL、Python脚本）。在创建测试数据、构建模拟数据集或为开发和演示生成示例数据时使用。

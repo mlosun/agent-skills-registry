@@ -7,8 +7,8 @@ source:
   category: pm-ai-shipping/skills
   path_in_repo: pm-ai-shipping/skills/shipping-artifacts
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 一套持久化的文档集，使AI构建（vibe-coded）应用在发布前可审查。每个应用所需的小核心——架构、用户/权限流程、权限、变量/密钥，以及测试覆盖映射——加上仅在适用时添加的条件文档：邮件、定时任务、SEO，以及嵌入式代理/自动化。定义每份文档必须捕获的内容，以及审查者或审计者如何使用它。在记录代码库以供交接、映射用户旅程和信任边界跨越、规划测试覆盖，或准备安全或性能审计时使用。

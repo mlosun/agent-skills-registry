@@ -7,8 +7,8 @@ source:
   category: pm-toolkit/skills
   path_in_repo: pm-toolkit/skills/review-resume
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 全面的产品经理简历审阅与定制，依据10项最佳实践，包括XYZ+S公式、关键词优化、针对特定职位的定制以及结构。在审阅产品经理简历、准备求职申请或提升简历影响力时使用。

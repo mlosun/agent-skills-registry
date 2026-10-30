@@ -7,8 +7,8 @@ source:
   category: pm-execution/skills
   path_in_repo: pm-execution/skills/create-prd
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 使用一个全面的8部分模板创建产品需求文档，涵盖问题、目标、细分市场、价值主张、解决方案和发布规划。在编写PRD、记录产品需求、准备功能规格或审查现有PRD时使用。

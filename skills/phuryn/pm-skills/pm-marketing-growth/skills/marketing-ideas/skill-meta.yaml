@@ -7,8 +7,8 @@ source:
   category: pm-marketing-growth/skills
   path_in_repo: pm-marketing-growth/skills/marketing-ideas
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 生成5个有创意且成本效益高的营销点子，包含渠道、信息传递和互动理由。在头脑风暴营销活动、规划产品推广或寻找创意营销策略时使用。

@@ -7,8 +7,8 @@ source:
   category: pm-product-discovery/skills
   path_in_repo: pm-product-discovery/skills/identify-assumptions-new
 upstream_branch: main
-upstream_sha: 07b34f64ee828df08953f505b7f747aef85ae7c6
-version: 1.0.4
-last_synced_at: '2026-10-17'
+upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
+version: 1.0.5
+last_synced_at: '2026-10-30'
 risk: clean
 description_zh: 识别新产品创意在8个风险类别中的风险假设，包括市场进入、战略和团队。在评估初创风险、评估新产品概念或为新企业绘制假设时使用。
