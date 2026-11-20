@@ -1,0 +1,14 @@
+# skill 级元数据 · 由 scripts 自动维护，请谨慎手改
+
+name: software-factory
+source:
+  owner: mattpocock
+  repo: skills
+  category: in-progress
+  path_in_repo: skills/in-progress/software-factory
+upstream_branch: main
+upstream_sha: abeeaf95660ba9e8b7c753eb38f441ca707a8823
+version: 1.0.0
+last_synced_at: '2026-11-20'
+risk: clean
+description_zh: ''

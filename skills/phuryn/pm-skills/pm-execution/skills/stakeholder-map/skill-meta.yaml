@@ -7,8 +7,8 @@ source:
   category: pm-execution/skills
   path_in_repo: pm-execution/skills/stakeholder-map
 upstream_branch: main
-upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
-version: 1.0.5
-last_synced_at: '2026-10-30'
+upstream_sha: 9af7bfd0bc47fdad43c2eaa7a43cd13918e7aaef
+version: 1.0.6
+last_synced_at: '2026-11-20'
 risk: clean
 description_zh: 使用权力/利益网格构建利益相关者地图，识别每个象限的沟通策略，并生成沟通计划。在管理利益相关者、准备发布、协调跨职能团队或规划利益相关者参与时使用。

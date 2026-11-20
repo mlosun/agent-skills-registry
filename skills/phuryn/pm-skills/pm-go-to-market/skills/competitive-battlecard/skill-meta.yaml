@@ -7,8 +7,8 @@ source:
   category: pm-go-to-market/skills
   path_in_repo: pm-go-to-market/skills/competitive-battlecard
 upstream_branch: main
-upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
-version: 1.0.5
-last_synced_at: '2026-10-30'
+upstream_sha: 9af7bfd0bc47fdad43c2eaa7a43cd13918e7aaef
+version: 1.0.6
+last_synced_at: '2026-11-20'
 risk: clean
 description_zh: 创建销售就绪的竞争对战卡，将你的产品与特定竞争对手进行比较——包括定位、功能对比、异议处理和赢单/输单模式。在准备销售团队、创建竞争材料或回应“为什么不选竞争对手X？”时使用。

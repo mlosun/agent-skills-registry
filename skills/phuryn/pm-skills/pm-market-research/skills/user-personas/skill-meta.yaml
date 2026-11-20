@@ -7,8 +7,8 @@ source:
   category: pm-market-research/skills
   path_in_repo: pm-market-research/skills/user-personas
 upstream_branch: main
-upstream_sha: 2a12295a7717569baa7be181b4cfebe3ca38a6bb
-version: 1.0.5
-last_synced_at: '2026-10-30'
+upstream_sha: 9af7bfd0bc47fdad43c2eaa7a43cd13918e7aaef
+version: 1.0.6
+last_synced_at: '2026-11-20'
 risk: clean
 description_zh: 从研究数据中创建精细的用户画像 — 3个画像，包含JTBD、痛点、收益和意外洞察。适用于从调查数据构建画像、从研究中创建用户档案，或为产品决策进行用户细分时使用。

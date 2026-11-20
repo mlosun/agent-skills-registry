@@ -7,8 +7,8 @@ source:
   category: null
   path_in_repo: skills/dispatching-parallel-agents
 upstream_branch: main
-upstream_sha: 2ce8aa15d05bd57213e6f746f953aafb7ded7a8b
-version: 1.0.5
-last_synced_at: '2026-10-22'
+upstream_sha: 22f0b463e7a5e579904dd6211a520321035526f7
+version: 1.0.6
+last_synced_at: '2026-11-20'
 risk: clean
 description_zh: 当面对2个及以上相互独立、无需共享状态或顺序依赖即可推进的任务时使用。
