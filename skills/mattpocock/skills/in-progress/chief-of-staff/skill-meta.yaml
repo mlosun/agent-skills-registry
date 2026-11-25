@@ -7,8 +7,8 @@ source:
   category: in-progress
   path_in_repo: skills/in-progress/chief-of-staff
 upstream_branch: main
-upstream_sha: abeeaf95660ba9e8b7c753eb38f441ca707a8823
-version: 1.0.7
-last_synced_at: '2026-11-20'
+upstream_sha: 6f7f7831a625f040a8e06a0e7954826b87ce775a
+version: 1.0.8
+last_synced_at: '2026-11-25'
 risk: clean
 description_zh: ''
