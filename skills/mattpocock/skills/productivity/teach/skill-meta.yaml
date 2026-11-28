@@ -7,8 +7,8 @@ source:
   category: productivity
   path_in_repo: skills/productivity/teach
 upstream_branch: main
-upstream_sha: 6f7f7831a625f040a8e06a0e7954826b87ce775a
-version: 1.0.15
-last_synced_at: '2026-11-25'
+upstream_sha: bbadaa631c37af594e5a05c9cefacd9956136b18
+version: 1.0.16
+last_synced_at: '2026-11-28'
 risk: clean
 description_zh: 在此工作区内，向用户传授一项新技能或概念。

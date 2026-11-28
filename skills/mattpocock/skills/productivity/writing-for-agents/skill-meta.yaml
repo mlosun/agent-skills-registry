@@ -7,8 +7,8 @@ source:
   category: productivity
   path_in_repo: skills/productivity/writing-for-agents
 upstream_branch: main
-upstream_sha: 6f7f7831a625f040a8e06a0e7954826b87ce775a
-version: 1.0.15
-last_synced_at: '2026-11-25'
+upstream_sha: bbadaa631c37af594e5a05c9cefacd9956136b18
+version: 1.0.16
+last_synced_at: '2026-11-28'
 risk: clean
 description_zh: 为智能体编写文档。在创建或编辑技能，或修改AGENTS.md或CLAUDE.md时使用。

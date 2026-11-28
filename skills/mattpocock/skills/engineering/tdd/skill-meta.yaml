@@ -7,8 +7,8 @@ source:
   category: engineering
   path_in_repo: skills/engineering/tdd
 upstream_branch: main
-upstream_sha: 6f7f7831a625f040a8e06a0e7954826b87ce775a
-version: 1.0.15
-last_synced_at: '2026-11-25'
+upstream_sha: bbadaa631c37af594e5a05c9cefacd9956136b18
+version: 1.0.16
+last_synced_at: '2026-11-28'
 risk: clean
 description_zh: 测试驱动开发。当用户希望以测试优先的方式构建功能或修复错误、提到“红绿重构”或需要集成测试时使用。
